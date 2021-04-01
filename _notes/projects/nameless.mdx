@@ -1,0 +1,144 @@
+---
+title: Nameless
+time: 2021-03-08 19:48:38
+tags: yijing, projects
+---
+
+# Nameless
+
+## Intro/Background
+
+- A Paean to the [[Yijing]]
+- A [web app](https://nameless.easeness.biz) built with Vue 3
+
+> The babies were little stars from Spiritland, and … when they first came to the earth … they were from the sky and _nameless_.
+> — via the Osage Indians
+> from Mamatoto, a book at the SF Birth Center by Carroll Dunham
+
+Throughout the [[Yijing]] we encounter nameless pawns: arrogant dragon, the forester, the young fool, the superior man, the maiden, the great prince, a petty man, the Son of Heaven, the Supreme Deity. Owing its admittedly masculine lean in modern interpretation to the many centuries of androcracy this timeless work of balance and harmony has endured as the pendulum has reached its Martian zenith today (we stand now at the moment of stillness before the pendulum swings back), the men, the maidens, the dragons, are not the protagonists of this story. The [[Yìjīng]] tells a story of the changes we experience, of the moments of choice in which we manifest what is to be, of the cusps and corners and junctures of the 10-D multiverse.
+
+- [Gui : Gua :: Sundial : Hexagram](https://www.yijing.nl/origins/gui-gua/gui-gua.html)
+  - The character Gua for hexagram is the character for sundial with the radical for divining added to it.
+- [The sun creates the Taiji](https://www.yijing.nl/origins/gui-gua/gui-gua-taiji.html)
+  - The Taiji is a map of changing light as seasons cycle
+- [Yìjīng is the Book of Ease](https://www.chinesefortunecalendar.com/yinyang.htm)
+  - 易 change, ease, sun over moon
+  - 經 book, classic, profound book
+
+## Design Thinking
+
+- A grid of tiles with cards that hover over.
+- Each tile contains a change from among the 64.
+- A change comprises an array of names and numbers and interpretations, the longer aspects of which are portrayed on the card, while the shorter bits are framed about the tile.
+- The guest is invited to produce the burning question of the moment, then asked and instructed how to divine the change that applies to it using three coins.
+- Entering the result of the divination, the guest sees the tile of that change highlit and the card displayed in detail.
+- One side of the card displays the written interpretations of the change, while the other side explores the two trigrams of which its six lines are composed, and the image they form together.
+- If any of the lines in the guest's cast are changing, the guest sees that line of the hexagram highlit, and tapping it, sees the written interpretation of that changing line.
+- The guest may also explore the changes without presenting a question, tapping tiles to see their cards, and flipping the cards as desired.
+
+## Development
+
+### Fridge
+
+#### Text/source - content
+
+- Visionary from Paul O'Brien
+- Online Clarity from Hilary Barrett
+- the very old japanese translation hosted by the fractal i ching dude
+- consider a [Geomancy](https://www.wikiwand.com/en/Geomantic_figures) clone
+
+#### Interaction
+
+- [ ] zzfx on reveal answer and show oracle
+- [ ] arrow keys to move between tiles
+- [ ] show adjacent cards with arrows
+  - [ ] add tappable arrows on sides of card
+  - [ ] keyboard arrow nav
+- [ ] Shift or meta click on tiles to keep the others open
+
+#### Architecture
+
+##### Backend
+
+- [x] [SMS code login setup for web](https://firebase.google.com/docs/auth/web/phone-auth?authuser=0)
+- [x] [Email Link (passwordless) setup](https://firebase.google.com/docs/auth/web/email-link-auth?authuser=0)
+- [x] [using Firebase Auth with Vue](https://www.freecodecamp.org/news/how-to-add-authentication-to-a-vue-app-using-firebase/)
+  - [x] [log the Magic.link process](./docs/passwordless.md) for a lib and a post on Atmanautica.com
+  - [x] integrate Twilio for phone codes
+  - [x] passport.js? express/node? firebase?
+- consider routers and app architecture
+  - [x] Nuxt
+
+### Bugs
+
+- [ ] Oracle first step scroll left is janky on mobile
+- [x] Sitenav themeswitch overlaps logo on mobile
+- [ ] order in journal is opposite intended. latest first pleaze
+
+### Next
+
+- [ ] make a page for each roll?
+- [ ] store users in Sanity?
+- [ ] FastSearch.js integration
+- [ ] merge phone and email accounts when logged in with both
+- [ ] save config preferences to firebase
+- expand and host database
+  - consider firebase with a simple custom CMS
+  - consider Sanity if vue-sanity can work
+  - consider Airtable or Serverless functions
+  - [x] ask Josh
+- [ ] add [Takashima translation](http://www.russellcottrell.com/VirtualYarrowStalks/TakashimaEkidan.htm)
+
+### Now
+
+- [x] remove entries from journal?
+- [x] see logged in user profile on journal or config pages
+
+### Test and Release
+
+- [x] scroll to help when selected
+- [x] scroll to query input on focus on mobile
+- [x] highlight Becoming hex in full list as well
+- [x] give the Change view a home in the Sitenav
+- [x] hilight the rolled tiles in the Changes views
+- [x] help icons aligned right due to class collision
+- [x] make this a progressive web app (PWA)
+- [x] add a user model to the App?
+- [x] TriGlyph too big in Change.vue and HexaTile.vue for mobile
+- [x] Hexagram on Tile on mobile needs margin
+- [x] Login with Phone doesn't work in prod on mobile, no error msg, no code received
+- [x] Login with Email broken in prod, probly domain or baseurl thing
+- [x] link between being and becoming change of a roll on the Change view
+- [x] make being and becoming link to each other
+- [x] allow login to save rolls and results
+- [x] Show the roll in the oracle response view
+
+### Done
+
+#### [x] Config - global user settings
+
+- [x] pinny - pinyin or not
+- [x] wenny - king wen or not
+- [x] texty - text or glyphs first
+- [x] primary text - Wilhelm or Barrett?
+- [x] hermagrams or hexagrams
+
+#### [x] FTE
+
+- [x] OracleIntro.vue pops up before OracleQuery
+  - [x] Welcome to Nameless: A Paean to the Yijing
+  - [x] Introducing the Oracle
+  - [x] [Consult the Oracle] button
+- [x] give the oracle its own root level route
+- [x] FAQ
+  - What is a Paean?
+  - Why is it Nameless?
+  - What is an Oracle?
+  - How does it work?
+  - What does it cost?
+- [x] passwordless login
+  - [x] consider datastores and state management
+    - [x] Vue 3 reactivity
+    - [x] Vuex
+    - [x] Storeon - simple, versatile, no HMR
+  - [x] [why passwords are obsolete](https://medium.com/@ninjudd/passwords-are-obsolete-9ed56d483eb)

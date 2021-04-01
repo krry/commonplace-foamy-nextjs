@@ -1,0 +1,60 @@
+# Becoming a blockchain developer
+
+The Blockgeeks have been offering plenty of unsolicited advice about how to develop on the blockchains, so I started by combing through their take on things. They, like many blockchain acolytes, use Ethereum and all its open-sourcey platformitude as a springboard.
+
+First we gather some tools/software.
+
+- `geth`, which the Go version of the the Ethereum engine
+- Mist, which is a browser built to help us traverse Ethereum blockchains
+
+Then we set up a Testnet.
+
+1. Create a project directory.
+
+```sh
+mkdir ethertest; mkdir ethertest/data; cd ethertest
+```
+
+2. Create a new account on the Testnet.
+
+```bash
+geth account new --datadir ./data
+```
+
+Set the password to `namaste`. Received the account's address: `Address: {c2d86b2af8a69913bc06edf25a1438376753fc36}` 3. Add this address to the `CustomGenesis.json` that will generate the genesis block.
+
+```json
+{
+  "config": {
+    "chainId": 15,
+    "homesteadBlock": 0,
+    "eip155Block": 0,
+    "eip158Block": 0
+  },
+  "difficulty": "0x400",
+  "gasLimit": "0x2100000",
+  "alloc": {
+    "c2d86b2af8a69913bc06edf25a1438376753fc36": {
+      "balance": "0x1337000000000000000000"
+    }
+  }
+}
+```
+
+4. Initialize the testnet database with the generated account address
+
+```sh
+geth --identity "MyTestNetNode" --nodiscover --networkid 1999 --datadir ./data  init CustomGenesis.json
+```
+
+5. Run the geth console
+
+```sh
+geth --identity "MyTestNetNode" --datadir ./data --nodiscover --networkid 1999 console
+```
+
+6. Check the newly seeded account's balance.
+
+```sh
+web3.fromWei(eth.getBalance(eth.accounts[0]), “ether”)
+```

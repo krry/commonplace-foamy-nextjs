@@ -1,0 +1,67 @@
+# README for teh codez
+
+If you have stepped away for a while, you may, as I currently find myself,
+find yourself rusty and lost as to how to steer this Goldbergian contraption.
+
+Here are the basics for this setup.
+
+## Mac Setup
+
+- the ctrl key does `<esc>`
+- the caps lock key does `<ctrl>`
+- your dotfiles are in `~/.dot`
+
+## Fish Shell
+
+- to open your dotfiles, try `dotv`
+- to configure fish, `confish`
+- to see fish functions, `functions`
+
+## Shell aliases
+
+- `devmo` takes you to the dev dir
+- `atma` jumps to atmanaut.me dir
+- `chak` jumps within that to the chakra theme dir
+- `dot` takes you to your dotfiles
+
+## Utilities you Know and Love
+
+- `rg` ripgrep offers very fast file and dir searching
+- `fd` can scour file contents like lightning
+
+## Nvim Editor
+
+- `<leader>ec` gets you to your init.vim or vimrc
+- your leader key in vim is `<space>`
+- `h/j/k/l` navigate like arrows
+- `<C-f>` page down, or `<C-b>` to page up
+- to close buffers, windows, tabs, `<C-q>`
+- to find a string within a buffer, `/`
+
+### Help in Vim
+
+- `:h <query>` for help on "query"
+- `<C-]>` to jump to a cursored links
+
+### File nav
+
+- `gf` to go to the file the cursor is on
+- `<C-o>` to jump to the previous file in the buffer
+- hit `-` to open the filetree
+- use `/` to start a search within the buffer
+- `<space>f` to denite fuzzy search in filesystem
+- `s` to highlight all instances of a string
+
+### Modes
+
+- hit `i` to enter insert mode where you can type
+  - vim-surround can change the surrounds
+- hit `v` to enter visual mode, where you can select text
+
+### Wiki
+
+- open wiki with `<space>ww`
+
+VIM Text Objects review:
+_ `e` jumps to end of word, `p` paragraph, `w` by word, `l` by line
+_ `o` means outside the group, `i` is inside

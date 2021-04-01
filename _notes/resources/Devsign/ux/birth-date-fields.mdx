@@ -1,0 +1,83 @@
+# Happy birthday! Date of birth input field best practices
+
+This topic ought to make for my driest post ever. Serengeti up in here. Friggin Gobi. Actually, who knows? Maybe someday I'll write about my [.jshintrc](http://jshint.com/docs/options/), or how I customize my [BASH](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29).
+
+Aridity aside, let's dig in to a common challenge for web [devsigners](http://www.devsignercon.com/) charged with building a signup form: **how should an web interface ask for someone's date of birth?**
+
+## Preamble
+
+Four score and one more score makes [100](https://soundcloud.com/octobersveryown/drake-0-to-100), where [we keep it](https://soundcloud.com/maddecent/grandtheft-keys-n-krates-keep-it-100). We're not talking about the copy you write above a date of birth field. Nor are we talking about how the request is couched in the overall experience in order to make it a comfortable, natural request. We're talking about the UI specifically today, which of course influences the UX.
+
+UI ≠ UX. UI < UX. UI => UX.
+
+## Constraints, goals, premises
+
+Let's first set our constraints. We're devsigning a signup form seeking date of birth for a web site or application. Our users are literate humans who have have web-connected devices with keyboards, mice, or touchscreens. We can use `HTML`, `CSS`, and `JS` to craft our interface.
+
+Our aim is to enable users to enter their date of birth easily and accurately. Like most complex decisions in life, we can model this one as an optimization equation.
+
+The factors in this optimization equation are (in no particular order):
+
+- cognitive load for users
+- speed of entry
+- data veracity
+- aesthetics
+- experience uniformity
+- accessibility
+- security
+
+## Research and the competitive landscape
+
+So you say you want **\*ALL** the DOBs\*? Well then—lend me your keys. And eyes. Mostly your eyes. And then your keys.
+
+If you prance around the web entering your date of birth, you'll encounter a wide and varied swath of approaches to the interface.
+
+Still we can classify the permutations along a few vectors:
+
+- date format: MM-DD-YY, DD-MM-YYYY, YYYY-MM-DD
+- number of fields: 1 or 3
+- field type: `<input>`, `<select>`, `<input type="date">`
+- datepicker?!?!?!?
+
+Let's look at some examples.
+
+In the US, Google asks for Month-Day-YYYY, then revalidates the month-day based on leap year status:
+{<1>}![Google DOB](/images/2015/May/Screenshot-2015-05-01-14-04-18.png)
+
+Facebook gives you three `<select>`s that adjust their `<option>`s based on your selections, moving 31s to 30s for the relevant months, 29s to 28s for non-leap years. Slicker, but the issue here is a HUGE `<select>` of year `<option>`s.
+{<2>}![Facebook DOB](/content/images/2015/May/Screenshot-2015-05-01-14-08-51.png)
+
+Goodreads uses `<select>`s but doesn't validate them until you submit your selected `<option>`.
+{<3>}![Goodreads DOB wrong](/content/images/2015/May/Screenshot-2015-05-01-14-14-38.png)
+{<4>}![Goodreads DOB corrected](/content/images/2015/May/Screenshot-2015-05-01-14-14-54.png)
+
+Apple lazily supplies three unsophisticated `<select>`s and performs validation on the server side once you submit a set of selections.
+{<5>}![Apple DOB wrong](/content/images/2015/May/Screenshot-2015-05-01-14-23-14.png)
+I guess this follows the notion that everyone knows her birthday, no need to be helpful. But that year list is really long, and awful to pan through on my shiny new iPhone.
+{<6>}![Apple DOB error](/content/images/2015/May/Screenshot-2015-05-01-14-23-22.png)
+
+## Prior attempts:
+
+1. The #2 result on Google when querying "input date of birth html"—
+   [Well formatted date of birth input field - JSFiddle](http://jsfiddle.net/davidelrizzo/c8ASE/)—employs `<input type="tel">` and a more international date format. On the first try I entered my American DOB improperly, mixing up day and month.
+2. These is a lot of disagreement around date of birth entry UI. The top three answers to [a relevant question on Stack Overflow](http://stackoverflow.com/questions/339956/whats-the-best-ui-for-entering-date-of-birth) suggest different approaches.
+3. One of the more well-developed keyboard-entry approaches still suffers from pinch points. Try to register for a boater exam in Washington. If you mistype your DOB, you'll end up in all kinds of error states. {<7>}![Boater DOB wrong](/content/images/2015/May/Screenshot-2015-05-01-14-35-34.png) {<8>}![Boater DOB edit](/content/images/2015/May/Screenshot-2015-05-01-14-36-09.png) {<9>}![Boater DOB edit2](/content/images/2015/May/Screenshot-2015-05-01-14-36-47.png) {<10>}![Boater DOB error](/content/images/2015/May/Screenshot-2015-05-01-14-35-15.png)
+4. And the most trafficked [ux.stackexchange discussion](http://ux.stackexchange.com/questions/5119/whats-the-best-way-to-present-date-of-birth-form-fields) is less than helpful, offering a recklessly scattered debate about text entry and accompanying instructions.
+
+## My preferred solution
+
+So as you can see, opinions about date of birth field UI are like assholes. Everyone's got one, and they all stink, except mine.
+
+Still with me? Let's do this.
+
+You know the year you were born. Probably better than you know any other year. Like the back of your hand, only harder, better, faster, stronger.
+
+So let's start with that. Type it in. Four numbers. We'll validate it as a year between now and whenever the oldest person alive was born.
+
+Based on the year you type in, I'll know a few things. You were either born in a leap year, or not. I'll also know how old you are, to within a year's time. If I have stipulations about your age, I can make a rough guess as to whether you meet them. If you're not far too young or old for our service, we won't jettison you. "Old enough to vote, young enough to float."
+
+In most calendars, every year has the same set of months. So we needn't adjust anything. Next you can choose a month, either from a dropdown, or by typing in a number that represents your birthmonth. Typing a non-month-number will result in a gentle error message: "Try a real month, brainiac."
+
+Then let's do the same with the date. Type it or select it from a prevalidated list of dates in that month and year. Typing a date outside the list will trigger a gentle error message. You didn't mean to forget your birthday after all, life just gets busy sometimes. "Don't lie to me now."
+
+I'm not terribly interested in receiving bad data. Are you? Didn't think so. So when we want a month and day in number form, or selected from lists, why would we allow letters?

@@ -1,0 +1,40 @@
+- Bitcoin is
+    - an electronic cryptocurrency
+        - made from digital signatures
+            - transacted peer-to-peer
+            - recorded by a distributed network of nodes
+                - using proof-of-work
+                    - that is computationally impractical to attack
+                        - if the majority of players are honest
+                        - and where transactions are easy to verify for any node.
+- Proof-of-work
+    - a solution to the Two Generals problem
+    - Nodes follows the greater majority of (processing) power, which is demonstrated by solving difficult problems faster.
+- from the Bitcoin whitepaper [[January 10th, 2018]]:
+    - The network flow of transactions and blocks
+        - 1. New transactions are broadcast to all nodes
+            - [[Transactions]] must be publicly announced to eschew a central trusted party.
+        - 2. Each node collects new transactions into a block.
+            - A block may hold record of an arbitrary number of transactions, depending on the proof-of-work.
+        - 3. Each node works on finding a difficult proof-of-work for its block.
+            - Increment a nonce until the value's hash has x' zero bits.
+            - Essentially one CPU, one vote.
+        - 4. When a node finds proof-of-work, it broadcasts the block to all nodes.
+            - Any node can solve a block, but all nodes keep records of the whole chain.
+        - 5. Nodes accept the block iff all transactions in it are valid and not already spent.
+            - the longest chain is used
+            - every node validates each block
+            - a valid block can be traced back
+        - 6. Nodes move on to create a new block with the previous hash.
+            - Thus continues the chain of blocks, linked in sequence and in SHA-256 #blockchain
+    - A coin is a chain of transactions' digital signatures with proof of work.
+    - A new coin is issued to the CPU that solves the next block.
+        - this is an incentive to support the network
+        - this is how coins are introduced into circulation
+        - eventually the coin supply will reach the set limit (ceiling)
+    - Transaction fees cover the support effort when new coins do not suffice or arise.
+    - Storage will not be an issue thanks to Merkle trees that compress past blocks with a hash.
+    - Payments/transactions within Merkle trees can be verified if
+        - they are in the longest chain,
+        - the transactions can be unhashed, and
+        - the subsequent blocks are valid.

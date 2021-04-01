@@ -1,0 +1,260 @@
+# VIM commands I Have Known and Loved
+
+## Refresher
+
+## Next to practice
+
+- basics like jumping around buffers/between files
+  - `C-o` returns to last cursor point in whatever buffer
+  - `\'\'` (two apostrophes) also jumps to the last position
+  - \`\` (that is two ticks) undoes the last jump
+  - `}`, `{` to jump to next or prev whitespace
+    - this is useful while highlighting in VISUAL mode
+    - see also Wildfire, activated with `<BSlash><BSlash>`
+- review Denite
+  - `<leader>f` to search for files
+  - `<leader>g` to grep through contents of `:pwd`
+  - `<leader>j` to grep for cursor word
+  - `<leader>h` to help for something
+  - `<leader>bf` to search for files in the buffers
+  - `<leader>bg` to grep for files in the buffers
+  - `<leader>pf` to search for files in the project
+  - `<leader>pg` to grep for files in the project
+- review find within buffer:
+  - `*` jumps to next instance
+  - `#` jumps to last instance
+  - then `n` and `p` move among them
+- Wildfire `<BSlash>` and `<BS>`
+- `:ComposerOpen`
+- how to Neosnippet!
+
+## Review some basics
+
+- `:ZZ` to save and quit all
+- `%` moves to the other surrounder
+- text objects - selectors for various pieces of a document
+  - `s` sentence
+  - `p` paragraph
+  - `{`,`}` braced area
+- `::` to quick search/replace global
+- `:'` to quick search/replace with approval
+- `<leader>t` opens NERDFileTree
+- `-` toggles file tree
+
+## Practicing now
+
+`<C-r>[R]` - Paste in insert mode, where [R] is the register
+
+Access a register by preceding the command with `"[R]`
+
+- `""y0` copies back to the start of line to unnamed reg
+- `"*p` pastes the clipboard after the cursor
+- `<C-r>:` inserts the last command
+
+### The Registers
+
+- `"` unnamed - the default
+- `*` clipboard - system copy/paste, `:set clipboard=unnamed` melds these
+- `.` insert - last inserted text
+- `:` command - last :Ex command
+- `=` expr - runs expressions and inserts the results
+- `/` search - last search with `/` `?` `*` `#`
+- `%` current file - path to current file from where vim was opened
+- `#` alternate file
+- `a-z` macros or manual
+- `0-9` unnamed history
+
+### EMMET!!!
+
+The leader key is now `<C-e>` for emmet, get it?
+
+- expandabbr `<C-e> ,`
+- expandword `<C-e> ;`
+- update_tag `<C-e> u`
+- balancetaginward `<C-e> d`
+- balancetagoutward `<C-e> D`
+- next `<C-e> n`
+- prev `<C-e> N`
+- imagesize `<C-e> i`
+- togglecomment `<C-e> /`
+- splitjointag `<C-e> j`
+- removetag `<C-e> k`
+- anchorizeurl `<C-e> a`
+- anchorizesummary `<C-e> A`
+- mergelines `<C-e> m`
+- codepretty `<C-e> c`
+
+### [Multicursor](https://github.com/terryma/vim-multiple-cursors)
+
+- `<C-n>` next like `*`
+- `<C-x>` to skip
+- `<C-A>` for all matches
+- `<leader>z` - Zenroom + Goyo
+
+## Formatoptions
+
+formatoptions is a setting that accepts an array of letter flags
+e.g., `:set formatoptions=jcorl`
+
+Here are the flags I need to know about:
+
+- t - auto-wrap text using the textwidth!
+- c - auto-wrap comments using the textwidth
+- r - prepend comment leader when creating newline with `<Return>`
+- o - prepend comment leader when creating newline with `o` or `O`
+- q - allow comments to be formatted by `gq`
+- w - trailing whitespace is taken as paragraph continues to next line
+- a - auto-formatting of a paragraph on insertion or deletion
+- n - list contents wrap to leave the bullet exposed at left
+- 2 - indent the paragraph to follow the second line, not the first
+- v - only break a line if you type whitespace past the gutter
+- b - breaks only if you enter blank before the gutter
+- l - leaves long lines alone
+
+Looks like I'll want to:
+
+- `set fo-=o` for most docs
+- `set fo+=t` for markdown
+
+## vim-wiki
+
+- `,ww` to open wiki at index
+- `=` to add header rank
+- `-` to subtract header rank
+
+- remapped Ctrl key to `<esc>`
+- `hugotime` expands to current time in hugo format
+- `<C-p>` in NORMAL sh
+- `<space>` in NORMAL selects by wildfire
+
+## editing
+
+- `ciw` change in word - just the word within spaces
+- `caw` change around word - gets spaces too
+- `cis` change in sentence
+- `cas` change around sentence
+- `cip` change in paragraph
+- `cap` change around paragraph
+- `C` change to end of line
+- `D` delete to end of line
+- `Y` copy to end of line
+- `0d` delete to beginning of line
+- `0c` change to beginning of line
+- `db` delete to beginning of word
+
+## Scrolling
+
+- `zz` to center buffer on cursor
+
+## Movement
+
+By character, use `f` and `t`, 'find' and 'till'. You can repeat a find or till:
+
+- use `,` to find/till the same character to the left
+- use `;` to find/till the same character again to the right
+
+* By sentence, use `)` and `(` to go forward and back respectively.
+* By paragraph, use `}` and `{`.
+* By section, use `]` and `[`.
+
+You can add these jumpers together:
+
+- use `]]` to go forward to the start of the next section
+- use `[[` to go backward to the start of the previous section,
+- use `][` to go forward to the end of the next section, and
+- use `[]` to go back to the end of the last section.
+
+Or you can find unclosed surrounders:
+
+- use `])` to look forward for unclosed `)`
+- use `[(` to look back for unclosed `(`
+- and so forth with `{` as well
+
+Some other jumpers include:
+
+- `*` finds a later use of an identifier under the cursor
+- `#` finds an earlier use of the cursored identifier
+- `gd` to go to the declaration of an identifier
+- `gD` to go to the global declaration of an identifier
+
+- `fgs` figlet small
+- `fgm` figlet medium
+- `fgl` figlet large
+- `fg3` figlet threepoint
+- `fg4` figlet 4max
+- `fga` figlet amc3
+
+### vim-surround
+
+- y adds surrounds
+- c changes them
+- d drops them
+- `yss(` add surround `()` with cushion
+- `cs"'` change surround from `"` to `'`
+- `ds]` delete surrounding `]` ignoring cushion
+- `ysiw%` surrounds word under cursor with `%`
+  - can also surround with html tags
+
+## Folding
+
+- `za` toggle fold
+- `zR` unfold all
+- `zA` fold all
+- `zm` fold more
+- `zr` fold less
+- `zf[text object]` add fold to text object, e.g.:
+  - `zfat` - add fold around tag
+  - `zfip` - add fold inside paragraph
+  - `zfas` - add fold around sentence
+  - `zfa}` - add fold inside braced area
+
+## Completion
+
+- `<C-p>` shows completion dropdown with previous words in open buffers
+- `<C-n>` shows completion dropdown with words after this in open buffers
+- `<C-^>` or `:e#` - switch to alternate (previous) file in buffer
+
+## Windows
+
+- `:vs` - vertical split, takes a file path
+- `<C-w> >` makes the focused window wider
+- `<C-w> <` makes the focused window narrower
+- `<C-w> +` makes the focused window taller
+- `<C-w> -` makes the focused window shorter
+- `:wq` - writes and quits
+- `:find` - finds a file by path
+- `:x` - closes window or file
+- `:wq` - writes file and quits vim
+- `:w` - saves file
+
+## Modes
+
+- `i` - switches to insert mode before cursor
+- `I` - insert mode at start of line
+- `a` - switches to insert mode after cursor
+- `A` - insert mode at end of line
+- `O` - insert mode on new line above
+- `o` - insert mode on new line below
+- `s` - substitutes where cursor lies
+- `S` - substitutes for whole line
+- `v` - VISUAL mode - cursor becomes highlighter
+- `<S-v>` - VISUAL LINE - selects a line, enters VISUAL mode
+- `<C-v>` - VISUAL BLOCK - select block with arrows
+  - use `I` to prepend, or `A` to append
+  - then `<ESC>` to apply
+
+## VISUAL mode
+
+- `y` - copies selection
+- `d` - cuts selection
+- `P` - pastes cut or copied selection
+- `:Explore` - invokes [`netrw`](https://shapeshed.com/vim-netrw/)
+- `:Sexplore` - horizontal split for `netrw` tree
+- `:Vexplore` - vertical `netrw` tree
+- `<C-w>` + arrow key - move control to window left right up down
+- `<C-d>` - jump halfway down
+- `<C-u>` - jump halfway up
+- `<C-b>` - page up
+- `<C-f>` - page down
+- `<C-e>` - scroll buffer up a line
+- `<C-y>` - scroll buffer down a line

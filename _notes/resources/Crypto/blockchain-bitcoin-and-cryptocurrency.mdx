@@ -1,0 +1,85 @@
+# Blockchain Basics
+
+## People
+
+* [Satoshi Nakamoto is likely an amalgam of Craig Steven Wright, Dave Kleiman, and Hal Finney.](https://longform.org/posts/the-satoshi-affair) ["The breakthrough that Satoshi Nakamoto made in 2008 was in bringing internet-scale distributed Byzantine Fault Tolerant (BFT) consensus into a blockchain scheme."](https://blog.cosmos.network/consensus-compare-casper-vs-tendermint-6df154ad56ae)
+* Gavin Andresen became the sole/lead developer in 2011. Satoshi passed him the torch before going silent.
+
+## Terms and concepts
+
+### Blockchain
+
+A chain of blocks.
+A replicated state machine.
+An open, secure, distributed ledger of transactions.
+A hash-linked batched log of transactions replicated deterministically across all nodes in a network.
+
+### Block
+
+An object containing a hash of the previous block, a nonce, and some data describing a transaction.
+
+### [Byzantine Fault Tolerance](https://en.wikipedia.org/wiki/Byzantine_fault_tolerance)
+
+The characteristic of a distributed, concerted network of actors that can overcome the Byzantine Generals' Problem, or avoid Byzantine failure.
+
+* Take a network of independent actors each with messengers, where
+  * actors may pass honest or dishonest messages, and
+  * the actors must reach consensus to win.
+* A winning strategy is for actors to follow the majority, and to have a default backup plan when the majority is meaningless.
+* Bitcoin's blockchain employs a proof-of-work consensus algorithm as probabilistic BFT.
+* Ethereum's forthcoming [Casper](https://arxiv.org/pdf/1710.09437.pdf) protocol will employ a hybrid proof-of-work/proof-of-stake consensus algorithm.
+
+### [Hash function](https://en.wikipedia.org/wiki/Hash_function)
+
+A function that maps input data of arbitrary size to output data of fixed size. A cryptographically secure hash function is:
+
+* **deterministic**: every execution of the hash function on the same arbitrary data maps to the same fixed data,
+* **uniform**: it maps the expected inputs evenly over its defined output range, and
+* **one-way**: it is not realistic to reconstruct the input data from their hash value alone without spending great amounts of computing time.
+
+### [Difficulty](https://en.bitcoin.it/wiki/Difficulty)
+
+The difficulty `D` of the bitcoin blockchain is set such that the previous 2016 blocks would take two weeks to solve at a rate of 10 minutes per block. The hash rate is approximately D × 2^32^ ⁄ 600. [Here is the current difficulty](https://blockexplorer.com/api/status?q=getDifficulty).
+
+### [Proof of work](https://en.wikipedia.org/wiki/Proof-of-work_system)
+
+A consensus algorithm based on hard work. Hashpower is voting power.
+
+Actors in the network (called **miners**) must solve difficulty cryptographic problems to validate blocks of transactions. More specifically, a miner must produce a hash value that is lower than a target value in order to add a block to the chain and reap the reward. A lower target is more difficult to hit. The target is determined by the **difficulty**. A miner iterates a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) (an arbitrary number that can only be used once) and sends that nonce along with the block data to the hash function. Since the hash function is one-way, the miners cannot invert the calculation to find a particular hash value. Rather the hash value is effectively random. When the hash value is lower than the target, the miner broadcasts the successful nonce to the other nodes.
+
+All miners work on the same current block and aim for the same current target. When they receive the broadcast of a new block, they quickly verify that block by hashing the nonce with the block data themselves. If verified, they add the block to the chain, and proceed to work on the next block. Nodes work from the longest version of the blockchain, and blocks take a significant amount of work to generate. Consequently to violate the integrity of the blockchain (that is, to add a false block to the chain), the dishonest miner or miners would have to maintain a majority of the computing power in the network. The source of truth is the amount of work done. Thus the integrity of the blockchain rests upon **proof of work**.
+
+### [Proof of stake](https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQ)
+
+A consensus algorithm based on votes. Stake of native currency is voting power.
+
+To become a validator and gain a vote, an actor in the network must lock up an amount of their cryptocurrency in a deposit. The size of the stake determines the weight of that validator's vote.
+
+A [chain-based proof-of-stake](https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQ) algorithm pseudo-randomly selects a validator during each time slot, for example 10 seconds. Then it assigns that validator the right to create a single block. This block must point to a previous block, typically the block at the end of the longest existing chain. As the algorithm runs and the network accepts the longest existing chain, most blocks converge into a single, constantly growing chain. This network must be synchronous to achieve Byzantine Fault Tolerance.
+
+A [BFT-based proof-of-stake] algorithm emphasizes voting power over chain length. In a given round, validators are randomly granted the opportunity to propose a block. Then validators each vote to accept a specific block for the round. The votes are weighted according to stake and tallied. Any winning block is added to the chain and a new round begins. This network can be partially asynchronous and still achieve Byzantine Fault Tolerance.
+
+#### The Nothing-at-stake pitfall
+
+["Validators can effectively break safety by voting for multiple conflicting blocks at a given block height without incurring cost for doing so."](https://blog.cosmos.network/consensus-compare-casper-vs-tendermint-6df154ad56ae)
+
+[**Slasher**](https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/) is a hybrid (proof-of-work/stake) mining algorithm that mitigates for the nothing-at-stake attack vector.
+
+* Slasher aims for a 30-second block time.
+* The miner earns a low proof-of-work reward for a block `K`.
+* At block `K+1000`, each address has a chance—proportional to the amount of money that it has—of gaining a signing privilege or **vote**. An average of 64 votes are assigned each block.
+* At block `K+2000`, those with signing privileges may sign the block with their votes, which award the miner a substantially higher reward than the proof-of-work
+* At block `K+3000`, the vote rewards unlock, unless a user detects  two signatures from the same address first, in which case the rat gets 33% of the reward and the signature reward is slashed/destroyed.
+
+| Proof-of-work | Proof-of-stake |
+|:--|:--|
+| Incentivises high electricity consumption by miners | Incentivises investment in the network |
+| Adds new coins to the network as blocks are generated | Detaches coin supply from block validation |
+| Vulnerable to selfish mining | Discourages centralized cartels with game mechanics |
+| Influence inflates with economies of scale in mining | Influence is proportional to stake through weighted voting power |
+| Vulnerable to 51% attacks and similar malicious strategies | Can allay economic penalties against actors employing malicious strategies |
+
+### Coin
+
+### Token
+
