@@ -9,7 +9,7 @@ const MDXComponents = {
     code: CodeBlock,
     img: (props) => <div className="nextImageWrapper"><Image  {...props} /></div>,
     Image: (props) => <div className="nextImageWrapper"><Image  {...props} /></div>,
-    Button: dynamic(() => import('../components/button')),
+    Btn: dynamic(() => import('../components/Btn')),
 }
 
 export default MDXComponents

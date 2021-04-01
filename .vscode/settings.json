@@ -1,31 +1,47 @@
 {
-  "editor.minimap.enabled": false,
-  "editor.wrappingIndent": "indent",
-  "editor.overviewRulerBorder": false,
-  "[markdown]": {
-    "editor.lineHeight": 24,
-    "editor.quickSuggestions": true
-  },
-  "files.defaultLanguage": "markdown",
-  "files.exclude": {
-    "**/node_modules": true
-  },
-  "files.watcherExclude": {
-    "**/node_modules": true
-  },
-  "foam.edit.linkReferenceDefinitions": "withoutExtensions",
-  "foam.openDailyNote.directory": "_notes",
-  "foam.openDailyNote.fileExtension": "mdx",
-  "foam.openDailyNote.titleFormat": "fullDate",
-  "git.enableSmartCommit": true,
-  "git.postCommitCommand": "sync",
-  "markdown.preview.breaks": true,
-  "pasteImage.path": "${projectRoot}/public/images",
-  "pasteImage.showFilePathConfirmInputBox": true,
-  "spellright.notificationClass": "warning",
-  "vscodeMarkdownNotes.defaultFileExtension": "mdx",
-  "vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
-  "vscodeMarkdownNotes.slugifyMethod": "github-slugger",
-  "vscodeMarkdownNotes.workspaceFilenameConvention": "uniqueFilenames",
-  "window.autoDetectColorScheme": true
+	"editor.fontFamily": "'UbuntuMono Nerd Font', 'mononoki Nerd Font', 'FantasqueSansMono Nerd Font', 'OpenDyslexic Nerd Font', 'Space Mono for Powerline', 'Inconsolata-g for Powerline', 'SauceCodePro Nerd Font'",
+	"editor.fontSize": 18,
+	"editor.minimap.enabled": false,
+	"editor.overviewRulerBorder": false,
+	"editor.wrappingIndent": "indent",
+	"[markdown]": {
+		"editor.lineHeight": 24,
+		"editor.quickSuggestions": true,
+		"editor.suggest.showSnippets": false,
+		"editor.wordBasedSuggestions": false
+	},
+	"files.associations": {
+		"*.md": "mdx"
+	},
+	"files.autoSave": "onFocusChange",
+	"files.defaultLanguage": "markdown",
+	"files.exclude": {
+		"**/node_modules": true
+	},
+	"files.watcherExclude": {
+		"**/node_modules": true
+	},
+	"foam.edit.linkReferenceDefinitions": "withoutExtensions",
+	"foam.openDailyNote.directory": "_notes/journal",
+	"foam.openDailyNote.fileExtension": "mdx",
+	"foam.openDailyNote.filenameFormat": "yyyy-mm-dd",
+	"foam.openDailyNote.titleFormat": "'---'\n'title: Kerrbear Journal 'yyyy-mm-dd\n'time: 'yyyy-mm-dd' 'HH:MM:ss\n'tags: journal '\n'---'\n\n'# Kerrbear Journal Entry'\n'## 'dddd, mmmm dd, yyyy",
+	"git.enableSmartCommit": true,
+	"git.postCommitCommand": "sync",
+	"gitdoc.enabled": false,
+	"insertDateString.format": " YYYY-MM-DDThh:mm:ss.SZZZZ",
+	"insertDateString.formatDate": "YYYY-MM-DD",
+	"insertDateString.formatTime": "hh:mm:ss",
+	"markdown.preview.breaks": true,
+	"pasteImage.path": "${projectRoot}/public/images",
+	"pasteImage.showFilePathConfirmInputBox": true,
+	"prettier.singleQuote": false,
+	"stylelint.enable": false,
+	"spellright.notificationClass": "warning",
+	"vscodeMarkdownNotes.defaultFileExtension": "mdx",
+	"vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
+	"vscodeMarkdownNotes.slugifyMethod": "github-slugger",
+	"vscodeMarkdownNotes.workspaceFilenameConvention": "uniqueFilenames",
+	"window.autoDetectColorScheme": true,
+	"workbench.colorTheme": "Midnight City"
 }

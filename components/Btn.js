@@ -1,4 +1,4 @@
-const Button = ({ children }) => {
+const Btn = ({ children }) => {
 	return (
 		<button
 			style={{
@@ -14,4 +14,4 @@ const Button = ({ children }) => {
 	)
 }
 
-export default Button
+export default Btn

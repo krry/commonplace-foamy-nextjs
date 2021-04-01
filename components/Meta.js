@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import config from '../foamy.config'
+import config from '../site.config'
 
 const Meta = () => {
 	return (
@@ -26,11 +26,11 @@ const Meta = () => {
 			<link rel="manifest" href="/favicons/manifest.json" />
 			<meta name="theme-color" content="#1F9E9E" />{' '}
 			<link rel="alternate" type="application/rss+xml" href="/favicons/feed.xml" />
-			<meta property="og:image" content={config.HOME_OG_IMAGE_URL} />
+			<meta property="og:image" content={config.OG_IMAGE_URL} />
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
-			<meta name="author" content={config.siteAuthor} />
-			<meta name="description" content={config.siteDescription} />
-			<title>{config.siteTitle}</title>
+			<meta name="author" content={config.site.author} />
+			<meta name="description" content={config.site.description} />
+			<title>{config.site.title}</title>
 		</Head>
 	)
 }
