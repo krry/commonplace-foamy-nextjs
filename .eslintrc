@@ -1,0 +1,8 @@
+{
+	"extends": ["standard", "standardx"],
+	"rules": {
+		"indent": [2, "tab"],
+		// "no-tabs": "off",
+		"no-tabs": 0
+	}
+}
