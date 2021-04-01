@@ -39,6 +39,7 @@
 		"next-remote-watch": "^1.0.0",
 		"postcss-advanced-variables": "^3.0.1",
 		"postcss-preset-env": "^6.7.0",
+		"prepend-file": "^2.0.0",
 		"remark-external-links": "^8.0.0",
 		"remark-images": "^2.0.0",
 		"remark-inline-links": "5.0.0",
