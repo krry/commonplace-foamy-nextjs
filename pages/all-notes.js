@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import { getAllNotes } from '../api/notes'
+import { getAllFilesFrontMatter } from '../lib/mdx'
 
 export default function AllNotes({ metas }) {
 	return (
@@ -20,8 +20,8 @@ export default function AllNotes({ metas }) {
 }
 
 export async function getStaticProps() {
-	const allNotes = getAllNotes(['title', 'time', 'tags', 'slug'])
-	const metas = allNotes.map((note) => note.meta)
+	const allNotes = getAllFilesFrontMatter()
+	const metas = allNotes.map((note) => note.title)
 
 	return {
 		props: { metas },
