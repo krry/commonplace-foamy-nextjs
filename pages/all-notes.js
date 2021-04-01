@@ -1,16 +1,16 @@
 import Layout from '../components/Layout'
 import { getAllFilesFrontMatter } from '../lib/mdx'
 
-export default function AllNotes({ metas }) {
+export default function AllNotes({ allNotes }) {
 	return (
 		<Layout>
 			<h1>All Notes</h1>
 			<ul>
-				{metas.slice().map((note, index) => (
+				{allNotes.slice().map((note, index) => (
 					<div key={index}>
-						<dt>{note.meta.title || ''}</dt>
+						<dt>{note.title || ''}</dt>
 						<dd>
-							<a href={note.meta.slug}>{note.meta.slug}</a>
+							<a href={note.slug}>{note.slug}</a>
 						</dd>
 					</div>
 				))}
@@ -20,10 +20,9 @@ export default function AllNotes({ metas }) {
 }
 
 export async function getStaticProps() {
-	const allNotes = getAllFilesFrontMatter()
-	const metas = allNotes.map((note) => note.title)
+	const allNotes = await getAllFilesFrontMatter()
 
 	return {
-		props: { metas },
+		props: { allNotes },
 	}
 }
