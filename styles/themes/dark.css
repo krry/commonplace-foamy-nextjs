@@ -1,0 +1,15 @@
+.dark {
+	--paper: hsla(237, 12%, 12%, 1);
+	--ink: hsla(237, 82%, 82%, 1);
+	--stone: hsla(237, 6%, 6%, 1);
+	--glass: hsla(237, 22%, 22%, 0.8);
+	--cloud: hsla(237, 82%, 82%, 0.5);
+	--smoke: hsla(237, 48%, 82%, 1);
+	--frost: hsla(237, 8%, 28%, 1);
+	--link: hsla(57, 90%, 82%, 1);
+	--link-hot: hsla(47, 100%, 72%, 1);
+	--link-cold: hsla(77, 100%, 72%, 1);
+	--link-tepid: hsla(67, 90%, 82%, 1);
+	--shade: hsla(237, 10%, 10%, 0.8);
+	--glare: hsla(237, 10%, 10%, 0.7);
+}

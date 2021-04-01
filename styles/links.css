@@ -1,0 +1,32 @@
+a {
+	color: var(--link);
+	transition: all 111ms ease-out;
+	text-decoration: none;
+	font-family: var(--sans);
+	font-variation-settings: 'wght' 444;
+}
+
+a:hover,
+a:focus {
+	color: var(--link-hot);
+}
+
+a:visited {
+	color: var(--link-cold);
+}
+
+a:visited:hover,
+a:visited:focus {
+	color: var(--link-tepid);
+}
+
+.wikiLink {
+	font-family: var(--heading);
+}
+
+.wikiLink:focus,
+.wikiLink:hover {
+	text-decoration: none;
+	outline: 2px dashed;
+	outline-offset: 2px;
+}

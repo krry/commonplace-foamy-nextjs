@@ -1,0 +1,16 @@
+:root,
+.land {
+	--paper: var(--abysmal);
+	--ink: var(--caulk);
+	--stone: var(--abyss);
+	--glass: var(--ghost);
+	--cloud: var(--haze);
+	--smoke: var(--mint);
+	--frost: var(--charcoal);
+	--link: var(--marigold);
+	--link-hot: var(--goldilocks);
+	--link-cold: var(--lightning);
+	--link-tepid: var(--daisy);
+	--shade: var(--ghost);
+	--glare: var(--haze);
+}

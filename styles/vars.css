@@ -1,0 +1,23 @@
+:root {
+	--charcoal: hsl(180, 8%, 28%);
+	--mint: hsl(180, 48%, 84%);
+	--tint: hsla(180, 38%, 58%, 0.58);
+	--haze: hsla(180, 78%, 78%, 0.48);
+	--shadow: hsla(180, 48%, 48%, 0.2);
+	--shaglow: hsla(180, 78%, 78%, 0.2);
+	--ghost: hsla(180, 24%, 24%, 0.48);
+	--abyss: hsla(180, 24%, 12%, 0.78);
+	--abysmal: hsl(180, 24%, 8%);
+	--caulk: hsl(180, 50%, 96%);
+	--zephyr: hsl(180, 67%, 37%);
+	--capri: hsl(192, 78%, 45%);
+	--azure: hsl(180, 78%, 48%);
+	--jung: hsl(168, 67%, 37%);
+	--daisy: hsl(60, 90%, 82%);
+	--lightning: hsl(72, 100%, 72%);
+	--marigold: hsl(48, 100%, 72%);
+	--goldilocks: hsl(32, 100%, 72%);
+	--sans: 'Quicksand', system-ui;
+	--mono: 'Inconsolata', monospace;
+	--heading: 'MuseoModerno', 'Comic Sans MS', system-ui;
+}

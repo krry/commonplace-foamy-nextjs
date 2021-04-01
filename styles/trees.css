@@ -1,0 +1,97 @@
+.tree.home {
+	line-height: 1.125;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.tree.home ul {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 1em auto 2em;
+	padding: 0;
+}
+
+ul.top {
+	flex-wrap: wrap;
+	flex-direction: column;
+	max-height: 60vh;
+	width: 100%;
+}
+
+@media (min-width: 768px) and (min-height: 536px) {
+	ul.top {
+		flex-direction: row;
+		max-height: unset;
+	}
+}
+
+@media (min-width: 768px) and (min-height: 536px) {
+	.tree.home ul {
+		flex-flow: row wrap;
+	}
+}
+
+.tree.side ul {
+	margin: 0.5em 0 1em;
+}
+
+.tree.side a + ul {
+	margin-top: 0.25em;
+}
+
+.tree.home a + ul {
+	margin-top: 1em;
+}
+
+.tree.home li {
+	flex: 1 0 auto;
+	margin: 0.25em 0.5rem;
+}
+
+.tree.home .primary {
+	font-size: clamp(1.5rem, 2.25vw + 2.25vh, 2.25rem);
+	text-align: center;
+	font-family: var(--sans);
+}
+
+.tree.home .secondary {
+	font-size: clamp(1rem, 1.75vw + 1.75vh, 1.75rem);
+	text-align: center;
+	font-family: var(--heading);
+}
+
+.tree.home .tertiary {
+	text-align: center;
+	font-size: clamp(0.875rem, 1.5vw + 1.5vh, 1.5rem);
+}
+
+.tree.side .primary {
+	font-size: clamp(1rem, 1.5vw + 1.5vh, 1.5rem);
+}
+
+.tree.side .secondary {
+	font-size: clamp(0.875rem, 1.25vw + 1.25vh, 1.25rem);
+}
+
+.tree.side .tertiary {
+	font-size: clamp(0.75rem, 1vw + 1vh, 1rem);
+	display: none;
+}
+
+.tree.home li a {
+	padding: 0.125em 0.5em 0.25em;
+}
+
+.tree.home li a:hover,
+.tree.home li a:focus {
+	outline: 3px dashed;
+	text-decoration: none;
+}
+
+.tree.home .second {
+	max-width: calc(100vw - 4rem);
+}

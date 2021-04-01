@@ -1,0 +1,15 @@
+.sea {
+	--paper: var(--capri);
+	--ink: var(--caulk);
+	--stone: var(--zephyr);
+	--glass: hsla(192, 40%, 80%, 0.4);
+	--cloud: hsla(192, 80%, 80%, 0.5);
+	--smoke: hsla(180, 50%, 96%, 0.7);
+	--frost: var(--shaglow);
+	--link: hsl(300, 57%, 32%);
+	--link-hot: hsl(330, 67%, 77%);
+	--link-cold: hsl(240, 47%, 32%);
+	--link-tepid: hsl(270, 57%, 82%);
+	--shade: var(--shadow);
+	--glare: var(--shaglow);
+}

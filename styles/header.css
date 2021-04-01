@@ -1,0 +1,41 @@
+.header {
+	text-align: center;
+	position: relative;
+	background-color: var(--glass);
+}
+
+.header h1 {
+	display: block;
+	font-family: var(--sans);
+	font-size: clamp(1rem, 2vw + 2vh, 3rem);
+	height: 2em;
+	line-height: 1.5;
+	padding: 0.25em 0;
+	font-weight: 700;
+	font-variation-settings: 'wght' 777;
+	transition-duration: 666ms;
+	margin: 0 auto;
+	outline-offset: -1px;
+	outline-width: 2px;
+	outline-style: dotted;
+	outline-color: transparent;
+	color: var(--ink);
+}
+
+.header h1 small {
+	font-size: 50%;
+	opacity: 0.7;
+	font-variation-settings: 'wght' 111;
+	vertical-align: middle;
+}
+
+.header h1:hover,
+.header h1:focus,
+.header h1:visited:hover {
+	text-decoration: none;
+	outline-width: 4px;
+	outline-offset: -2px;
+	outline-color: inherit;
+	color: var(--smoke);
+	background-color: var(--frost);
+}

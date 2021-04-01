@@ -1,0 +1,57 @@
+ul {
+	list-style: none;
+	padding: 0 0 0 1.5em;
+	margin: 0;
+}
+
+ul > li {
+	position: relative;
+}
+
+ul > li::before {
+	position: absolute;
+	left: -1rem;
+	top: 0;
+	bottom: 0;
+}
+
+ul > li.task-list-item::before,
+nav ul > li::before {
+	display: none;
+}
+
+ul > li:nth-of-type(7n)::before {
+	content: '☄︎';
+}
+
+ul > li:nth-of-type(7n-1)::before {
+	content: '☯︎';
+}
+
+ul > li:nth-of-type(7n-2)::before {
+	content: '☤';
+}
+
+ul > li:nth-of-type(7n-3)::before {
+	content: '☥';
+}
+
+ul > li:nth-of-type(7n-4)::before {
+	content: '☸︎';
+}
+
+ul > li:nth-of-type(7n-5)::before {
+	content: '⚚';
+}
+
+ul > li:nth-of-type(7n-6)::before {
+	content: '⚜︎';
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
