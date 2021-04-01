@@ -1,10 +1,12 @@
+import ErrorPage from 'next/error'
+import Layout from '../components/Layout'
 import hydrate from 'next-mdx-remote/hydrate'
 import MDXComponents from '../components/MDXComponents'
 import { mdxFilePaths, getFileBySlug } from '../lib/mdx'
 
 export default function NotePage({ mdxSource, frontMatter }) {
   const content = hydrate(mdxSource, { components: MDXComponents })
-  return content
+  return <Layout {...frontMatter}> {content} </Layout>
 }
 
 export const getStaticProps = async ({ params }) => {

@@ -1,18 +1,15 @@
-import Head from 'next/head'
+import Meta from '../../foamy-nextjs/components/Meta'
+import SideBar from './SideBar'
 import Header from './Header'
 
-export default function Layout({ children, config }) {
+export default function Layout({ children, config }, ...frontMatter) {
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content={config.siteAuthor} />
-        <meta name="description" content={config.siteDescription} />
-        <title>{config.siteTitle}</title>
-      </Head>
+			<Meta />
       <Header siteTitle={config.siteTitle} />
       <main className="container">
-        {children}
+				<article className="noteBody">{children}</article>
+				<SideBar {...frontMatter} />
       </main>
     </>
   )
