@@ -112,3 +112,6 @@ a:hover {
   font-size: 0.8rem;
   line-height: 1.25rem;
 }
+header nav a {
+  display: block;
+}

@@ -13,8 +13,8 @@
   "files.watcherExclude": {
     "**/node_modules": true
   },
-  "foam.edit.linkReferenceDefinitions": "withExtensions",
-  "foam.openDailyNote.directory": "_posts",
+  "foam.edit.linkReferenceDefinitions": "withoutExtensions",
+  "foam.openDailyNote.directory": "_notes",
   "foam.openDailyNote.fileExtension": "mdx",
   "foam.openDailyNote.titleFormat": "fullDate",
   "git.enableSmartCommit": true,
@@ -26,5 +26,6 @@
   "vscodeMarkdownNotes.defaultFileExtension": "mdx",
   "vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
   "vscodeMarkdownNotes.slugifyMethod": "github-slugger",
+  "vscodeMarkdownNotes.workspaceFilenameConvention": "uniqueFilenames",
   "window.autoDetectColorScheme": true
 }

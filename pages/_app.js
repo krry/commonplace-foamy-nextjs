@@ -1,14 +1,12 @@
 import '../styles/global.css'
 import '../styles/prism-theme-night-owl.css'
 import Layout from '../components/Layout'
-import siteData from '../siteconfig'
-import CodeBlock from '../components/CodeBlock'
-import AnchorTag from '../components/AnchorTag'
-import Image from '../components/Image'
+import config from '../foamy.config'
 
 export default function App({ Component, pageProps }) {
+  console.log('pageProps', pageProps)
   return (
-    <Layout siteData={siteData}>
+    <Layout config={config}>
       <Component {...pageProps} />
     </Layout>
   )

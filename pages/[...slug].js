@@ -1,8 +1,8 @@
 import hydrate from 'next-mdx-remote/hydrate'
 import MDXComponents from '../components/MDXComponents'
-import { getAllFiles, getFileBySlug, POSTS_PATH } from '../lib/mdx'
+import { mdxFilePaths, getFileBySlug } from '../lib/mdx'
 
-export default function PostPage({ mdxSource, frontMatter }) {
+export default function NotePage({ mdxSource, frontMatter }) {
   const content = hydrate(mdxSource, { components: MDXComponents })
   return content
 }
@@ -14,14 +14,13 @@ export const getStaticProps = async ({ params }) => {
     slug = Array.isArray(params.slug) ? params.slug.join('/') : params.slug
   }
 
-  const post = await getFileBySlug(slug)
+  const note = await getFileBySlug(slug)
 
-  return { props: post }
+  return { props: note }
 }
 
 export const getStaticPaths = async () => {
-  const posts = await getAllFiles(POSTS_PATH)
-  const paths = posts
+  const paths = mdxFilePaths
     // Remove file extensions for page paths
     .map((path) => path.replace(/\.mdx?$/, ''))
     // Map the path into the static paths object required by Next.js
