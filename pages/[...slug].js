@@ -5,6 +5,7 @@ import MDXComponents from '../components/MDXComponents'
 import { mdxFilePaths, getFileBySlug } from '../lib/mdx'
 
 export default function NotePage({ mdxSource, frontMatter }) {
+  if (!mdxSource) return <ErrorPage statusCode={404} />
   const content = hydrate(mdxSource, { components: MDXComponents })
   return <Layout {...frontMatter}> {content} </Layout>
 }

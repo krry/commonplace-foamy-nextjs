@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 function verifyRelativityOfHref(href) {
 	const router = useRouter()
-	console.log('href of link is', href)
+	// console.log('href of link is', href)
 	// does the `href` start with something besides a letter or number?
 	// this is likely a sign that the path is already properly relative
 	// e.g. '../path/to/note' which we leave be
@@ -14,7 +14,7 @@ function verifyRelativityOfHref(href) {
 	// if not, parse the current directory from the router's path
 	// and prepend this to the href for the link
 	else {
-		console.log('router?.asPath', router?.asPath)
+		// console.log('router?.asPath', router?.asPath)
 		const pathPrefix = router?.asPath ? router.asPath.split('/').slice(1, -1).join('/') : '.'
 		return pathPrefix + '/' + href
 	}
