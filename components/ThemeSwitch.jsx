@@ -5,13 +5,13 @@ export const themes = [
 	{ name: 'light', emoji: '🌞' },
 	{ name: 'dark', emoji: '🌛' },
 	{ name: 'land', emoji: '🌳' },
-	{ name: 'sea', emoji: '🌊' },
+	{ name: 'sea', emoji: '🐳' },
 ]
 
-export default function ThemeSwitch() {
+export default function ThemeSwitch () {
 	const { theme, setTheme } = useTheme()
 	let dex = themes.findIndex((node) => node.name === theme) ?? 0
-	let themoji = themes[dex]?.emoji ?? '🌛'
+	let themoji = themes[dex]?.emoji ?? '🌳'
 
 	const nextTheme = () => {
 		dex = dex + 1 < themes.length ? dex + 1 : 0

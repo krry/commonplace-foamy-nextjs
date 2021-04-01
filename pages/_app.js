@@ -1,4 +1,5 @@
 import { ThemeProvider } from 'next-themes'
+import { themes } from '../components/ThemeSwitch'
 import '@fontsource/quicksand/400.css'
 import '@fontsource/quicksand/variable.css'
 import '@fontsource/inconsolata/400.css'
@@ -7,7 +8,6 @@ import '@fontsource/museomoderno/400.css'
 import '@fontsource/museomoderno/variable.css'
 import '../styles/global.css'
 import '../styles/prism-theme-synthwave.css'
-import { themes } from '../components/ThemeSwitch'
 
 // export const reportWebVitals = (metric) => console.log(metric)
 

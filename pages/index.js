@@ -20,4 +20,3 @@ export default function Index() {
 		</Layout>
 	)
 }
-// export { default, getStaticProps } from './[...slug]'

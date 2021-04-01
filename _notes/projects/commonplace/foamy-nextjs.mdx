@@ -41,7 +41,7 @@ I used Gridlover to generate a typography system with modular scale and vertical
 Add your preferred prism theme CSS file in `/styles` folder and import it to `_app.js`
 
 ```javascript
-import "/styles/prism-theme-night-owl.css";
+import '/styles/prism-theme-night-owl.css'
 ```
 
 You can convert your VS Code theme to use with this tool:
@@ -55,14 +55,14 @@ NextJS uses CSS Modules by default. [Next JS Docs: Built-In CSS Support](https:/
 
 ### Siteconfig.js
 
-`siteconfig.js` is used for populating site name in the Header and Layout components.
+`site.config.js` is used for populating site name in the Header and Layout components.
 
 ```javascript
 export default {
-  title: "Foamy NextJS",
-  description: "Digital Garden built with Foam and NextJS with MDX",
-  author: "Yenly Ma",
-};
+	title: 'Foamy NextJS',
+	description: 'Digital Garden built with Foam and NextJS with MDX',
+	author: 'Yenly Ma',
+}
 ```
 
 ### [Remark](https://github.com/remarkjs/remark/blob/main/doc/plugins.md) and Rehype plugins
@@ -70,16 +70,16 @@ export default {
 Add/remove plugins in `next.config.js`
 
 ```javascript
-const remarkImages = require("remark-images");
-const remarkExternalLinks = require("remark-external-links");
-const remarkFootnote = require("remark-numbered-footnote-labels");
+const remarkImages = require('remark-images')
+const remarkExternalLinks = require('remark-external-links')
+const remarkFootnote = require('remark-numbered-footnote-labels')
 
-const withMDX = require("@next/mdx")({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [remarkImages, remarkExternalLinks, [remarkFootnotes]],
-  },
-});
+const withMDX = require('@next/mdx')({
+	extension: /\.mdx?$/,
+	options: {
+		remarkPlugins: [remarkImages, remarkExternalLinks, [remarkFootnotes]],
+	},
+})
 ```
 
 ### How to upgrade Foam
