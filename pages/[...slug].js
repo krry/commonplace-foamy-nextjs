@@ -4,10 +4,17 @@ import hydrate from 'next-mdx-remote/hydrate'
 import MDXComponents from '../components/MDXComponents'
 import { mdxFilePaths, getFileBySlug } from '../lib/mdx'
 
-export default function NotePage ({ mdxSource, frontMatter }) {
-	if (!mdxSource) return <ErrorPage statusCode={404} />
-	const content = hydrate(mdxSource, { components: MDXComponents })
-	return <Layout {...frontMatter}> {content} </Layout>
+export const getStaticPaths = async () => {
+	const paths = mdxFilePaths
+		// Remove file extensions for page paths
+		.map((path) => path.replace(/\.mdx?$/, ''))
+		// Map the path into the static paths object required by Next.js
+		.map((slug) => ({ params: { slug: slug.split('/') } }))
+
+	return {
+		paths,
+		fallback: false
+	}
 }
 
 export const getStaticProps = async ({ params }) => {
@@ -22,15 +29,8 @@ export const getStaticProps = async ({ params }) => {
 	return { props: note }
 }
 
-export const getStaticPaths = async () => {
-	const paths = mdxFilePaths
-		// Remove file extensions for page paths
-		.map((path) => path.replace(/\.mdx?$/, ''))
-		// Map the path into the static paths object required by Next.js
-		.map((slug) => ({ params: { slug: slug.split('/') } }))
-
-	return {
-		paths,
-		fallback: false
-	}
+export default function NotePage ({ mdxSource, frontMatter }) {
+	if (!mdxSource) return <ErrorPage statusCode={404} />
+	const content = hydrate(mdxSource, { components: MDXComponents })
+	return <Layout {...frontMatter}> {content} </Layout>
 }
