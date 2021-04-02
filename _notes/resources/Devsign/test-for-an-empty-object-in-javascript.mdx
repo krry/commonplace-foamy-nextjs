@@ -1,0 +1,15 @@
+---
+title: Test For An Empty Object In Javascript
+created: 2021-04-02T05:14:52.346Z
+tags:
+---
+
+# Test For An Empty Object In Javascript
+
+I can't imagine remembering this rote. Thankfully there are more forward thinking devs than I, like [@flaviocopes](https://flaviocopes.com/javascript-check-empty-object/)...
+
+```javascript
+const obj = {}
+
+Object.keys(obj).length === 0 && obj.constructor === Object
+```

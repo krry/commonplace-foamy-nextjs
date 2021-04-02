@@ -1,6 +1,6 @@
 {
-	"editor.fontFamily": "'UbuntuMono Nerd Font', 'mononoki Nerd Font', 'FantasqueSansMono Nerd Font', 'OpenDyslexic Nerd Font', 'Space Mono for Powerline', 'Inconsolata-g for Powerline', 'SauceCodePro Nerd Font'",
-	"editor.fontSize": 18,
+	"editor.fontFamily": "'SauceCodePro Nerd Font', 'Space Mono for Powerline', 'UbuntuMono Nerd Font', 'mononoki Nerd Font', 'FantasqueSansMono Nerd Font', 'OpenDyslexic Nerd Font', 'Inconsolata-g for Powerline'",
+	"editor.fontSize": 17,
 	"editor.minimap.enabled": false,
 	"editor.overviewRulerBorder": false,
 	"editor.wrappingIndent": "indent",
@@ -9,6 +9,19 @@
 		"editor.quickSuggestions": true,
 		"editor.suggest.showSnippets": false,
 		"editor.wordBasedSuggestions": false
+	},
+	// Run formatter when you save code changes
+	"editor.formatOnSave": true,
+	// Disable default formatting (ESLint formatting will be used instead)
+	"[javascript]": {
+		"editor.formatOnSave": false
+	},
+	"[javascriptreact]": {
+		"editor.formatOnSave": false
+	},
+	// Auto-fix issues with ESLint when you save code changes
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
 	},
 	"files.associations": {
 		"*.md": "mdx"
@@ -25,7 +38,7 @@
 	"foam.openDailyNote.directory": "_notes/journal",
 	"foam.openDailyNote.fileExtension": "mdx",
 	"foam.openDailyNote.filenameFormat": "yyyy-mm-dd",
-	"foam.openDailyNote.titleFormat": "'---'\n'title: Kerrbear Journal 'yyyy-mm-dd\n'time: 'yyyy-mm-dd' 'HH:MM:ss\n'tags: journal '\n'---'\n\n'# Kerrbear Journal Entry'\n'## 'dddd, mmmm dd, yyyy",
+	"foam.openDailyNote.titleFormat": "'---'\n'title: Journal of Kerrbear 'yyyy-mm-dd\n'time: 'yyyy-mm-dd' 'HH:MM:ss\n'tags: journal '\n'---'\n\n'# 'yyyy-mm-dd\n'## Journal of Kerrbear'",
 	"git.enableSmartCommit": true,
 	"git.postCommitCommand": "sync",
 	"gitdoc.enabled": false,
