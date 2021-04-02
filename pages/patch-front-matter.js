@@ -31,7 +31,7 @@ export default function Test ({ files, filesFixed }) {
 }
 
 export async function getStaticProps () {
-	const dirPath = path.join(root, '_notes', 'areas', 'NAAS')
+	const dirPath = path.join(root, '_notes', 'journal')
 	const results = await patchMissingFrontMatter(dirPath)
 
 	return {
