@@ -12,8 +12,8 @@ export default function Test ({ files, filesFixed }) {
 				<div className="col flex">
 					<h2>Files Fixed</h2>
 					<ul>
-						{filesFixed.map((file) => (
-							<li>{file}</li>
+						{filesFixed.map((file, index) => (
+							<li key={index}>{file}</li>
 						))}
 					</ul>
 				</div>
