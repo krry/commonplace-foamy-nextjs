@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import SiteNav from '../components/SiteNav'
 import CopyLeft from '../components/CopyLeft'
 
-export default function Index() {
+export default function Index () {
 	return (
 		<Layout>
 			<SiteNav location="home" />
@@ -20,3 +20,10 @@ export default function Index() {
 		</Layout>
 	)
 }
+
+// export const getStaticProps = async () => {
+// 	const configData = await import('../site.config')
+// 	return {
+// 		...configData,
+// 	}
+// }

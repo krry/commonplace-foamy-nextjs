@@ -11,7 +11,7 @@ import '../styles/prism-theme-synthwave.css'
 
 // export const reportWebVitals = (metric) => console.log(metric)
 
-export default function App({ Component, pageProps }) {
+export default function App ({ Component, pageProps }) {
 	const themeNames = themes.map((t) => t.name)
 	return (
 		<ThemeProvider attribute="class" themes={themeNames}>

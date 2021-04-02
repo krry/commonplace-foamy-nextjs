@@ -1,7 +1,15 @@
 import Layout from '../components/Layout'
 import { getAllFilesFrontMatter } from '../lib/mdx'
 
-export default function AllNotes({ allNotes }) {
+export async function getStaticProps () {
+	const allNotes = await getAllFilesFrontMatter()
+
+	return {
+		props: { allNotes },
+	}
+}
+
+export default function AllNotes ({ allNotes }) {
 	return (
 		<Layout>
 			<h1>All Notes</h1>
@@ -17,12 +25,4 @@ export default function AllNotes({ allNotes }) {
 			</ul>
 		</Layout>
 	)
-}
-
-export async function getStaticProps() {
-	const allNotes = await getAllFilesFrontMatter()
-
-	return {
-		props: { allNotes },
-	}
 }
