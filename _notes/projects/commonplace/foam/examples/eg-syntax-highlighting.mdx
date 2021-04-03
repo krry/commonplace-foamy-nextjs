@@ -1,21 +1,25 @@
 ---
 title: Syntax Highlighting Example
+created: Thu Apr 01 2021 02:41:52 GMT-0700 (Pacific Daylight Time)
+modified: Thu Apr 01 2021 20:55:48 GMT-0700 (Pacific Daylight Time)
 ---
+
 # Syntax Highlighting
 
 Using the MDXProvider
+
 ```javascript
 // src/App.js
 import React from 'react'
-import {MDXProvider} from '@mdx-js/react'
+import { MDXProvider } from '@mdx-js/react'
 const components = {
-  pre: props => <div {...props} />,
-  code: props => <pre style={{color: 'tomato'}} {...props} />
+	pre: (props) => <div {...props} />,
+	code: (props) => <pre style={{ color: 'tomato' }} {...props} />,
 }
-export default props => (
-  <MDXProvider components={components}>
-    <main {...props}></main>
-  </MDXProvider>
+export default (props) => (
+	<MDXProvider components={components}>
+		<main {...props}></main>
+	</MDXProvider>
 )
 ```
 

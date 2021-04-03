@@ -11,7 +11,7 @@
 	flex-flow: column wrap;
 	justify-content: center;
 	align-items: center;
-	margin: 1em auto 2em;
+	margin: 2vh auto;
 	padding: 0;
 }
 
@@ -56,12 +56,24 @@ ul.top {
 	font-size: clamp(1.5rem, 2.25vw + 2.25vh, 2.25rem);
 	text-align: center;
 	font-family: var(--sans);
+	padding: 4vh 2vw 2vh;
+	margin: 2vh auto;
+	background: var(--glass);
+	border-radius: 2vh;
+	/* border: 1px inset var(--cloud); */
+}
+
+@media (min-width: 768px) and (min-height: 536px) {
+	.tree.home .primary {
+		margin: 3vh auto;
+	}
 }
 
 .tree.home .secondary {
 	font-size: clamp(1rem, 1.75vw + 1.75vh, 1.75rem);
 	text-align: center;
 	font-family: var(--heading);
+	padding: 1vh 1vw;
 }
 
 .tree.home .tertiary {

@@ -55,3 +55,8 @@ ol ul {
 	margin-top: 0;
 	margin-bottom: 0;
 }
+
+.microlist {
+	font-size: 10pt;
+	line-height: 1;
+}

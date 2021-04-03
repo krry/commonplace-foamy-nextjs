@@ -2,6 +2,7 @@
 	text-align: center;
 	position: relative;
 	background-color: var(--glass);
+	border-bottom: 1px solid var(--cloud);
 }
 
 .header h1 {

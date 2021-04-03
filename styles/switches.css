@@ -1,12 +1,12 @@
 .themeSwitch {
-	position: absolute;
+	position: fixed;
 	font-size: clamp(2rem, 3vw + 3vh, 4rem);
 	border-radius: 100%;
 	outline: none;
 	border: none;
 	background: none;
 	top: clamp(1.5rem, 2vw + 2vh, 4rem);
-	right: 2vw;
+	left: 2vw;
 	cursor: pointer;
 }
 
