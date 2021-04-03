@@ -24,7 +24,7 @@ export default function Test ({ filesFixed }) {
 }
 
 export async function getStaticProps () {
-	const dirPath = path.join(root, '_notes')
+	const dirPath = path.join(root, 'private')
 	const results = await patchMissingFrontMatter(dirPath)
 
 	return {
