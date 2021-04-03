@@ -51,5 +51,8 @@
 	"workbench.colorTheme": "Midnight City",
 	"[javascript]": {
 		"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+	},
+	"[ignore]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
 	}
 }
