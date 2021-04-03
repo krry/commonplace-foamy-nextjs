@@ -3,7 +3,7 @@ import NoteFields from './NoteFields'
 import CopyLeft from './CopyLeft'
 
 export default function SideBar({metadata}) {
-	console.log('metadata', metadata);
+	// console.log('metadata', metadata);
 	if (!metadata.slug) return null
 	return (
 		<aside className="sidebar">

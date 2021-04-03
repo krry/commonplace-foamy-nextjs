@@ -4,7 +4,7 @@ import Header from './Header'
 import config from '../site.config'
 
 export default function Layout({ children }, metadata) {
-	console.log('layout props', metadata)
+	// console.log('layout props', metadata)
 	return (
 		<>
 			<Meta />
