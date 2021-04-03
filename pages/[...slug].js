@@ -32,5 +32,5 @@ export const getStaticProps = async ({ params }) => {
 export default function NotePage ({ mdxSource, frontMatter }) {
 	if (!mdxSource) return <ErrorPage statusCode={404} />
 	const content = hydrate(mdxSource, { components: MDXComponents })
-	return <Layout {...frontMatter}> {content} </Layout>
+	return <Layout metadata={frontMatter}> {content} </Layout>
 }

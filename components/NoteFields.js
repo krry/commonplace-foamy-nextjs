@@ -2,12 +2,12 @@ function arrayFromCommaList(list) {
 	return list.split(',').map((w) => w.trim())
 }
 
-export default function NoteFields({ frontMatter }) {
-	const tags = frontMatter?.tags ?? 'untagged'
-	const time = frontMatter?.time ?? new Date()
+export default function NoteFields({ metadata }) {
+	const tags = metadata?.tags ?? 'untagged'
+	const time = metadata?.time ?? new Date()
 
-	const metadata = {
-		title: frontMatter?.title ?? 'Untitled',
+	const fields = {
+		title: metadata?.title ?? 'Untitled',
 		time: time.toLocaleString().replace(',', ''),
 		tags: arrayFromCommaList(tags),
 	}
@@ -15,11 +15,11 @@ export default function NoteFields({ frontMatter }) {
 		<>
 			<dl>
 				<dt>Title</dt>
-				<dd>{metadata.title}</dd>
+				<dd>{fields.title}</dd>
 				<dt>Time</dt>
-				<dd>{metadata.time}</dd>
+				<dd>{fields.time}</dd>
 				<dt>Tags</dt>
-				{metadata.tags.map((tag, index) => (
+				{fields.tags.map((tag, index) => (
 					<dd key={index}>
 						<a href={'/' + tag}>#{tag}</a>
 					</dd>

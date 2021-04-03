@@ -1,0 +1,60 @@
+---
+title: Snowpiercer - How to ship it continuously
+created: Thu Apr 01 2021 02:41:53 GMT-0700 (Pacific Daylight Time)
+modified: Fri Apr 02 2021 01:10:47 GMT-0700 (Pacific Daylight Time)
+tags: devmo, devops
+---
+
+# Snowpiercer - How to ship it continuously
+
+Snowpiercer, as you know, is the last hope of humanity. It is a perpetual motion machine, circling the Earth with its precious cargo: personnel. These personnel—the last vestiges of humanity—are carefully placed within Snowpiercer at their allotted stations, occupying their preordained particular positions, performing their discrete duties.
+
+Among our personnel we have:
+
+- users
+- stakeholders
+- designers
+- developers
+- coordinators
+- engineers
+- analysts
+- testers
+
+## As a user
+
+## For stakeholders
+
+## For designers
+
+## For producers
+
+## For architects
+
+## For coordinators
+
+## For developers: the new feature cycle
+
+Developers, yours is a simple station. In come the tickets requesting features, out go the commits. But it's never quite that easy, is it? On Snowpiercer it can be.
+
+If the designers and directors have performed their duties, the tickets are shimmering beacons of clarity and wisdom—a joy to read, and a pleasure to complete. Your role as a developer is to build the new features as specified, and to support them with tests that verify their operation and completion.
+
+For each requested feature, you shall:
+
+1. Branch `develop`, naming the new branch succinctly after the feature, e.g., `git branch feature/devzample`.
+2. Write unit, functional, and/or integration tests that comprehensively describe the new feature.
+3. Develop the feature, committing your progress as each test passes.
+4. When the feature is complete, publish it to Github.
+5. Submit a pull request for your feature branch into `develop`.
+6. Ask the most relevant other dev in your pod for a code review of that pull request.
+7. Field the reviewers comments and feedback, committing and publishing updates to the feature if necessary.
+8. When the feature is approved, rebase your branch on `develop`, then merge your branch into `develop`. Feature finished!
+
+## For engineers: releases, build, and deployment
+
+Engineers, you ensure that Snowpiercer keeps running smoothly and perpetually. A perpetual motion machine is still a machine after all. This machine, like any other, needs monitoring, maintenance, tuning, and refinement to keep running. These are your duties.
+
+Once the developers have finished a set of features, and the producers and coordinators have grouped the features into a coherent release that offers new and verifiable value to the users, your task begins.
+
+## For analysts
+
+## For testers

@@ -1,0 +1,139 @@
+---
+title: The many steps of setting up and hosting your own ghost blog
+created: Thu Apr 01 2021 02:41:53 GMT-0700 (Pacific Daylight Time)
+modified: Thu Apr 01 2021 02:41:53 GMT-0700 (Pacific Daylight Time)
+---
+
+# The many steps of setting up and hosting your own ghost blog
+
+Here's the goal: your new blog is sofa king cool and all your great ideas have a dais. All you have to do is breathe, and digest about 8 hours of pain into IT. You can rest easily investing 8 hours, once you see how much time others have spent assembling all of the components that comprise this wondrously automated Gutenberg of brilliance. ![Guinness' Brilliant]()
+
+1. Get the ghost blog code, decide if you need to build it yourself or just run `npm install --production` - I built the damn thing with grunt and bower and such, though I may not have needed to
+
+2. Run it locally and customize it until you're happy with it - I made my own theme, got a bunch of custom fonts thanks to typography.com and Google Fonts, and set the color palette and logos among a few other standard CSS reset things that were missing. I set my new theme up on SASS, made sure all elements abide the border-box-sizing, optimizeLegibility, and anti-aliased text-rendering that make-a look real niccccccce.
+
+3. Select a host. I used [the Ghost guide](http://docs.ghost.org/installation/deploy/) to help me get going. I choose DigitalOcean after trying AWS (they remembered that I'd tried them a while back and denied me a trial first-year like most of y'all would get).
+
+I tried Heroku first (they tend to wipe Ghost databases unless you jump through some hoops), and then tried to fit a round peg in a square hole by attempting to host a blog on Divshot. Divshot specializes in hosting static web apps. I am a little fuzzy on the 'static' part there, but I think a blog you can edit once it's on the server does not qualify as static. Perhaps a static web app may show dynamic content via services and API calls, but it's own code remains static once deployed.
+
+4. Configure your DNS to allow your host to use your domain name. I use DNSimple for domainy shit, they stay out of my way and make shit work. DigitalOcean, my host, asked for full NS swap, which I abided because had to.
+
+5. Then start configuring your server. `ssh` into that scraper piece and start learning linux. There are [slight differences in commands and package managers](https://help.ubuntu.com/community/SwitchingToUbuntu/FromLinux/RedHatEnterpriseLinuxAndFedora), but they pretty much do the same damn things. I chose Ubuntu because it's more well-used and I figured there would be more noobs already asking stupid questions on StackFlowExchange. it ought to have you set a root password on your first login
+   ssh root@xxx.xxx.xxx.xxx` // IP address, not xxx
+   cd ~
+
+6. Get latest system software
+   sudo apt-get upgrade
+   sudo apt-get git
+   sudo apt-get nodejs
+   sudo apt-get npm
+
+6.1. If you install `nodejs` on an Ubuntu box via apt-get, it might not let you use `node` as the run command (instead it lets ax25-node have the namespace and `node` is relegated to `nodejs`). this jacked up a lot of out-of-the-box scripts for me until I symlinked `nodejs` to `node` like so:
+ln -s /usr/bin/nodejs /usr/bin/node
+
+7. Deploy your local ghost to a remote repo, I used github, made it private becuz security. **first, make and name your <ghost_repo> on [github](http://github.com)**
+   cd ~/path/to/<ghost_repo>
+   git init
+   git add .
+   git commit -am "it's alive!"
+   git remote add git@github.com:<your_github_username>/<ghost_repo>.git
+
+8. Set up your server to be able to git that repo
+   Off to <b><i>key</i></b>ndyland:
+   cd ~/.ssh
+   Grind it out:
+   ssh-keygen -t rsa -C "krry@me.com"
+   Run dat agent:
+   eval "$(ssh-agent -s)"
+   Add it to das keychain:
+   ssh-add ~/.ssh/id_rsa
+   Testit:
+   ssh -T git@github.com
+   cat ~/.ssh/id_rsa.pub
+   copy your RSA key to your local system clipboard, then paste it into [Github's list of RSA keys on your account](https://github.com/settings/ssh)
+9. Clone dat repo into a nice spot
+   mkdir /var/www/ghost
+   cd /var/www/ghost
+   git clone git@github.com:<github_username>/<github_repo_name>.git
+10. Set up the server to auto-run your ghost app
+    find `YOUR_NODE_PATH` with this:
+    which node
+    then dive into the curls:
+    sudo curl https://raw.githubusercontent.com/TryGhost/Ghost-Config/master/init.d/ghost \
+     -o /etc/init.d/ghost
+    just a trim here, and a trim there:
+    vi /etc/init.d/ghost
+    GHOST_ROOT=/path/to/ghost
+    DAEMON=<NODE_PATH>
+11. Set up a _ghost_ user group, make your _root_ a part of the group
+    sudo useradd -r ghost -U
+    to check what users are laying in the cut (like neosporin):
+    cut -d: -f1 /etc/passwd
+12. Set the permissions so that the 'ghost' has partial `chownership` and can `chmodify` important files like `config.js` once deployed
+    sudo chown -R ghost:ghost /var/www/ghost
+    sudo chmod 755 /etc/init.d/ghost
+13. Time for everyone's favorite reaming: web server config
+    which nginx
+    if null results:
+    sudo apt-get install nginx
+    in Soviet Russia, nginx configures you
+    vi /etc/nginx/sites-available/ghost.conf
+    in there make the configs say right things
+
+```js
+server {
+    listen 80;
+    server_name <your_host_url.tld>;
+
+    location / {
+        proxy_set_header   X-Real-IP $remote_addr;
+        proxy_set_header   Host      $http_host;
+        proxy_pass         http://127.0.0.1:2368;
+    }
+}
+```
+
+```js
+server {
+    listen 0.0.0.0:80;
+    server_name <your.domain.name>;
+    access_log /var/log/nginx/<your-domain-name>.log;
+
+    location / {
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header HOST $http_host;
+        proxy_set_header X-NginX-Proxy true;
+
+        proxy_pass http://127.0.0.1:2368;
+        proxy_redirect off;
+    }
+}
+```
+
+then when you're done, link it up and RAWRstart your web server:
+sudo ln -s /etc/nginx/sites-available/ghost.conf /etc/nginx/sites-enabled/ghost.conf
+sudo service nginx restart 14. Then set up the server to forever run your app even after deploys and power cycles. you can `apt-get pm2` or `apt-get supervisor` or `apt-get forever`. I choose `supervisor` which took some doing as the Ghost docs weren't spot on, but after not doing this, I did this, which worked:
+
+It's apt to get it installed, supervisor.
+sudo apt-get install supervisor
+"Configure it out yourself, I'm tired and drunk", said your dad.
+vi /etc/supervisor/conf.d/ghost.conf
+Start it up:
+supervisorctl start ghost
+or you might need to specify the `.conf` file, I'm not sure:
+supervisorctl -c /etc/supervisor/supervisord.conf start ghost 15. Pull the ripcord. these make sure the ghost floats on its own:
+sudo update-rc.d ghost defaults
+sudo update-rc.d ghost enable
+sudo adduser <your_admin_server_username> ghost 16. Safen your haven. Get an SSL certificate from some sleazy cryptographer on the virtual street corner.
+copy your greasy little cert to the system clipboard from a super secure plaintext email and paste into a hidden spot on your server:
+vi /etc/ssl/certs/server.crt
+then put that stankin' cert in its place:
+mkdir /etc/nginx/ssl
+cp /etc/ssl/certs/server.crt /etc/nginx/ssl/server.crt 17. Build the ghost app on the server
+Install all dependencies
+npm install
+npm install --production
+Gather the front-end packages
+bower install --allow-root
+Run with the boars
+grunt init --verbose
