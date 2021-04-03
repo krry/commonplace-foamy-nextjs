@@ -1,10 +1,17 @@
-# Snowpiercer: Ship it perpetually
+---
+title: Snowpiercer - Ship it perpetually
+created: Thu Apr 01 2021 02:41:53 GMT-0700 (Pacific Daylight Time)
+modified: Thu Apr 01 2021 02:41:53 GMT-0700 (Pacific Daylight Time)
+---
+
+# Snowpiercer - Ship it perpetually
 
 Snowpiercer, as you know, is the last hope of humanity. It is a perpetual motion machine, circling the Earth with its precious cargo: techies. These techies—the last vestiges of humanity—are carefully placed within Snowpiercer at their allotted stations, occupying their particular, preordained positions, performing their discrete duties.
 
 Snowpiercer didn't just materialize though. When that long winter came, some of us were ready. Some were left frozen, but I and mine weathered the storm. If you're interested as to how, let's talk equipment. My survival shed was piled high with [`git flow`](https://github.com/nvie/gitflow), brimming with BDD and CI, and chockfull of feedback loops to wile away the lonely nights.
 
 But you're never alone on Snowpiercer. Among the personnel on this fatal rail we have:
+
 1. designers
 2. producers
 3. directors
@@ -17,14 +24,23 @@ But you're never alone on Snowpiercer. Among the personnel on this fatal rail we
 10. users
 
 ## 1. As a designer, I envision the product.
+
 ## 2. As a producer, I have the resources to make the product.
+
 ## 3. As a director, I keep the train on the tracks.
+
 ## 4. As an architect, I realize the product.
+
 ## 5. As a coordinator, I connect the cars.
+
 ## 6. As a developer, I build the product.
+
 ## 7. As an engineer, I ensure we go as fast as possible without running off the rails.
+
 ## 8. As a tester, I'm okay with failure as long as I detect it before you.
+
 ## 9. As an analyst, I knowish what you've been up to, to a point, in my acerbic way.
+
 ## 10. As a user, I love gelatin made of roaches, and I would have never known the difference.
 
 Developer, yours is a simple station. In come the tickets requesting features, out go the commits. But it's never quite that easy, is it? On Snowpiercer it can be.
@@ -32,6 +48,7 @@ Developer, yours is a simple station. In come the tickets requesting features, o
 If the designer and director have performed their duties, the tickets are shimmering beacons of clarity and wisdom—a joy to read, and a pleasure to complete. Your role as a developer is to build the new features as specified, and to support them with tests that verify their operation and completion.
 
 For each requested feature, you:
+
 1. Branch `develop`, naming the new branch succinctly after the feature, e.g., `git flow feature start devsample` which is roughly equivalent to `git checkout develop && git pull origin develop && git branch feature/devsample`.
 2. Write unit, functional, and/or integration tests that comprehensively describe the new feature.
 3. Develop the feature, committing your progress as each test passes.
@@ -48,9 +65,12 @@ Engineer, you ensure that Snowpiercer keeps running smoothly and perpetually. A 
 Once the developer has finished a set of features, and the director and coordinator have grouped the features into a coherent release that offers new and verifiable value to the users, your task begins.
 
 For each slated release, you:
+
 1. Verify with the director, the coordinator, and the developer that the set of features to be released is represented in the `develop` branch. A properly attended task manager will automate this step.
 2. Branch `develop`, naming the new release branch after the release, e.g., `git flow release start new-release-on-life` which is equivalent to `git checkout develop && git pull origin develop && git branch release/new-release-on-life`
 
 ## 8. As a tester, I simulate multitudes of users to predict
+
 ## 9. As an analyst, I measure the product and its fit in the market.
+
 ## 10. As a user, I need the product.

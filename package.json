@@ -1,14 +1,13 @@
 {
 	"name": "commonplace",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"license": "CC-BY-NC-SA-4.0",
 	"repository": {
 		"git": "git@github.com:krry/commonplace.git"
 	},
 	"scripts": {
-		"dev": "NODE_OPTIONS='--inspect' next dev",
+		"dev": "NODE_OPTIONS='--inspect' next dev --port 2891",
 		"dev:watch": "next-remote-watch ./_notes",
-		"lint": "eslint **/*.js --fix",
 		"build": "next build",
 		"start": "next start"
 	},
@@ -29,7 +28,6 @@
 	},
 	"devDependencies": {
 		"babel-plugin-superjson-next": "^0.2.3",
-		"eslint": "^7.23.0",
 		"next-remote-watch": "^1.0.0",
 		"postcss-advanced-variables": "^3.0.1",
 		"postcss-preset-env": "^6.7.0",
@@ -39,9 +37,6 @@
 		"remark-inline-links": "5.0.0",
 		"remark-numbered-footnote-labels": "^1.1.0",
 		"remark-unwrap-images": "^2.0.0",
-		"remark-wiki-link": "1.0.2",
-		"standard": "^16.0.3",
-		"stylelint": "^13.12.0",
-		"stylelint-config-standard": "^21.0.0"
+		"remark-wiki-link": "1.0.2"
 	}
 }
