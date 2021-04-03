@@ -30,7 +30,7 @@
 		"**/node_modules": true
 	},
 	"foam.edit.linkReferenceDefinitions": "withoutExtensions",
-	"foam.openDailyNote.directory": "_notes/journal",
+	"foam.openDailyNote.directory": "_notes/remember/journal",
 	"foam.openDailyNote.fileExtension": "mdx",
 	"foam.openDailyNote.filenameFormat": "yyyy-mm-dd",
 	"foam.openDailyNote.titleFormat": "'---'\n'title: Journal of Kerrbear 'yyyy-mm-dd\n'time: 'yyyy-mm-dd' 'HH:MM:ss\n'tags: journal '\n'---'\n\n'# 'yyyy-mm-dd\n'## Journal of Kerrbear'",

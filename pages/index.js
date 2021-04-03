@@ -10,8 +10,8 @@ export default function Index () {
 			<hr />
 			<footer style={{ textAlign: 'center' }}>
 				<p>
-					Welcome to the <Link href="/projects/commonplace">Commonplace Book</Link> of{' '}
-					<Link href="/projects/commonplace/who">Kerry Snyder</Link>
+					Welcome to the <Link href="/intend/commonplace-book">Commonplace Book</Link> of{' '}
+					<Link href="/intend/who-i-am">Kerry Snyder</Link>
 				</p>
 				<p>
 					<CopyLeft />

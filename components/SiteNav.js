@@ -5,50 +5,50 @@ export default function SiteNav({ location }) {
 		<nav className={'tree ' + location}>
 			<ul className="top">
 				<li className="primary">
-					<Link href="/projects">Projects</Link>
+					<Link href="/intend">Intend</Link>
 					<ul className="second">
 						<li className="tertiary">
-							<Link href="/projects/nameless">Nameless</Link>
+							<Link href="/intend/nameless">Nameless</Link>
 						</li>
 						<li className="tertiary">
-							<Link href="/projects/the-well-of-being">The Well of Being</Link>
+							<Link href="/intend/the-well-of-being">The Well of Being</Link>
 						</li>
 						<li className="tertiary">
-							<Link href="/projects/this-is-it">This is It</Link>
+							<Link href="/intend/this-is-it">This is It</Link>
 						</li>
 						<li className="tertiary">
-							<Link href="/projects/commonplace">Commonplace</Link>
+							<Link href="/intend/commonplace">Commonplace</Link>
 						</li>
 						<li className="tertiary">
-							<Link href="/projects/easeness">Easeness</Link>
+							<Link href="/intend/easeness">Easeness</Link>
 						</li>
 					</ul>
 				</li>
 				<li className="primary">
-					<Link href="/areas">Areas</Link>
+					<Link href="/attend">Attend</Link>
 					<ul className="second">
 						<li className="tertiary">
-							<Link href="/areas/atmanaut">Atmanaut</Link>
+							<Link href="/attend/atmanaut">Atmanaut</Link>
 						</li>
 						<li className="tertiary">
-							<Link href="/areas/get-real">Get Real</Link>
+							<Link href="/attend/get-real">Get Real</Link>
 						</li>
 						<li className="tertiary">
-							<Link href="/areas/sovereignty">Sovereignty</Link>
+							<Link href="/attend/sovereignty">Sovereignty</Link>
 						</li>
 						<li className="tertiary">
-							<Link href="/areas/full-smile">Full Smile</Link>
+							<Link href="/attend/full-smile">Full Smile</Link>
 						</li>
 					</ul>
 				</li>
 				<li className="secondary">
-					<Link href="/resources">Resources</Link>
+					<Link href="/remember">Remember</Link>
 				</li>
 				<li className="secondary">
-					<Link href="/archives">Archives</Link>
+					<Link href="/forget">Forget</Link>
 				</li>
 				<li className="secondary">
-					<Link href="/projects/commonplace">Meta</Link>
+					<Link href="/intend/commonplace">Meta</Link>
 				</li>
 			</ul>
 		</nav>
