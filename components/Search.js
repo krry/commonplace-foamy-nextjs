@@ -12,15 +12,15 @@ export default function Search () {
 	// useHotkeys('esc', () => searchRef.current.blur())
 
 	const searchEndpoint = query => `api/search?q=${query}`
-	const controller = new AbortController()
-	const signal = controller.signal
+	// const controller = new AbortController()
+	// const signal = controller.signal
 
 	const onChange = useCallback((event) => {
 		const query = event.target.value
 		setQuery(query)
 		if (query.length) {
 			// controller.abort()
-			fetch(searchEndpoint(query), {signal})
+			fetch(searchEndpoint(query))
 				.then(res => res.json())
 				.then(res => {
 					setResults(res.results)
