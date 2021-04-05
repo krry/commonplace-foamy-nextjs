@@ -11,7 +11,7 @@ export default function Search () {
 	// useHotkeys('command+k', () => searchRef.current.focus())
 	// useHotkeys('esc', () => searchRef.current.blur())
 
-	const searchEndpoint = query => `api/search?q=${query}`
+	const searchEndpoint = query => `/api/search?q=${query}`
 	// const controller = new AbortController()
 	// const signal = controller.signal
 
