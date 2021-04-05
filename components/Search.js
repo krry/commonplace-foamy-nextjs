@@ -1,11 +1,15 @@
-import {useCallback, useRef, useState} from 'react'
+import {useCallback, useRef, useState, useEffect} from 'react'
 import Link from 'next/link'
+import {useHotkeys} from 'react-hotkeys-hook'
 
 export default function Search () {
 	const searchRef = useRef(null)
 	const [query, setQuery] = useState('')
 	const [active, setActive] = useState(false)
 	const [results, setResults] = useState([])
+
+	useHotkeys('command+k', () => searchRef.current.focus())
+	useHotkeys('esc', () => searchRef.current.blur())
 
 	const searchEndpoint = query => `api/search?q=${query}`
 	const controller = new AbortController()

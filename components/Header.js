@@ -1,8 +1,10 @@
+import {useRef} from 'react'
 import Link from 'next/link'
-import ThemeSwitch from './ThemeSwitch'
 import Search from './Search'
+import ThemeSwitch from './ThemeSwitch'
 
 export default function Header({ siteTitle }) {
+	const searchRef = useRef(null)
 	return (
 		<>
 			<header className="header">
@@ -14,7 +16,7 @@ export default function Header({ siteTitle }) {
 						<small> of an Atmanaut</small>
 					</h1>
 				</nav>
-				<Search />
+				<Search ref={searchRef} />
 			</header>
 		</>
 	)
