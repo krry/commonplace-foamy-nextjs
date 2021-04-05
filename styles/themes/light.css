@@ -12,4 +12,5 @@
 	--link-tepid: var(--foam);
 	--shade: var(--shadow);
 	--glare: var(--shaglow);
+	--flair: hsl(30, 58%, 48%);
 }

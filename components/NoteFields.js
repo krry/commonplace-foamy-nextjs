@@ -4,11 +4,13 @@ function arrayFromCommaList(list) {
 
 export default function NoteFields({ metadata }) {
 	const tags = metadata?.tags ?? 'untagged'
-	const time = metadata?.time ?? new Date()
+	const time = metadata?.time ?? metadata?.created ?? new Date()
+
+	// console.log('time', typeof time);
 
 	const fields = {
 		title: metadata?.title ?? 'Untitled',
-		time: time.toLocaleString().replace(',', ''),
+		time: time.split(' ').slice(0, -4).join(' '),
 		tags: arrayFromCommaList(tags),
 	}
 	return (

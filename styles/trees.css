@@ -47,6 +47,10 @@ ul.top {
 	margin-top: 1em;
 }
 
+.tree.side h3 {
+	display: none;
+}
+
 .tree.home li {
 	flex: 1 0 auto;
 	margin: 0.25em 0.5rem;
@@ -79,6 +83,20 @@ ul.top {
 .tree.home .tertiary {
 	text-align: center;
 	font-size: clamp(0.875rem, 1.5vw + 1.5vh, 1.5rem);
+}
+
+.tree.side .primary,
+.tree.side .secondary {
+	line-height: 1.25rem;
+	margin-bottom: 0.25rem;
+}
+
+.tree.side + h4 {
+	margin-top: -0.25rem;
+}
+
+.tree.side .second {
+	display: none;
 }
 
 .tree.side .primary {

@@ -1,6 +1,6 @@
 export default {
 	site: {
-		title: 'The Commonplace of an Atmanaut',
+		title: 'Commonplace ☉⚚☉ Atmanaut',
 		description:
 			'A new and ancient digital mind garden, Zettelkasten, and commonplace book built with Foamy-NextJS (Foam + NextJS + MDX + PostCSS)',
 		author: 'Kerrbear',

@@ -26,12 +26,8 @@
 .noteBody::after {
 	content: '⚜';
 	font-size: 3rem;
-	color: var(--zephyr);
+	color: var(--cloud);
 	margin: 1em auto;
-}
-
-.dark .noteBody::after {
-	color: var(--daisy);
 }
 
 .sidebar,

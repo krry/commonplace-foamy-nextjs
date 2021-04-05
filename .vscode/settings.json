@@ -54,5 +54,8 @@
 	},
 	"[ignore]": {
 		"editor.defaultFormatter": "foxundermoon.shell-format"
-	}
+	},
+	"frontMatter.taxonomy.categories": [
+		"reading"
+	]
 }

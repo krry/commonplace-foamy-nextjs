@@ -18,7 +18,7 @@ export default function AllNotes ({ allNotes }) {
 					<div key={index}>
 						<dt>{note.title || ''}</dt>
 						<dd>
-							<a href={note.slug}>{note.slug}</a>
+							<a href={note?.slug}>{note.slug}</a>
 						</dd>
 					</div>
 				))}

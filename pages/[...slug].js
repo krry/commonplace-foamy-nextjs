@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
 	let slug = 'index'
 
-	if (params && params.slug) {
+	if (params?.slug) {
 		slug = Array.isArray(params.slug) ? params.slug.join('/') : params.slug
 	}
 
@@ -30,6 +30,7 @@ export const getStaticProps = async ({ params }) => {
 }
 
 export default function NotePage ({ mdxSource, frontMatter }) {
+	// console.log('frontMatter', frontMatter);
 	if (!mdxSource) return <ErrorPage statusCode={404} />
 	const content = hydrate(mdxSource, { components: MDXComponents })
 	return <Layout metadata={frontMatter}> {content} </Layout>

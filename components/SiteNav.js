@@ -8,19 +8,19 @@ export default function SiteNav({ location }) {
 					<Link href="/intend">Intend</Link>
 					<ul className="second">
 						<li className="tertiary">
+							<Link href="/intend/commonplace">Commonplace</Link>
+						</li>
+						<li className="tertiary">
 							<Link href="/intend/nameless">Nameless</Link>
+						</li>
+						<li className="tertiary">
+							<Link href="/intend/easeness">Easeness</Link>
 						</li>
 						<li className="tertiary">
 							<Link href="/intend/the-well-of-being">The Well of Being</Link>
 						</li>
 						<li className="tertiary">
 							<Link href="/intend/this-is-it">This is It</Link>
-						</li>
-						<li className="tertiary">
-							<Link href="/intend/commonplace">Commonplace</Link>
-						</li>
-						<li className="tertiary">
-							<Link href="/intend/easeness">Easeness</Link>
 						</li>
 					</ul>
 				</li>
@@ -49,6 +49,9 @@ export default function SiteNav({ location }) {
 				</li>
 				<li className="secondary">
 					<Link href="/intend/commonplace">Meta</Link>
+				</li>
+				<li className="secondary">
+					<Link href="/intend/">About the FAIR Method</Link>
 				</li>
 			</ul>
 		</nav>

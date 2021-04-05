@@ -13,4 +13,5 @@
 	--link-tepid: var(--daisy);
 	--shade: var(--ghost);
 	--glare: var(--haze);
+	--flair: hsl(330, 78%, 48%);
 }
