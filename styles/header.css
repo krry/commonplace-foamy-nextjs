@@ -1,5 +1,6 @@
 .header {
-	text-align: center;
+	text-align: left;
+	padding-left: 10vw;
 	position: relative;
 	background-color: var(--glass);
 	border-bottom: 1px solid var(--cloud);
@@ -30,13 +31,18 @@
 	vertical-align: middle;
 }
 
-.header h1:hover,
-.header h1:focus,
-.header h1:visited:hover {
-	text-decoration: none;
+.header:hover,
+.header:focus,
+.header:visited:hover {
 	outline-width: 4px;
 	outline-offset: -2px;
 	outline-color: inherit;
 	color: var(--smoke);
 	background-color: var(--frost);
+}
+
+.header:hover h1,
+.header:focus h1,
+.header:visited:hover h1 {
+	text-decoration: none;
 }

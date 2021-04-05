@@ -204,6 +204,7 @@ textarea {
 @import 'links';
 @import 'header';
 @import 'flex';
+@import 'search';
 
 .brobding {
 	font-size: clamp(5rem, 25vw + 25vh, 100vw);

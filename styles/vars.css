@@ -21,4 +21,5 @@
 	--sans: 'Quicksand', system-ui;
 	--mono: 'Inconsolata', monospace;
 	--heading: 'MuseoModerno', 'Comic Sans MS', system-ui;
+	--bevel: 0.25rem;
 }

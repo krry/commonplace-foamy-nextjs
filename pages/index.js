@@ -13,9 +13,7 @@ export default function Index () {
 					Welcome to the <Link href="/intend/commonplace-book">Commonplace Book</Link> of{' '}
 					<Link href="/intend/who-i-am">Kerry Snyder</Link>
 				</p>
-				<p>
-					<CopyLeft />
-				</p>
+				<CopyLeft />
 			</footer>
 		</Layout>
 	)

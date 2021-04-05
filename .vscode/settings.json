@@ -1,7 +1,7 @@
 {
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.fontFamily": "'SauceCodePro Nerd Font', 'Space Mono for Powerline', 'UbuntuMono Nerd Font', 'mononoki Nerd Font', 'FantasqueSansMono Nerd Font', 'OpenDyslexic Nerd Font', 'Inconsolata-g for Powerline'",
-	"editor.fontSize": 17,
+	"editor.fontSize": 16,
+	"editor.fontLigatures": true,
 	"editor.minimap.enabled": false,
 	"editor.overviewRulerBorder": false,
 	"editor.wrappingIndent": "indent",
@@ -55,7 +55,5 @@
 	"[ignore]": {
 		"editor.defaultFormatter": "foxundermoon.shell-format"
 	},
-	"frontMatter.taxonomy.categories": [
-		"reading"
-	]
+	"frontMatter.taxonomy.categories": ["reading"]
 }

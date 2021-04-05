@@ -51,7 +51,7 @@ export default function SiteNav({ location }) {
 					<Link href="/intend/commonplace">Meta</Link>
 				</li>
 				<li className="secondary">
-					<Link href="/intend/">About the FAIR Method</Link>
+					<Link href="/intend/fair-method">F.A.I.R.</Link>
 				</li>
 			</ul>
 		</nav>

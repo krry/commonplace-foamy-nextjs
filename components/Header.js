@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ThemeSwitch from './ThemeSwitch'
+import Search from './Search'
 
 export default function Header({ siteTitle }) {
 	return (
@@ -13,6 +14,7 @@ export default function Header({ siteTitle }) {
 						<small> of an Atmanaut</small>
 					</h1>
 				</nav>
+				<Search />
 			</header>
 		</>
 	)

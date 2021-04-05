@@ -10,7 +10,7 @@ export default function NoteFields({ metadata }) {
 
 	const fields = {
 		title: metadata?.title ?? 'Untitled',
-		time: time.split(' ').slice(0, -4).join(' '),
+		time: time.toLocaleString().split(' ').slice(0, -4).join(' '),
 		tags: arrayFromCommaList(tags),
 	}
 	return (

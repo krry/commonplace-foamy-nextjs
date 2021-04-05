@@ -7,16 +7,23 @@
 	},
 	"scripts": {
 		"dev": "NODE_OPTIONS='--inspect' next dev --port 2891",
-		"dev:watch": "next-remote-watch ./_notes",
+		"dev:watch": "PORT=2891 next-remote-watch ./_notes",
 		"build": "next build",
+		"cache": "node lib/cache.js",
 		"start": "next start"
+	},
+	"husky": {
+		"pre-commit": "npm run cache && git add _cache/data.js"
 	},
 	"dependencies": {
 		"@fontsource/inconsolata": "^4.2.2",
 		"@fontsource/museomoderno": "^4.2.2",
 		"@fontsource/quicksand": "^4.2.2",
 		"fs-readdir-recursive": "^1.1.0",
+		"fuse.js": "^6.4.6",
+		"fuzzy-search": "^3.2.1",
 		"gray-matter": "4.0.2",
+		"husky": "^6.0.0",
 		"next": "^10.0.9",
 		"next-auth": "^3.13.3",
 		"next-mdx-remote": "^2.1.3",
@@ -37,6 +44,7 @@
 		"remark-inline-links": "5.0.0",
 		"remark-numbered-footnote-labels": "^1.1.0",
 		"remark-unwrap-images": "^2.0.0",
-		"remark-wiki-link": "1.0.2"
+		"remark-wiki-link": "1.0.2",
+		"stylelint-config-standard": "^21.0.0"
 	}
 }
