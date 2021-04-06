@@ -64,7 +64,6 @@ ul.top {
 	margin: 2vh auto;
 	background: var(--glass);
 	border-radius: 2vh;
-	/* border: 1px inset var(--cloud); */
 }
 
 @media (min-width: 768px) and (min-height: 536px) {
