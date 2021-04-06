@@ -1,43 +1,47 @@
 ---
 title: Automatically publish posts from your iPhone to your Jekyll blog
-created: Thu Apr 01 2021 02:41:53 GMT-0700 (Pacific Daylight Time)
-modified: Thu Apr 01 2021 02:41:53 GMT-0700 (Pacific Daylight Time)
+created: Thu Apr 01 2015 02:41:53 GMT-0700 (Pacific Daylight Time)
+modified: Thu Apr 01 2015 02:41:53 GMT-0700 (Pacific Daylight Time)
 ---
+
 # Automatically publish posts from your iPhone to your Jekyll blog
 
-I had a dream—a dream where I'm passenging in the bucket seat of a U-haul on Nevada State Highway 447 on the way to Burning Man, swiftly tapping out some markdown in the lovely iA Writer app on my iPhone 6+. When I save that file to my Dropbox (which the Writer app supports), my phone waits for a cell tower to come into range, then sends those several hundreds bytes of markdown off to my puffy Dropbox cloud. When the new post reaches the cloud, my home computer senses its presence. It pulls it down from the cloud and pushes it up to the Github repository that holds my Jekyll blog, which auto-publishes any new posts that get committed to that repo.
+I had a dream—a dream where I'm passenging in the bucket seat of a U-haul on Nevada State Highway 447 on the way to Burning Man, swiftly tapping out some markdown in the lovely iA Writer app on my old-fangled iPhone 6+. When I save that file to my Dropbox (which the Writer app supports), my phone waits for a cell tower to come into range, then sends those several hundreds bytes of markdown off to my puffy Dropbox cloud. When the new post reaches the cloud, my home computer senses its presence. It pulls it down from the cloud and pushes it up to the Github repository that holds my Jekyll blog, which auto-publishes any new posts that get committed to that repo.
 
 ## This is no longer just a dream.
 
 In the last few hours, I have made this dream a reality. In fact, this post may just be my first dream come true.
 
 ### Here's the toolset:
-* [Dropbox for Mac](https://www.dropbox.com/downloading?src=index) and [iOS](https://itunes.apple.com/us/app/dropbox/id327630330?mt=8)
-* [CommonMark MarkDown](http://commonmark.org/)
-* [iA Writer for iOS](https://ia.net/writer/ios)
-* [Workflow for iOS](https://workflow.is/)
-* [Automator Folder Actions](http://www.maclife.com/article/howtos/how_use_folder_actions_automator)
-* [A Jekyll blog](http://jekyllrb.com/) [hosted via](https://help.github.com/articles/using-jekyll-with-pages/) [Github Pages](https://pages.github.com/)
+
+- [Dropbox for Mac](https://www.dropbox.com/downloading?src=index) and [iOS](https://itunes.apple.com/us/app/dropbox/id327630330?mt=8)
+- [CommonMark MarkDown](http://commonmark.org/)
+- [iA Writer for iOS](https://ia.net/writer/ios)
+- [Workflow for iOS](https://workflow.is/)
+- [Automator Folder Actions](http://www.maclife.com/article/howtos/how_use_folder_actions_automator)
+- [A Jekyll blog](http://jekyllrb.com/) [hosted via](https://help.github.com/articles/using-jekyll-with-pages/) [Github Pages](https://pages.github.com/)
 
 ### How did it come together?
 
 First a big shoutout to Amit Jain ([@gravicle](https://twitter.com/gravicle)) and Mike Gabriel ([@mikegabriel](https://twitter.com/mikegabriel)) for providing what were two missing links in this ramshackle workflow I had dreamed up. Mike up in Moose Jaw keyed me into [using Workflow on my phone to manipulate the file in my Dropbox](http://mikegabriel.net/2015/04/27/publishing-to-a-jekyll-blog-from-ios.html). And Amit down in Kansas City [proffered the Automator Folder Action](http://spinhalf.net/2015/01/04/getting-started-with-a-jekyll-blog/), though he ended up with a different solution for his own purposes. Thanks, guys! You rock for doing the hard parts and publishing them.
 
 ### Here's what I did:
+
 1. Linked my **iA Writer** app with my **Dropbox**.
 2. Built a [custom **Workflow**](https://workflow.is/workflows/fbb77849337e4b6b8e25964dcd659899) that:
-	* accepts a Dropbox file
-	* formats its filename to be Jekyll-friendly
-	* then saves it in the magical `Posts` folder in my Dropbox
+   - accepts a Dropbox file
+   - formats its filename to be Jekyll-friendly
+   - then saves it in the magical `Posts` folder in my Dropbox
 3. Wrote a Folder Action for the `Posts` folder that:
-	* watches for new files in the folder
-	* grabs the current time and date
-	* copies the content of the `Posts` folder to the `_posts` folder in my local Jekyll environment
-	* commits and pushes the Jekyll blog directory
+   - watches for new files in the folder
+   - grabs the current time and date
+   - copies the content of the `Posts` folder to the `_posts` folder in my local Jekyll environment
+   - commits and pushes the Jekyll blog directory
 
 ![Dropbox-to-Jekyll Folder Action](https://dl.dropboxusercontent.com/u/23825/jekyll-workflow.png)
 
 ### Here's how it works:
+
 1. I open iA Writer app and tap out a post in plaintext markdown on my phone, where it saves to my Dropbox.
 2. I hit the Home Screen icon for the custom Workflow.
 3. It asks me which Dropbox file I want to post, e.g., "Dropbox/Drafts/Wrote and published this with my phone.txt".

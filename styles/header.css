@@ -25,10 +25,17 @@
 }
 
 .header h1 small {
+	display: none;
 	font-size: 50%;
 	opacity: 0.7;
 	font-variation-settings: 'wght' 111;
 	vertical-align: middle;
+}
+
+@media (min-width: 536px) {
+	.header h1 small {
+		display: inline;
+	}
 }
 
 .header:hover,

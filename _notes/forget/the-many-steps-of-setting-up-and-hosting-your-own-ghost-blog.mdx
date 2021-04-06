@@ -2,6 +2,7 @@
 title: The many steps of setting up and hosting your own ghost blog
 created: Thu Apr 01 2021 02:41:53 GMT-0700 (Pacific Daylight Time)
 modified: Thu Apr 01 2021 02:41:53 GMT-0700 (Pacific Daylight Time)
+tags: saga, devmo, obsolete
 ---
 
 # The many steps of setting up and hosting your own ghost blog
@@ -23,61 +24,80 @@ I tried Heroku first (they tend to wipe Ghost databases unless you jump through 
    cd ~
 
 6. Get latest system software
-   sudo apt-get upgrade
-   sudo apt-get git
-   sudo apt-get nodejs
-   sudo apt-get npm
+
+```sh
+sudo apt-get upgrade
+sudo apt-get git
+sudo apt-get nodejs
+sudo apt-get npm
+```
 
 6.1. If you install `nodejs` on an Ubuntu box via apt-get, it might not let you use `node` as the run command (instead it lets ax25-node have the namespace and `node` is relegated to `nodejs`). this jacked up a lot of out-of-the-box scripts for me until I symlinked `nodejs` to `node` like so:
+
+```bash
 ln -s /usr/bin/nodejs /usr/bin/node
+```
 
 7. Deploy your local ghost to a remote repo, I used github, made it private becuz security. **first, make and name your <ghost_repo> on [github](http://github.com)**
-   cd ~/path/to/<ghost_repo>
-   git init
-   git add .
-   git commit -am "it's alive!"
-   git remote add git@github.com:<your_github_username>/<ghost_repo>.git
+
+```bash
+cd ~/path/to/<ghost_repo>
+git init
+git add .
+git commit -am "it's alive!"
+git remote add git@github.com:<your_github_username>/<ghost_repo>.git
+```
 
 8. Set up your server to be able to git that repo
    Off to <b><i>key</i></b>ndyland:
-   cd ~/.ssh
+   `cd ~/.ssh`
    Grind it out:
-   ssh-keygen -t rsa -C "krry@me.com"
+   `ssh-keygen -t rsa -C "krry@me.com"`
    Run dat agent:
-   eval "$(ssh-agent -s)"
+   `eval "$(ssh-agent -s)"`
    Add it to das keychain:
-   ssh-add ~/.ssh/id_rsa
+   `ssh-add ~/.ssh/id_rsa`
    Testit:
-   ssh -T git@github.com
-   cat ~/.ssh/id_rsa.pub
+   `ssh -T git@github.com`
+   `cat ~/.ssh/id_rsa.pub`
    copy your RSA key to your local system clipboard, then paste it into [Github's list of RSA keys on your account](https://github.com/settings/ssh)
 9. Clone dat repo into a nice spot
-   mkdir /var/www/ghost
-   cd /var/www/ghost
-   git clone git@github.com:<github_username>/<github_repo_name>.git
-10. Set up the server to auto-run your ghost app
-    find `YOUR_NODE_PATH` with this:
-    which node
+
+```sh
+mkdir /var/www/ghost
+cd /var/www/ghost
+git clone git@github.com:<github_username>/<github_repo_name>.git
+```
+
+10. Set up the server to auto-run your ghost app. Find `YOUR_NODE_PATH` with this:
+    `which node`
     then dive into the curls:
-    sudo curl https://raw.githubusercontent.com/TryGhost/Ghost-Config/master/init.d/ghost \
-     -o /etc/init.d/ghost
+    `sudo curl https://raw.githubusercontent.com/TryGhost/Ghost-Config/master/init.d/ghost -o /etc/init.d/ghost`
     just a trim here, and a trim there:
-    vi /etc/init.d/ghost
-    GHOST_ROOT=/path/to/ghost
-    DAEMON=<NODE_PATH>
+
+```sh
+	vi /etc/init.d/ghost
+GHOST_ROOT=/path/to/ghost
+DAEMON=<NODE_PATH>
+```
+
 11. Set up a _ghost_ user group, make your _root_ a part of the group
-    sudo useradd -r ghost -U
+    `sudo useradd -r ghost -U`
     to check what users are laying in the cut (like neosporin):
-    cut -d: -f1 /etc/passwd
+    `cut -d: -f1 /etc/passwd`
 12. Set the permissions so that the 'ghost' has partial `chownership` and can `chmodify` important files like `config.js` once deployed
-    sudo chown -R ghost:ghost /var/www/ghost
-    sudo chmod 755 /etc/init.d/ghost
+
+```sh
+	sudo chown -R ghost:ghost /var/www/ghost
+sudo chmod 755 /etc/init.d/ghost
+```
+
 13. Time for everyone's favorite reaming: web server config
-    which nginx
+    `which nginx`
     if null results:
-    sudo apt-get install nginx
+    `sudo apt-get install nginx`
     in Soviet Russia, nginx configures you
-    vi /etc/nginx/sites-available/ghost.conf
+    `vi /etc/nginx/sites-available/ghost.conf`
     in there make the configs say right things
 
 ```js
@@ -111,29 +131,42 @@ server {
 ```
 
 then when you're done, link it up and RAWRstart your web server:
-sudo ln -s /etc/nginx/sites-available/ghost.conf /etc/nginx/sites-enabled/ghost.conf
-sudo service nginx restart 14. Then set up the server to forever run your app even after deploys and power cycles. you can `apt-get pm2` or `apt-get supervisor` or `apt-get forever`. I choose `supervisor` which took some doing as the Ghost docs weren't spot on, but after not doing this, I did this, which worked:
+`sudo ln -s /etc/nginx/sites-available/ghost.conf /etc/nginx/sites-enabled/ghost.conf`
+`sudo service nginx restart`
+
+14. Then set up the server to forever run your app even after deploys and power cycles. you can `apt-get pm2` or `apt-get supervisor` or `apt-get forever`. I choose `supervisor` which took some doing as the Ghost docs weren't spot on, but after not doing this, I did this, which worked:
 
 It's apt to get it installed, supervisor.
-sudo apt-get install supervisor
+`sudo apt-get install supervisor`
 "Configure it out yourself, I'm tired and drunk", said your dad.
-vi /etc/supervisor/conf.d/ghost.conf
+`vi /etc/supervisor/conf.d/ghost.conf`
 Start it up:
-supervisorctl start ghost
+`supervisorctl start ghost`
 or you might need to specify the `.conf` file, I'm not sure:
-supervisorctl -c /etc/supervisor/supervisord.conf start ghost 15. Pull the ripcord. these make sure the ghost floats on its own:
+`supervisorctl -c /etc/supervisor/supervisord.conf start ghost`
+
+15. Pull the ripcord. these make sure the ghost floats on its own:
+
+```sh
 sudo update-rc.d ghost defaults
 sudo update-rc.d ghost enable
-sudo adduser <your_admin_server_username> ghost 16. Safen your haven. Get an SSL certificate from some sleazy cryptographer on the virtual street corner.
-copy your greasy little cert to the system clipboard from a super secure plaintext email and paste into a hidden spot on your server:
-vi /etc/ssl/certs/server.crt
-then put that stankin' cert in its place:
-mkdir /etc/nginx/ssl
-cp /etc/ssl/certs/server.crt /etc/nginx/ssl/server.crt 17. Build the ghost app on the server
-Install all dependencies
+sudo adduser <your_admin_server_username> ghost
+```
+
+16. Safen your haven. Get an SSL certificate from some sleazy cryptographer on the virtual street corner. Copy that greasy little cert to the system clipboard from a super secure plaintext email and paste into a hidden spot on your server:
+    `vi /etc/ssl/certs/server.crt`
+    then put that stankin' cert in its place:
+    `mkdir /etc/nginx/ssl`
+    `cp /etc/ssl/certs/server.crt /etc/nginx/ssl/server.crt`
+17. Build the ghost app on the server
+    Install all dependencies
+
+```sh
 npm install
 npm install --production
+```
+
 Gather the front-end packages
-bower install --allow-root
+`bower install --allow-root`
 Run with the boars
-grunt init --verbose
+`grunt init --verbose`
