@@ -1,0 +1,117 @@
+---
+title: Nameless Todos
+created: 2021-04-08T06:42:29.450Z
+tags:
+---
+
+# Nameless Todos
+
+## Now
+
+- [x] remove entries from journal?
+- [ ] removing an entry doesn't happen until Journal is reloaded
+- [ ] refresh Journal entry list after remove entry
+- [x] see logged in user profile on journal or config pages
+- [x] order in journal is opposite intended. latest first pleaze
+
+## Bugs
+
+- [ ] Oracle first step scroll left is janky on mobile
+- [x] Sitenav themeswitch overlaps logo on mobile
+
+## Next
+
+- [ ] make a page for each roll?
+- [ ] store users in Sanity?
+- [x] search? integration - Fuse or Algolia
+- [ ] merge phone and email accounts when logged in with both
+- [ ] save config preferences to firebase
+- expand and host database
+  - consider firebase with a simple custom CMS
+  - consider Sanity if vue-sanity can work
+  - consider Airtable or Serverless functions
+  - [x] ask Josh
+- [ ] add [Takashima translation](http://www.russellcottrell.com/VirtualYarrowStalks/TakashimaEkidan.htm)
+
+## Fridge
+
+### Text/source - content
+
+- Visionary from Paul O'Brien
+- Online Clarity from Hilary Barrett
+- the Takashima translation
+- consider making clones of other divination methods
+	- [Geomancy](https://www.wikiwand.com/en/Geomantic_figures)
+	- tarot
+	- astrology
+
+### Interaction
+
+- [ ] zzfx on reveal answer and show oracle
+- [ ] arrow keys to move between tiles
+- [ ] show adjacent cards with arrows
+  - [ ] add tappable arrows on sides of card
+  - [ ] keyboard arrow nav
+- [ ] Shift or meta click on tiles to keep the others open
+
+### Architecture
+
+#### Backend
+
+- [x] [SMS code login setup for web](https://firebase.google.com/docs/auth/web/phone-auth?authuser=0)
+- [x] [Email Link (passwordless) setup](https://firebase.google.com/docs/auth/web/email-link-auth?authuser=0)
+- [x] [using Firebase Auth with Vue](https://www.freecodecamp.org/news/how-to-add-authentication-to-a-vue-app-using-firebase/)
+  - [x] [log the Magic.link process](./docs/passwordless.md) for a lib and a post on Atmanautica.com
+  - [x] integrate Twilio for phone codes
+  - [x] passport.js? express/node? firebase?
+- consider routers and app architecture
+  - [x] Nuxt
+
+## Test and Release
+
+- [x] scroll to help when selected
+- [x] scroll to query input on focus on mobile
+- [x] highlight Becoming hex in full list as well
+- [x] give the Change view a home in the Sitenav
+- [x] hilight the rolled tiles in the Changes views
+- [x] help icons aligned right due to class collision
+- [x] make this a progressive web app (PWA)
+- [x] add a user model to the App?
+- [x] TriGlyph too big in Change.vue and HexaTile.vue for mobile
+- [x] Hexagram on Tile on mobile needs margin
+- [x] Login with Phone doesn't work in prod on mobile, no error msg, no code received
+- [x] Login with Email broken in prod, probly domain or baseurl thing
+- [x] link between being and becoming change of a roll on the Change view
+- [x] make being and becoming link to each other
+- [x] allow login to save rolls and results
+- [x] Show the roll in the oracle response view
+
+## Done
+
+### [x] Config - global user settings
+
+- [x] pinny - pinyin or not
+- [x] wenny - king wen or not
+- [x] texty - text or glyphs first
+- [x] primary text - Wilhelm or Barrett?
+- [x] hermagrams or hexagrams
+
+### [x] FTE
+
+- [x] OracleIntro.vue pops up before OracleQuery
+  - [x] Welcome to Nameless: A Paean to the Yijing
+  - [x] Introducing the Oracle
+  - [x] [Consult the Oracle] button
+- [x] give the oracle its own root level route
+- [x] FAQ
+  - What is a Paean?
+  - Why is it Nameless?
+  - What is an Oracle?
+  - How does it work?
+  - What does it cost?
+- [x] passwordless login
+  - [x] consider datastores and state management
+    - [x] Vue 3 reactivity
+    - [x] Vuex
+    - [x] Storeon - simple, versatile, no HMR
+  - [x] [why passwords are obsolete](https://medium.com/@ninjudd/passwords-are-obsolete-9ed56d483eb)

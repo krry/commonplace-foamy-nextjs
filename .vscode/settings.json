@@ -32,7 +32,6 @@
 	"foam.edit.linkReferenceDefinitions": "withoutExtensions",
 	"foam.openDailyNote.directory": "_notes/remember/journal",
 	"foam.openDailyNote.fileExtension": "mdx",
-	"foam.openDailyNote.filenameFormat": "yyyy-mm-dd",
 	"foam.openDailyNote.titleFormat": "'---'\n'title: Journal of Kerrbear 'yyyy-mm-dd\n'time: 'yyyy-mm-dd' 'HH:MM:ss\n'tags: journal '\n'---'\n\n'# 'yyyy-mm-dd\n'## Journal of Kerrbear'",
 	"git.enableSmartCommit": true,
 	"git.postCommitCommand": "sync",
@@ -48,12 +47,34 @@
 	"vscodeMarkdownNotes.slugifyMethod": "github-slugger",
 	"vscodeMarkdownNotes.workspaceFilenameConvention": "uniqueFilenames",
 	"window.autoDetectColorScheme": true,
-	"workbench.colorTheme": "Midnight City",
+	"workbench.colorTheme": "Summer Vacation (One Dark)",
 	"[javascript]": {
-		"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[ignore]": {
 		"editor.defaultFormatter": "foxundermoon.shell-format"
 	},
-	"frontMatter.taxonomy.categories": ["reading"]
+	"frontMatter.taxonomy.categories": [
+		"reading"
+	],
+	"workbench.colorCustomizations": {
+		"activityBar.activeBackground": "#6c2561",
+		"activityBar.activeBorder": "#6b7729",
+		"activityBar.background": "#6c2561",
+		"activityBar.foreground": "#e7e7e7",
+		"activityBar.inactiveForeground": "#e7e7e799",
+		"activityBarBadge.background": "#6b7729",
+		"activityBarBadge.foreground": "#e7e7e7",
+		"statusBar.background": "#46183f",
+		"statusBar.foreground": "#e7e7e7",
+		"statusBarItem.hoverBackground": "#6c2561",
+		"titleBar.activeBackground": "#46183f",
+		"titleBar.activeForeground": "#e7e7e7",
+		"titleBar.inactiveBackground": "#46183f99",
+		"titleBar.inactiveForeground": "#e7e7e799"
+	},
+	"peacock.color": "#46183f",
+	"WillLuke.nextjs.addTypesOnSave": true,
+	"WillLuke.nextjs.hasPrompted": true,
+	"foam.decorations.links.enable": true
 }
