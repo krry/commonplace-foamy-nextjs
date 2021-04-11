@@ -1,26 +1,43 @@
 .searchContainer {
 	position: absolute;
-	right: 1em;
-	top: 0.5em;
-	display: flex;
+	top: 0.5vh;
+	right: 1.25vw;
 	z-index: 2;
 }
 
+@media (min-width: 536px) {
+	.searchContainer {
+		right: 0.75vw;
+		top: 0.75vh;
+	}
+}
+
+@media (min-height: 536px) and (min-width: 536px) {
+	.searchContainer {
+		top: 1.5vh;
+		right: 1vw;
+	}
+}
+
 .search {
-	border: 1px solid var(--glass);
-	box-sizing: border-box;
 	padding: 0.33em 0.67em;
 	margin: 0.125em 0;
 	font-family: var(--sans);
 	font-size: 1em;
 	width: 100%;
+	max-width: 43vw;
+	border: 1px solid var(--glass);
 	border-radius: var(--bevel);
 	background: var(--stone);
 	color: var(--ink);
+	transition: 333ms ease-out;
 }
 
+.search:hover,
+.search:focus-visible,
 .search:focus {
-	border-color: var(--link-hot);
+	outline-color: var(--flair);
+	border-color: var(--flair);
 }
 
 .results {

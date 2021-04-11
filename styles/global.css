@@ -218,3 +218,9 @@ textarea {
 	opacity: 20%;
 	pointer-events: none;
 }
+
+input,
+button,
+a {
+	transition: 333ms ease-out;
+}

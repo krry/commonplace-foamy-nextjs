@@ -64,7 +64,6 @@ ul.top {
 	margin: 2vh auto;
 	background: var(--glass);
 	border-radius: 2vh;
-	/* border: 1px inset var(--cloud); */
 }
 
 @media (min-width: 768px) and (min-height: 536px) {
@@ -78,6 +77,22 @@ ul.top {
 	text-align: center;
 	font-family: var(--heading);
 	padding: 1vh 1vw;
+}
+
+@media (min-width: 536px) {
+	.tree.home .primary + .secondary {
+		margin-top: 1.25em;
+	}
+}
+
+.tree.home .primary + .primary {
+	margin-left: 0.5em;
+}
+
+@media (min-height: 536px) and (min-width: 536px) {
+	.tree.home .secondary:first-of-type {
+		margin-top: 0.5em;
+	}
 }
 
 .tree.home .tertiary {
