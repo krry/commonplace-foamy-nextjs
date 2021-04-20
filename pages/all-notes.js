@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/client'
-import AccessDenied from '../components/access-denied'
+import AccessDenied from '../components/AccessDenied'
 import Layout from '../components/Layout'
 import { getAllFilesFrontMatter } from '../lib/mdx'
 import { getSession } from 'next-auth/client'
