@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Search from './Search'
 import ThemeSwitch from './ThemeSwitch'
 import { signIn, signOut, useSession } from 'next-auth/client'
+import {FaStroopwafel} from 'react-icons/fa'
 
 export default function Header({ siteTitle }) {
 	const [session, loading] = useSession()
@@ -14,22 +15,23 @@ export default function Header({ siteTitle }) {
 				<nav className="nav">
 					<ThemeSwitch />
 					<h1>
-						<small>The </small>
+						<FaStroopwafel className="icon" />
 						<Link href="/">Commonplace</Link>
-						<small> of an Atmanaut</small>
+						<small>&nbsp;&nbsp;of an Atmanaut</small>
 					</h1>
 				</nav>
 				{!session && (
-					<>
-						Not signed in <br />
+					<div className="signin">
 						<button
+							className="btn"
 							onClick={(e) => {
 								e.preventDefault()
 								signIn()
 							}}>
-							Sign in
+							👑 Sign in
+
 						</button>
-					</>
+					</div>
 				)}
 				{session && (
 					<>

@@ -41,18 +41,20 @@ export default function SiteNav({ location }) {
 						</li>
 					</ul>
 				</li>
-				<li className="secondary">
-					<Link href="/remember">Remember</Link>
-				</li>
-				<li className="secondary">
-					<Link href="/forget">Forget</Link>
-				</li>
-				<li className="secondary">
-					<Link href="/intend/commonplace">Meta</Link>
-				</li>
-				<li className="secondary">
-					<Link href="/intend/fair-method">F.A.I.R.</Link>
-				</li>
+				<div className="primary trans">
+					<li className="secondary">
+						<Link href="/remember">Remember</Link>
+					</li>
+					<li className="secondary">
+						<Link href="/forget">Forget</Link>
+					</li>
+					<li className="secondary">
+						<Link href="/intend/commonplace">Meta</Link>
+					</li>
+					<li className="secondary">
+						<Link href="/intend/fair-method">F.A.I.R.</Link>
+					</li>
+				</div>
 			</ul>
 		</nav>
 	)

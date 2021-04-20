@@ -3,30 +3,51 @@ created: Thu Apr 01 2021 02:41:53 GMT-0700 (Pacific Daylight Time)
 modified: Thu Apr 01 2021 02:41:53 GMT-0700 (Pacific Daylight Time)
 title: Person Reaction Interest Matrix
 ---
-# Person Reaction Interest MatrixSocialMatrix.prototype = {
+
+# Person Reaction Interest Matrix
 
 A reaction can be emotional or interest-based.  We capture reactions by allowing users to upvote tags that closely resemble their reaction to the content.
+
 Reactions may also have more than one person in context, for example when a user wishes to share his or her reaction to a GIF with another person.
 
-Next GIF has the same [emo tag, interest tag, author] and the highest number of similarities with the current GIF within the person-reaction-interest-matrix
-(PRIM).  PRIM tracks collisions of matrix factors for each GIF in the system. A collision may occur between 2 and n of the factors.
+Next GIF has the same [emo tag, interest tag, author] and the highest number of similarities with the current GIF within the person-reaction-interest-matrix (PRIM).
 
-PRIM_factors = {gif, reaction, person, emotion, interest, person.reaction, reaction.person, reaction.interest, reaction.emotion, reaction.interest.person, reaction.emotion.person, person.emotion, person.interest}
+```js
+SocialMatrix.prototype = {
 
-GIFs
-|  GIFs  | reactions |  reactions.emotions  |  reactions.interests  |  views  | reactions/views | 
-| gif_id |  user_id  | emotion_id + user_id | interest_id + user_id | user_id | 
+const PRIM_factors = {
+	gif,
+	reaction: {
+		person,
+		interest: {person},
+		emotion: {person}
+	},
+	person: {
+		reaction,
+		emotion,
+		interest
+	},
+	emotion,
+	interest,
+}
+```
+## HUNH!?
 
-counts of user behaviors
-========================
-gif.views				    •number of views
-gif.reactions               •number of reactions captured (emotions + interests)
-gif.reactions.person        •number of reactions captured from each person
-gif.emotions                •number of emotions captured
-gif.emotions.person         •number of emotions captured from each person
-gif.interests               •number of interests captured
-gif.interests.person        •number of interests captured from each person
-gif.reactions.shared        •number of reactions directed at a person
-gif.reactions.shared.person •number of reactions directed at each person
-gif.interests.shared        •number of interests directed at a person
-gif.interests.shared.person •number of interests directed at each person
+PRIM tracks collisions of matrix factors for each GIF in the system. A collision may occur between 2 and n of the factors.
+
+GIFs have views, and reactions, which have	emotions or interests and views.
+
+## Counts of user behaviors
+| entity key | what it counts |
+| --: | -- |
+| gif.views				    				| number of views |
+| gif.reactions               | number of reactions captured (emotions + interests) |
+| gif.reactions.person        | number of reactions captured from each person |
+| gif.emotions                | number of emotions captured |
+| gif.emotions.person         | number of emotions captured from each person |
+| gif.interests               | number of interests captured |
+| gif.interests.person        | number of interests captured from each person |
+| gif.reactions.shared        | number of reactions directed at a person |
+| gif.reactions.shared.person | number of reactions directed at each person |
+| gif.interests.shared        | number of interests directed at a person |
+| gif.interests.shared.person | number of interests directed at each person |
