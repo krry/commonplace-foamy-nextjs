@@ -5,8 +5,8 @@
 	outline: none;
 	border: none;
 	background: none;
-	top: clamp(1.5rem, 2vw + 2vh, 4rem);
-	left: 2vw;
+	bottom: clamp(1.5rem, 1vw + 1vh, 3rem);
+	right: 2vw;
 	cursor: pointer;
 }
 
