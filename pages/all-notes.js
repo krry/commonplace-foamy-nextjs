@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react'
-import { useSession } from 'next-auth/client'
 import AccessDenied from '../components/AccessDenied'
 import Layout from '../components/Layout'
 import { getAllFilesFrontMatter } from '../lib/mdx'
-import { getSession } from 'next-auth/client'
+import { useSession, getSession } from 'next-auth/client'
 
-export async function getStaticProps() {
-	const session = await getSession({ req })
+export async function getStaticProps(context) {
+	const session = await getSession({ context })
 	const allNotes = await getAllFilesFrontMatter()
 
 	if (session) {
 		return {
-			props: { allNotes },
+			props: { session, allNotes },
 		}
 	} else {
 		return {
