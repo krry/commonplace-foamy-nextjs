@@ -66,6 +66,10 @@ ul.top {
 	border-radius: 2vh;
 }
 
+.tree.home .primary.trans {
+	padding-top: 2vh;
+}
+
 @media (min-width: 768px) and (min-height: 536px) {
 	.tree.home .primary {
 		margin: 3vh auto;
@@ -80,7 +84,10 @@ ul.top {
 }
 
 @media (min-width: 536px) {
-	.tree.home .primary + .secondary {
+	.tree.home .ducklings {
+		display: flex;
+		justify-content: flex-start;
+		align-items: baseline;
 		margin-top: 1.25em;
 	}
 }

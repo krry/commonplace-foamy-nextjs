@@ -2,13 +2,11 @@
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	margin: 1vh auto 0;
 	width: 100vw;
 }
 
 @media (min-width: 536px) {
 	.container {
-		max-width: 80vw;
 		width: auto;
 	}
 }
@@ -33,7 +31,7 @@
 .sidebar,
 .noteBody {
 	width: 100vw;
-	padding: 0 1rem;
+	/* padding: 0 1rem; */
 
 	@media (min-width: 768px) and (min-height: 536px) {
 		width: auto;
