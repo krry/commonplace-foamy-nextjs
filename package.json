@@ -1,14 +1,16 @@
 {
 	"name": "commonplace",
-	"version": "0.2.3",
+	"version": "0.2.5",
 	"license": "CC-BY-NC-SA-4.0",
 	"repository": {
 		"git": "git@github.com:krry/commonplace.git"
 	},
 	"scripts": {
 		"dev": "NODE_OPTIONS='--inspect' next dev --port 2891",
+		"dev:ssl": "node server.js",
 		"dev:watch": "PORT=2891 next-remote-watch ./_notes",
 		"build": "next build",
+		"lint": "eslint ./ --fix --ext js",
 		"cache": "node lib/cache.js",
 		"start": "next start"
 	},
@@ -38,6 +40,8 @@
 	},
 	"devDependencies": {
 		"babel-plugin-superjson-next": "^0.2.3",
+		"eslint": "^7.24.0",
+		"eslint-plugin-react": "^7.23.2",
 		"next-remote-watch": "^1.0.0",
 		"postcss-advanced-variables": "^3.0.1",
 		"postcss-preset-env": "^6.7.0",

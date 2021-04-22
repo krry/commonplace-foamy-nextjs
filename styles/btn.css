@@ -2,10 +2,29 @@
 	border: 0.125em solid var(--cloud);
 	border-radius: 0.25em;
 	background: var(--glass);
-	color: var(--ink);
+	color: var(--flair);
 	font-weight: bold;
 	font-size: 1em;
 	font-family: var(--sans);
 	padding: 0.33em 0.67em;
 	margin: 0.425rem;
+	cursor: pointer;
+}
+
+.btn.sm {
+	font-size: 0.875em;
+}
+
+.naked {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	appearance: none;
+}
+
+.avatar {
+	background-repeat: no-repeat;
+	width: clamp(2rem, 4vw + 4vh, 4rem);
+	height: clamp(2rem, 4vw + 4vh, 4rem);
+	background-size: contain;
 }

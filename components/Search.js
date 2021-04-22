@@ -1,25 +1,39 @@
-import {useCallback, useRef, useState, useEffect} from 'react'
+import {useCallback, useRef, useState} from 'react'
 import Link from 'next/link'
-// import {useHotkeys} from 'react-hotkeys-hook'
+import {useHotkeys} from 'react-hotkeys-hook'
 
 export default function Search () {
 	const searchRef = useRef(null)
+	const inputRef = useRef(null)
 	const [query, setQuery] = useState('')
 	const [active, setActive] = useState(false)
 	const [results, setResults] = useState([])
 
-	// useHotkeys('command+k', () => searchRef.current.focus())
-	// useHotkeys('esc', () => searchRef.current.blur())
+	useHotkeys('command+k', () => {
+		// console.log('commanded', event.key)
+		inputRef.current.focus()
+		inputRef.current.addEventListener('keydown', handleKeydown)
+	})
+
+	function handleKeydown (evt) {
+		if (evt.key === 'Escape') {
+			inputRef.current.blur()
+			// console.log('escaped', evt.key)
+		}
+		if (evt.key === 'ArrowDown') {
+			// TODO: advance focus down the results list
+		}
+		if (evt.key === 'ArrowUp') {
+			// TODO: advance focus up the results list
+		}
+	}
 
 	const searchEndpoint = query => `/api/search?q=${query}`
-	// const controller = new AbortController()
-	// const signal = controller.signal
 
 	const onChange = useCallback((event) => {
 		const query = event.target.value
 		setQuery(query)
 		if (query.length) {
-			// controller.abort()
 			fetch(searchEndpoint(query))
 				.then(res => res.json())
 				.then(res => {
@@ -46,6 +60,7 @@ export default function Search () {
 			ref={searchRef}
 		>
 			<input
+				ref={inputRef}
 				type="search"
 				className="search"
 				onChange={onChange}
@@ -55,9 +70,9 @@ export default function Search () {
 			/>
 			{active && results.length > 0 && (
 				<ul className="results">
-					{results.map(({slug, title}) => {
+					{results.map(({slug, title}, index) => {
 						return (
-							<li className="result" key={slug}>
+							<li className="result" key={slug} tabIndex={index+1}>
 								<Link href="/[slug]" as={`/${slug}`}>
 									<a>{title}</a>
 								</Link>

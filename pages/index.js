@@ -17,10 +17,3 @@ export default function Index () {
 		</Layout>
 	)
 }
-
-// export const getStaticProps = async () => {
-// 	const configData = await import('../site.config')
-// 	return {
-// 		...configData,
-// 	}
-// }

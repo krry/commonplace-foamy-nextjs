@@ -10,11 +10,17 @@ const MDXComponents = {
 			<Image {...props} />
 		</div>
 	),
+	Icons: Icons,
 	Image: (props) => (
 		<div className="nextImageWrapper">
 			<Image {...props} />
 		</div>
 	),
 }
+
+MDXComponents.a.displayName = 'AnchorTag'
+MDXComponents.code.displayName = 'CodeBlock'
+MDXComponents.img.displayName = 'Image'
+MDXComponents.Image.displayName = 'Image'
 
 export default MDXComponents

@@ -1,19 +1,19 @@
 :root {
 	--charcoal: hsl(180, 8%, 28%);
-	--mint: hsl(180, 48%, 84%);
-	--tint: hsla(180, 38%, 58%, 0.58);
-	--haze: hsla(180, 78%, 78%, 0.48);
+	--mint: hsl(180, 48%, 87%);
+	--tint: hsla(180, 48%, 64%, 0.48);
+	--haze: hsla(180, 78%, 72%, 0.48);
 	--shadow: hsla(180, 48%, 48%, 0.4);
 	--shaglow: hsla(180, 78%, 78%, 0.4);
 	--ghost: hsla(180, 24%, 24%, 0.48);
 	--abyss: hsla(180, 24%, 12%, 0.78);
 	--abysmal: hsl(180, 24%, 8%);
 	--caulk: hsl(180, 50%, 96%);
-	--zephyr: hsl(180, 67%, 32%);
+	--zephyr: hsl(180, 72%, 27%); /* hsl(180, 78%, 48%) */
 	--capri: hsl(192, 78%, 35%);
 	--azure: hsl(180, 78%, 38%);
-	--jung: hsl(168, 67%, 37%);
-	--foam: hsl(168, 67%, 32%);
+	--jung: hsl(168, 72%, 37%);
+	--foam: hsl(168, 64%, 32%);
 	--daisy: hsl(60, 90%, 82%);
 	--lightning: hsl(72, 100%, 72%);
 	--marigold: hsl(48, 100%, 72%);

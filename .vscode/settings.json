@@ -47,7 +47,7 @@
 	"vscodeMarkdownNotes.slugifyMethod": "github-slugger",
 	"vscodeMarkdownNotes.workspaceFilenameConvention": "uniqueFilenames",
 	"window.autoDetectColorScheme": true,
-	"workbench.colorTheme": "Outrun Night Meets Synthwave",
+	"workbench.colorTheme": "Nighthawk",
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},

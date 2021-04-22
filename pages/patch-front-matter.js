@@ -2,8 +2,7 @@ import path from 'path'
 import Layout from '../components/Layout'
 import { patchMissingFrontMatter } from '../lib/frontmatter'
 
-const root = process.cwd();
-
+const root = process.cwd()
 
 export default function Test ({ filesFixed }) {
 	return (
@@ -24,7 +23,9 @@ export default function Test ({ filesFixed }) {
 }
 
 export async function getStaticProps () {
-	const dirPath = path.join(root, 'private')
+	// this dirPath determines which files' front matter is patched
+	// might be helpful for this to come in as a param
+	const dirPath = path.join(root, '_notes/forget')
 	const results = await patchMissingFrontMatter(dirPath)
 
 	return {

@@ -6,8 +6,9 @@
 	border: none;
 	background: none;
 	bottom: clamp(1.5rem, 1vw + 1vh, 3rem);
-	right: 2vw;
+	left: 2vw;
 	cursor: pointer;
+	z-index: 5;
 }
 
 .themeSwitch:focus {

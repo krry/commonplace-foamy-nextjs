@@ -13,9 +13,11 @@ export default function Custom404() {
 			<nav>
 				<ul>
 					<li>
-						<Link href="/" onClick="router.back()">
-							Take a big step back
-						</Link>
+						<button
+							className="btn"
+							onClick={() => router.back()}>
+							Jump back
+						</button>
 					</li>
 					<li>
 						<Link href="/">Back to the Index</Link>

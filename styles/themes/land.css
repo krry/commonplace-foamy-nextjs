@@ -1,8 +1,8 @@
 :root,
 .land {
-	--paper: var(--abysmal);
+	--paper: var(--abyss);
 	--ink: var(--caulk);
-	--stone: var(--abyss);
+	--stone: var(--abysmal);
 	--glass: var(--ghost);
 	--cloud: var(--haze);
 	--smoke: var(--mint);

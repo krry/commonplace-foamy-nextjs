@@ -7,5 +7,5 @@ My humble [[commonplace]] which:
 - started as an archive of markdown writings and a [Roam](https://roamresearch.com) graph
 - templated on @yenly's [Foamy NextJS](https://github.com/yenly/foamy-nextjs) starter
 - sails the open-source, data-sovereign seas with [Foam](https://foambubble.github.io)
-- can also be maintained with obsidian
-- is auto-published with Vercel whenever I **_Ship It!_**™
+- can also be maintained with [Obsidian](https://obsidian.md)
+- is auto-published with [Vercel](https://vercel.com) whenever I **_Ship It!_**™

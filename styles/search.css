@@ -20,11 +20,11 @@
 }
 
 .search {
+	width: 10rem;
+	margin: 0 3.25em 0.125em 0;
 	padding: 0.33em 0.67em;
-	margin: 0.125em 0;
 	font-family: var(--sans);
 	font-size: 1em;
-	width: 100%;
 	max-width: 43vw;
 	border: 1px solid var(--glass);
 	border-radius: var(--bevel);
@@ -42,20 +42,20 @@
 
 .results {
 	list-style: none;
-	overflow: hidden;
-	margin: 9px 0 0;
+	overflow-y: auto;
+	margin: 0.33em 0 0;
 	padding: 0;
 	position: absolute;
 	top: 100%;
 	left: 0;
 	right: 0;
+	height: 100vh;
+	background: var(--glass);
 }
 
 .result {
-	background: var(--glass);
+	background: var(--paper);
 	color: var(--ink);
-	margin: 0 0 9px;
-	padding: 0.33em 0.67em;
 }
 
 .result:hover,
@@ -65,6 +65,10 @@
 }
 
 .result a {
+	display: block;
+	padding: 0.67em;
+	margin: 0 0 0.33em;
+	line-height: 1.33;
 	color: var(--link);
 }
 

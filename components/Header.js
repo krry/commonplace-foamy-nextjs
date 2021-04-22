@@ -1,26 +1,31 @@
-import { useRef } from 'react'
 import Link from 'next/link'
 import Search from './Search'
 import ThemeSwitch from './ThemeSwitch'
+import { GiMeshNetwork, GiSpinningRibbons } from 'react-icons/gi'
+import { GoSignOut } from 'react-icons/go'
 import { signIn, signOut, useSession } from 'next-auth/client'
-import {FaStroopwafel} from 'react-icons/fa'
 
-export default function Header({ siteTitle }) {
+const Header = () => {
+
 	const [session, loading] = useSession()
 
-	const searchRef = useRef(null)
 	return (
 		<>
 			<header className="header">
 				<nav className="nav">
 					<ThemeSwitch />
 					<h1>
-						<FaStroopwafel className="icon" />
+						<GiMeshNetwork className="icon" />
 						<Link href="/">Commonplace</Link>
 						<small>&nbsp;&nbsp;of an Atmanaut</small>
 					</h1>
 				</nav>
-				{!session && (
+				{!session && loading && (
+					<button disabled className="btn loading">
+						<GiSpinningRibbons className="icon spinning"/>
+					</button>
+				)}
+				{!session && !loading && (
 					<div className="signin">
 						<button
 							className="btn"
@@ -29,27 +34,31 @@ export default function Header({ siteTitle }) {
 								signIn()
 							}}>
 							👑 Sign in
-
 						</button>
 					</div>
 				)}
 				{session && (
 					<>
-						Signed in as {session.user.email ?? session.user.name} <br />
+						<Search />
 						{session.user.image && (
-							<span style={{ backgroundImage: `url(${session.user.image})` }} className="avatar" />
+							<button
+								className="naked avatar"
+								style={{ backgroundImage: `url(${session.user.image})` }}
+								onClick={(evt) => {
+									evt.preventDefault()
+									if (confirm('You sure?'))
+										signOut()
+								}}>
+								<GoSignOut className="showOnHover"/>
+							</button>
 						)}
-						<Search ref={searchRef} />
-						<button
-							onClick={() => {
-								e.preventDefault()
-								signOut()
-							}}>
-							Sign out
-						</button>
 					</>
 				)}
 			</header>
 		</>
 	)
 }
+
+Header.displayName = 'Header'
+
+export default Header

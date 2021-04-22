@@ -51,13 +51,17 @@ h1,
 .h1 {
 	font-size: 2.34rem;
 	font-variation-settings: 'wght' 444;
+	color: transparent;
+	background-image: linear-gradient(to bottom right, var(--ink), var(--link-cold));
+	background-clip: text;
 }
 
 h2,
 .h2 {
 	font-size: 1.61rem;
 	font-variation-settings: 'wght' 777;
-	background-image: linear-gradient(to top left, var(--ink), var(--flair));
+	color: transparent;
+	background-image: linear-gradient(to bottom right, var(--ink), var(--link-tepid));
 	background-clip: text;
 }
 
@@ -65,14 +69,18 @@ h3,
 .h3 {
 	font-size: 1.37rem;
 	font-variation-settings: 'wght' 666;
-	color: var(--stone);
+	color: transparent;
+	background-image: linear-gradient(to bottom right, var(--ink), var(--smoke));
+	background-clip: text;
 }
 
 h4,
 .h4 {
 	font-size: 1.25rem;
 	font-variation-settings: 'wght' 555;
-	color: var(--flair);
+	color: transparent;
+	background-image: linear-gradient(to top left, var(--ink), var(--link));
+	background-clip: text;
 }
 
 h5,
@@ -80,8 +88,9 @@ h5,
 	font-size: 1.125rem;
 	font-variation-settings: 'wght' 555;
 	font-variant: small-caps;
-	color: var(--ink);
-	opacity: 0.5;
+	color: transparent;
+	background-image: linear-gradient(to top left, var(--ink), var(--link-cold));
+	background-clip: text;
 }
 
 p,

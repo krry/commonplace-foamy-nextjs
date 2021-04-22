@@ -11,17 +11,30 @@
 	}
 }
 
-.noteBody {
+.fuselage {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	align-items: center;
 	text-align: left;
 	margin: 0 auto;
 	max-width: 64ch;
 }
 
-.noteBody::after {
+.fuselage p {
+	white-space: pre-line;
+	word-break: break-word;
+	line-break: any;
+}
+
+@media (min-width: 536px) {
+	.fuselage {
+		max-width: 80ch;
+	}
+}
+
+.fuselage::after {
 	content: '⚜';
 	font-size: 3rem;
 	color: var(--cloud);
@@ -29,11 +42,11 @@
 }
 
 .sidebar,
-.noteBody {
+.fuselage {
 	width: 100vw;
-	/* padding: 0 1rem; */
 
 	@media (min-width: 768px) and (min-height: 536px) {
+		padding: 0 4vw;
 		width: auto;
 	}
 }
@@ -51,7 +64,7 @@
 		text-align: right;
 		flex-basis: 32%;
 		min-width: 240px;
-		max-width: 320px;
+		max-width: 32vw;
 	}
 }
 

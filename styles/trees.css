@@ -8,17 +8,17 @@
 
 .tree.home ul {
 	display: flex;
-	flex-flow: column wrap;
+	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	margin: 2vh auto;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
 	padding: 0;
 }
 
 ul.top {
 	flex-wrap: wrap;
 	flex-direction: column;
-	max-height: 60vh;
 	width: 100%;
 }
 
@@ -61,9 +61,10 @@ ul.top {
 	text-align: center;
 	font-family: var(--sans);
 	padding: 4vh 2vw 2vh;
-	margin: 2vh auto;
+	margin: 2vh;
 	background: var(--glass);
 	border-radius: 2vh;
+	max-width: 45vw;
 }
 
 .tree.home .primary.trans {
@@ -72,7 +73,7 @@ ul.top {
 
 @media (min-width: 768px) and (min-height: 536px) {
 	.tree.home .primary {
-		margin: 3vh auto;
+		/* margin: 3vh; */
 	}
 }
 
@@ -146,4 +147,35 @@ ul.top {
 
 .tree.home .second {
 	max-width: calc(100vw - 4rem);
+}
+
+.tree .primary .icon {
+	vertical-align: -0.25rem;
+	margin: 0 0.375rem;
+}
+
+.icon.flipX {
+	transform: scaleX(-1);
+}
+
+.icon.flipY {
+	transform: scaleY(-1);
+}
+
+.icon.flipXY {
+	transform: scaleX(-1) scaleY(-1);
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.icon.spinning {
+	animation: spin 750ms infinite linear;
 }
