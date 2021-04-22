@@ -2,5 +2,5 @@ module.exports = {
 	future: {
 		webpack5: true,
 	},
-	target: 'serverless'
+	target: 'experimental-serverless-trace'
 }
