@@ -38,3 +38,6 @@ yarn-error.log*
 .vercel
 
 # https://help.github.com/articles/ignoring-files/
+
+# Local Netlify folder
+.netlify
