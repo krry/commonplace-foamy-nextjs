@@ -10,7 +10,6 @@ const MDXComponents = {
 			<Image {...props} />
 		</div>
 	),
-	Icons: Icons,
 	Image: (props) => (
 		<div className="nextImageWrapper">
 			<Image {...props} />
