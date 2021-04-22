@@ -25,7 +25,7 @@ export default function Test ({ filesFixed }) {
 export async function getStaticProps () {
 	// this dirPath determines which files' front matter is patched
 	// might be helpful for this to come in as a param
-	const dirPath = path.join(root, '_notes/forget')
+	const dirPath = path.join(root, 'private')
 	const results = await patchMissingFrontMatter(dirPath)
 
 	return {
