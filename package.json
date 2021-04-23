@@ -1,6 +1,6 @@
 {
 	"name": "commonplace",
-	"version": "0.2.6",
+	"version": "0.2.7",
 	"license": "CC-BY-NC-SA-4.0",
 	"repository": {
 		"git": "git@github.com:krry/commonplace.git"
@@ -15,8 +15,10 @@
 		"start": "next start"
 	},
 	"husky": {
-		"pre-commit": "yarn cache && git add _cache/data.js && yarn lint",
-		"pre-push": "yarn build"
+		"hooks": {
+			"pre-commit": "yarn cache && git add _cache/data.js && yarn lint",
+			"pre-push": "yarn build"
+		}
 	},
 	"dependencies": {
 		"@fontsource/inconsolata": "^4.2.2",
