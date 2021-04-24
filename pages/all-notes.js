@@ -1,4 +1,5 @@
 // import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import AccessDenied from '../components/AccessDenied'
 import Layout from '../components/Layout'
 import { getAllFilesFrontMatter } from '../lib/mdx'
@@ -32,16 +33,18 @@ export default function AllNotes({ allNotes }) {
 	return (
 		<Layout>
 			<h1>All Notes</h1>
-			<ul>
+			<dl>
 				{allNotes.slice().map((note, index) => (
 					<div key={index}>
 						<dt>{note.title || ''}</dt>
 						<dd>
-							<a href={note?.slug}>{note.slug}</a>
+							<Link href={note?.slug}>
+								<a>{note.slug}</a>
+							</Link>
 						</dd>
 					</div>
 				))}
-			</ul>
+			</dl>
 		</Layout>
 	)
 }

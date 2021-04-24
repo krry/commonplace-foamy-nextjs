@@ -14,3 +14,10 @@
 .themeSwitch:focus {
 	outline: none;
 }
+
+.loading-rack {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	height: calc(100vh - clamp(3rem, 3vw + 3vh, 5rem));
+}

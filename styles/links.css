@@ -6,6 +6,17 @@ a {
 	font-variation-settings: 'wght' 444;
 }
 
+.termLink {
+	display: block;
+	cursor: pointer;
+}
+
+.termLink:hover pre,
+.termLink:focus pre {
+	/* opacity: 0.5; */
+	color: var(--link);
+}
+
 a:hover,
 a:focus {
 	color: var(--link-hot);
