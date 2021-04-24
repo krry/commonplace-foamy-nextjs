@@ -23,7 +23,7 @@ export default function NoteFields({ metadata }) {
 				<dt>Tags</dt>
 				{fields.tags.map((tag, index) => (
 					<dd key={index}>
-						<a href={'/' + tag}>#{tag}</a>
+						<a href={'/terms/' + tag.replace(' ', '-')}>#{tag}</a>
 					</dd>
 				))}
 			</dl>

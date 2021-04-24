@@ -187,6 +187,13 @@ pre {
 	font-family: var(--mono);
 }
 
+.termLink pre {
+	background: var(--glass);
+	padding: 4vh;
+	transition: 367ms;
+	white-space: pre-line;
+}
+
 img {
 	max-width: 100%;
 	display: block;

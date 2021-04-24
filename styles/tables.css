@@ -1,49 +1,96 @@
 table {
-  background: hsla(180, 10%, 10%, 0.1);
-  padding: 0.25em;
-  overflow: auto;
-  border-radius: 0.5em;
+	background: hsla(180, 10%, 10%, 0.1);
+	padding: 0.125em;
+	overflow: auto;
+	border-radius: 0.5em;
 }
+
 .dark table {
-  background-color: hsla(180, 10%, 90%, 0.1);
+	background-color: hsla(180, 10%, 90%, 0.1);
 }
 
 th,
 td {
-  text-align: center;
-  border-radius: 0.25em;
-  padding: 4px;
-  border: 1px dotted transparent;
+	text-align: center;
+	border-radius: 0.125em;
+	padding: 4px;
+	margin: 2px;
+	border: 1px dotted transparent;
 }
 
 th:first-child,
 thead tr:first-child,
 td:first-child {
-  background-color: var(--shaglow) !important;
+	background-color: var(--shaglow) !important;
 }
 
 tr td:hover,
 tr td:focus {
-  background-color: hsla(180, 30%, 20%, 0.2) !important;
-  border-color: inherit;
+	background-color: hsla(180, 30%, 20%, 0.2) !important;
+	border-color: inherit;
 }
 
 tr:nth-of-type(2n) td:nth-of-type(2n),
 tr:nth-of-type(2n-1) td:nth-of-type(2n-1) {
-  background-color: hsla(180, 10%, 20%, 0.1);
+	background-color: hsla(180, 10%, 20%, 0.1);
 }
 
 .dark tr td:hover,
 .dark tr td:focus {
-  background-color: hsla(180, 30%, 90%, 0.2) !important;
-  border-color: inherit;
+	background-color: hsla(180, 30%, 90%, 0.2) !important;
+	border-color: inherit;
 }
 
 .dark tr:nth-of-type(2n) td:nth-of-type(2n),
 .dark tr:nth-of-type(2n-1) td:nth-of-type(2n-1) {
-  background-color: hsla(180, 10%, 90%, 0.1);
+	background-color: hsla(180, 10%, 90%, 0.1);
 }
 
 th {
-  text-align: center;
+	text-align: center;
+}
+
+hr.divider {
+	width: 80%;
+	color: var(--glow);
+	margin: 1rem auto;
+}
+
+hr {
+	--unit: 1rem;
+}
+
+hr.dinkus {
+	border: 0;
+	position: relative;
+	margin: var(--unit) auto;
+	width: 100%;
+
+	&.spacey {
+		margin: calc(var(--unit) * 3) auto;
+	}
+}
+
+hr.dinkus::after {
+	color: var(--flair);
+	display: block;
+	font-family: var(--text);
+	font-size: calc(var(--unit));
+	text-align: center;
+}
+
+.asterism::after {
+	content: '⁂';
+}
+
+.fleuron::after {
+	content: '𐡸';
+}
+
+.fleuroff::after {
+	content: '𐡷';
+}
+
+.fleur::after {
+	content: '⚜';
 }
