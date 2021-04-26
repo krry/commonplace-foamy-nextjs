@@ -6,11 +6,11 @@
 	--cloud: hsla(192, 80%, 80%, 0.5);
 	--smoke: hsla(180, 50%, 96%, 0.7);
 	--frost: var(--shaglow);
-	--link: hsl(300, 57%, 32%);
+	--link: hsl(240, 47%, 32%);
 	--link-hot: hsl(330, 67%, 57%);
-	--link-cold: hsl(240, 47%, 32%);
+	--link-cold: hsl(300, 57%, 32%);
 	--link-tepid: hsl(270, 57%, 52%);
 	--shade: var(--shadow);
 	--glare: var(--shaglow);
-	--flair: hsl(300, 48%, 48%);
+	--flair: hsl(300, 57%, 32%);
 }

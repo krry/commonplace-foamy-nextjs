@@ -11,8 +11,7 @@
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	margin-top: 2vh;
-	margin-bottom: 2vh;
+	margin: 2vh auto;
 	padding: 0;
 }
 
@@ -64,7 +63,7 @@ ul.top {
 	margin: 2vh;
 	background: var(--glass);
 	border-radius: 2vh;
-	max-width: 45vw;
+	max-width: 90vw;
 }
 
 .tree.home .primary.trans {
@@ -73,7 +72,7 @@ ul.top {
 
 @media (min-width: 768px) and (min-height: 536px) {
 	.tree.home .primary {
-		/* margin: 3vh; */
+		max-width: 42vw;
 	}
 }
 
@@ -149,21 +148,32 @@ ul.top {
 	max-width: calc(100vw - 4rem);
 }
 
-.tree .primary .icon {
-	vertical-align: -0.25rem;
-	margin: 0 0.375rem;
-}
+.icon {
+	vertical-align: -0.1625em;
 
-.icon.flipX {
-	transform: scaleX(-1);
-}
+	&.before {
+		margin-right: 0.3em;
+	}
 
-.icon.flipY {
-	transform: scaleY(-1);
-}
+	&.after {
+		margin-left: 0.3em;
+	}
 
-.icon.flipXY {
-	transform: scaleX(-1) scaleY(-1);
+	&.flipX {
+		transform: scaleX(-1);
+	}
+
+	&.flipY {
+		transform: scaleY(-1);
+	}
+
+	&.flipXY {
+		transform: scaleX(-1) scaleY(-1);
+	}
+
+	&.spinning {
+		animation: spin 750ms infinite linear;
+	}
 }
 
 @keyframes spin {
@@ -174,8 +184,4 @@ ul.top {
 	100% {
 		transform: rotate(360deg);
 	}
-}
-
-.icon.spinning {
-	animation: spin 750ms infinite linear;
 }

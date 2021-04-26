@@ -56,24 +56,24 @@ export default function Search () {
 
 	return (
 		<div
-			className="searchContainer"
+			className='searchContainer'
 			ref={searchRef}
 		>
 			<input
 				ref={inputRef}
-				type="search"
-				className="search"
+				type='search'
+				className='search'
 				onChange={onChange}
 				onFocus={onFocus}
-				placeholder="Search notes…"
+				placeholder='Search notes…'
 				value={query}
 			/>
 			{active && results.length > 0 && (
-				<ul className="results">
+				<ul className='results'>
 					{results.map(({slug, title}, index) => {
 						return (
-							<li className="result" key={slug} tabIndex={index+1}>
-								<Link href="/[slug]" as={`/${slug}`}>
+							<li className='result' key={slug} tabIndex={index+1}>
+								<Link href='/[slug]' as={`/${slug}`}>
 									<a>{title}</a>
 								</Link>
 							</li>

@@ -12,5 +12,5 @@
 	--link-tepid: hsla(67, 90%, 82%, 1);
 	--shade: hsla(237, 10%, 10%, 0.8);
 	--glare: hsla(237, 10%, 10%, 0.7);
-	--flair: var(--azure);
+	--flair: hsla(177, 90%, 82%, 1);
 }

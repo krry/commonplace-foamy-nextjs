@@ -8,8 +8,8 @@ export default function Layout({ children, metadata }) {
 		<>
 			<Meta />
 			<Header />
-			<main className="container">
-				<article className="fuselage">{children}</article>
+			<main className='container'>
+				<article className='fuselage'>{children}</article>
 				<SideBar metadata={metadata} />
 			</main>
 		</>

@@ -1,17 +1,49 @@
 import AnchorTag from '../components/AnchorTag'
 import CodeBlock from '../components/CodeBlock'
 import Image from '../components/Image'
+import {
+	GiLightningBow,
+	GiElephantHead,
+	GiSpyglass,
+	GiBottleVapors,
+	GiSpellBook,
+	GiFairyWings,
+	GiWell,
+	GiSwanBreeze,
+	GiFlyingTrout,
+	GiFlamedLeaf,
+	GiDropletSplash,
+	GiMagicGate,
+	GiDiamondsSmile,
+	GiCrownedHeart,
+	GiBabyFace,
+} from 'react-icons/gi'
 
 const MDXComponents = {
-	a: (props) => <AnchorTag {...props} />,
+	a: props => <AnchorTag {...props} />,
 	code: CodeBlock,
-	img: (props) => (
-		<div className="nextImageWrapper">
+	GiLightningBow,
+	GiElephantHead,
+	GiSpyglass,
+	GiBottleVapors,
+	GiSpellBook,
+	GiFairyWings,
+	GiWell,
+	GiSwanBreeze,
+	GiFlyingTrout,
+	GiFlamedLeaf,
+	GiDropletSplash,
+	GiMagicGate,
+	GiDiamondsSmile,
+	GiCrownedHeart,
+	GiBabyFace,
+	img: props => (
+		<div className='nextImageWrapper'>
 			<Image {...props} />
 		</div>
 	),
-	Image: (props) => (
-		<div className="nextImageWrapper">
+	Image: props => (
+		<div className='nextImageWrapper'>
 			<Image {...props} />
 		</div>
 	),

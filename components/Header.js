@@ -6,30 +6,29 @@ import { GoSignOut } from 'react-icons/go'
 import { signIn, signOut, useSession } from 'next-auth/client'
 
 const Header = () => {
-
 	const [session, loading] = useSession()
 
 	return (
 		<>
-			<header className="header">
-				<nav className="nav">
+			<header className='header'>
+				<nav className='nav'>
 					<ThemeSwitch />
 					<h1>
-						<GiMeshNetwork className="icon" />
-						<Link href="/">Commonplace</Link>
-						<small>&nbsp;&nbsp;of an Atmanaut</small>
+						<GiMeshNetwork className='icon' />
+						<Link href='/'>Commonplace</Link>
+						<small>&nbsp;of an Atmanaut</small>
 					</h1>
 				</nav>
 				{!session && loading && (
-					<button disabled className="btn loading">
-						<GiSpinningRibbons className="icon spinning"/>
+					<button disabled className='btn loading'>
+						<GiSpinningRibbons className='icon spinning' />
 					</button>
 				)}
 				{!session && !loading && (
-					<div className="signin">
+					<div className='signin'>
 						<button
-							className="btn"
-							onClick={(e) => {
+							className='btn'
+							onClick={e => {
 								e.preventDefault()
 								signIn()
 							}}>
@@ -42,14 +41,13 @@ const Header = () => {
 						<Search />
 						{session.user.image && (
 							<button
-								className="naked avatar"
+								className='naked avatar'
 								style={{ backgroundImage: `url(${session.user.image})` }}
-								onClick={(evt) => {
+								onClick={evt => {
 									evt.preventDefault()
-									if (confirm('You sure?'))
-										signOut()
+									if (confirm('You sure?')) signOut()
 								}}>
-								<GoSignOut className="showOnHover"/>
+								<GoSignOut className='showOnHover' />
 							</button>
 						)}
 					</>

@@ -18,8 +18,8 @@
 	--lightning: hsl(72, 100%, 72%);
 	--marigold: hsl(48, 100%, 72%);
 	--goldilocks: hsl(32, 100%, 72%);
-	--sans: 'Quicksand', system-ui;
-	--mono: 'Inconsolata', monospace;
-	--heading: 'MuseoModerno', 'Comic Sans MS', system-ui;
+	--font: 'Recursive', system-ui, sans-serif;
+	--serif: 'Fraunces', ui-serif, serif;
 	--bevel: 0.25rem;
+	--header-height: 3em;
 }

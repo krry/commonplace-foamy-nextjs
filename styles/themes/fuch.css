@@ -1,0 +1,16 @@
+.fuch {
+	--paper: hsla(330, 78%, 48%, 0.9);
+	--ink: hsla(255, 100%, 100%, 1);
+	--stone: hsla(150, 88%, 88%, 1);
+	--glass: hsla(330, 48%, 48%, 0.7);
+	--cloud: hsla(330, 38%, 58%, 0.5);
+	--smoke: hsla(330, 68%, 68%, 0.6);
+	--frost: hsla(330, 28%, 78%, 0.7);
+	--link: hsla(150, 68%, 68%, 1);
+	--link-hot: hsla(130, 78%, 68%, 1);
+	--link-cold: hsla(190, 58%, 78%, 1);
+	--link-tepid: hsla(170, 78%, 68%, 1);
+	--shade: hsla(330, 28%, 12%, 0.3);
+	--glare: hsla(330, 28%, 88%, 0.3);
+	--flair: #eab600;
+}

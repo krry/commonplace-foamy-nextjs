@@ -1,14 +1,23 @@
 .btn {
+	--font-weight: 111;
+	--font-casual: 0;
+	font-family: var(--font);
 	border: 0.125em solid var(--cloud);
 	border-radius: 0.25em;
-	background: var(--glass);
+	background-color: var(--glass);
 	color: var(--flair);
-	font-weight: bold;
 	font-size: 1em;
-	font-family: var(--sans);
 	padding: 0.33em 0.67em;
 	margin: 0.425rem;
 	cursor: pointer;
+	transition: all 367ms ease-out;
+}
+
+.btn:hover,
+.btn:focus {
+	--font-weight: 777;
+	color: var(--stone);
+	background-color: var(--smoke);
 }
 
 .btn.sm {

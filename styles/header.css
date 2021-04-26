@@ -4,25 +4,25 @@
 	position: relative;
 	background-color: var(--glass);
 	border-bottom: 1px solid var(--cloud);
+	height: var(--header-height);
 	display: flex;
+	flex-flow: row nowrap;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .header h1 .icon {
-	margin: 0 0.25em -0.125em 0.5em;
+	margin: 0 0.25em 0 0.5em;
 	color: var(--flair);
 	transform: rotate(45deg);
+	display: inline-block;
 }
 
 .header h1 {
-	display: block;
-	font-family: var(--sans);
+	--font-casual: 1;
+	display: inline-block;
 	font-size: clamp(1rem, 2vw + 2vh, 3rem);
-	height: 2em;
-	line-height: 1.5;
-	padding: 0.25em 0;
-	font-weight: 700;
-	font-variation-settings: 'wght' 777;
+	line-height: var(--header-height);
 	transition-duration: 666ms;
 	margin: 0 auto;
 	outline-offset: -1px;
@@ -32,11 +32,34 @@
 	color: var(--ink);
 }
 
+.header h1 a {
+	--font-weight: 999;
+	display: inline-block;
+	height: 100%;
+	color: transparent;
+	background-clip: text;
+	background-image: linear-gradient(
+		to bottom right,
+		var(--link),
+		var(--link-tepid)
+	);
+}
+
+.header h1 a:hover {
+	--font-weight: 111;
+	--font-slant: 0;
+	background-image: linear-gradient(
+		to bottom right,
+		var(--link-hot),
+		var(--link-cold)
+	);
+}
+
 .header h1 small {
+	--font-weight: 222;
 	display: none;
 	font-size: 50%;
 	opacity: 0.7;
-	font-variation-settings: 'wght' 111;
 	vertical-align: middle;
 }
 
@@ -52,10 +75,6 @@
 	outline-width: 4px;
 	outline-offset: -2px;
 	outline-color: inherit;
-
-	/* color: var(--smoke); */
-
-	/* background-color: var(--frost); */
 }
 
 .header:hover h1,

@@ -6,11 +6,12 @@ export const themes = [
 	{ name: 'dark', emoji: '🌛' },
 	{ name: 'land', emoji: '🌳' },
 	{ name: 'sea', emoji: '🐳' },
+	{ name: 'fuch', emoji: '🌺' },
 ]
 
-export default function ThemeSwitch () {
+export default function ThemeSwitch() {
 	const { theme, setTheme } = useTheme()
-	let dex = themes.findIndex((node) => node.name === theme) ?? 0
+	let dex = themes.findIndex(node => node.name === theme) ?? 0
 	let themoji = themes[dex]?.emoji ?? '🌳'
 
 	const nextTheme = () => {
@@ -21,9 +22,9 @@ export default function ThemeSwitch () {
 
 	return (
 		<>
-			<button type="button" className="themeSwitch" onClick={nextTheme}>
+			<button type='button' className='themeSwitch' onClick={nextTheme}>
 				<span>{themoji}</span>
-				<span aria-hidden="true" hidden>
+				<span aria-hidden='true' hidden>
 					{theme + 'mode'}
 				</span>
 			</button>

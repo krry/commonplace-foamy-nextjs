@@ -15,12 +15,14 @@ function verifyRelativityOfHref(href) {
 	// and prepend this to the href for the link
 	else {
 		// console.log('router?.asPath', router?.asPath)
-		const pathPrefix = router?.asPath ? router.asPath.split('/').slice(1, -1).join('/') : '.'
+		const pathPrefix = router?.asPath
+			? router.asPath.split('/').slice(1, -1).join('/')
+			: '.'
 		return pathPrefix + '/' + href
 	}
 }
 
-const AnchorTag = (props) => {
+const AnchorTag = props => {
 	const { href, title, target, children } = props
 	const shouldBeSimpleLink = target || href.startsWith('#')
 	if (shouldBeSimpleLink) {

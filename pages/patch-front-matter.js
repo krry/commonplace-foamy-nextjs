@@ -8,10 +8,10 @@ export default function Test ({ filesFixed }) {
 	return (
 		<Layout>
 			<h1>Patching Front Matter</h1>
-			<div className="flex row">
-				<div className="flex col">
+			<div className='flex row'>
+				<div className='flex col'>
 					<h2>Files Fixed</h2>
-					<ul className="microlist">
+					<ul className='microlist'>
 						{filesFixed.map((file, index) => (
 							<li key={index}>{file}</li>
 						))}

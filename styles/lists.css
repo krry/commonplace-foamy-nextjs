@@ -6,6 +6,7 @@ ul {
 
 ul > li {
 	position: relative;
+	padding-left: 0.25rem;
 }
 
 ul > li::before {
@@ -59,4 +60,15 @@ ol ul {
 .microlist {
 	font-size: 10pt;
 	line-height: 1;
+}
+
+.fields {
+	--font-mono: 1;
+	--font-casual: 0;
+	font-size: 81%;
+	line-height: 1.6;
+}
+
+dd + dt {
+	margin-top: 1em;
 }

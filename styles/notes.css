@@ -25,7 +25,7 @@
 .fuselage p {
 	white-space: pre-line;
 	word-break: break-word;
-	line-break: any;
+	line-break: loose;
 }
 
 @media (min-width: 536px) {
@@ -58,7 +58,7 @@
 	align-items: center;
 
 	@media (min-width: 768px) and (min-height: 536px) {
-		margin-top: 5vh;
+		margin-top: 20vh;
 		justify-content: flex-start;
 		align-items: flex-end;
 		text-align: right;

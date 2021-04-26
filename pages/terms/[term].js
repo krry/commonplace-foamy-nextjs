@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import {useRouter} from 'next/router'
-import {getAllTerms, getNotesWithTerm} from '../../lib/mdx'
+import { useRouter } from 'next/router'
+import { getAllTerms, getNotesWithTerm } from '../../lib/mdx'
 import Loading from '../../components/Loading'
 import Layout from '../../components/Layout'
 // looks through the mdx docs for #terms
@@ -17,57 +17,52 @@ export const getStaticPaths = async () => {
 	const paths = terms.sort().map(term => ({
 		params: {
 			slug: `/terms/${term.slice(1)}`,
-			term
-		}
+			term: term.slice(1),
+		},
 	}))
 	// console.log('paths count', paths.length)
 	// console.log('paths', paths)
 	// an array containing the #terms found in the mdx docs
 	return {
 		paths: paths,
-		fallback: true
+		fallback: true,
 	}
 }
 
-export const getStaticProps = async ({params}) => {
+export const getStaticProps = async ({ params }) => {
 	const notes = await getNotesWithTerm(params.term)
 	// console.log('props received notes with term', params.term, notes)
 	if (!notes) {
 		return {
-			notFound: true
+			notFound: true,
 		}
 	}
 	return {
-		props: { notes }
+		props: { notes },
 	}
-
 }
 
-const TermPage = ({notes}) => {
+const TermPage = ({ notes }) => {
 	const router = useRouter()
+	const term = notes?.length ? notes[0].term : 'term'
+
 	if (router.isFallback) {
 		return (
 			<Layout>
 				<Loading />
 			</Layout>
 		)
-	}
-	else {
+	} else {
 		return (
 			<Layout>
-				<h1>
-					{'#' + notes[0].term}
-				</h1>
+				<h1>{'#' + term}</h1>
 				{notes.slice().map((note, index) => (
-					<div key={index}>
-						<Link href={'/' + note?.slug}>
-							<div className="termLink">
-								<h2>{note.title}</h2>
-								<pre>{note.excerpt}</pre>
-							</div>
-						</Link>
-						<hr className="dinkus asterism" />
-					</div>
+					<Link href={'/' + note?.slug} key={index}>
+						<div className='termLink'>
+							<h2>👉 {note.title}</h2>
+							<pre>{note.excerpt}</pre>
+						</div>
+					</Link>
 				))}
 			</Layout>
 		)

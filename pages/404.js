@@ -14,13 +14,13 @@ export default function Custom404() {
 				<ul>
 					<li>
 						<button
-							className="btn"
+							className='btn'
 							onClick={() => router.back()}>
 							Jump back
 						</button>
 					</li>
 					<li>
-						<Link href="/">Back to the Index</Link>
+						<Link href='/'>Back to the Index</Link>
 					</li>
 				</ul>
 			</nav>

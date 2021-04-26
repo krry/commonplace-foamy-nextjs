@@ -3,9 +3,24 @@
 @import 'themes/light';
 @import 'themes/sea';
 @import 'themes/dark';
+@import 'themes/fuch';
+
+:root {
+	--font-weight: 400;
+	--font-slant: 0;
+	--font-casual: 1;
+	--font-mono: 0;
+}
 
 * {
 	box-sizing: border-box;
+
+	/* prettier-ignore */
+	font-variation-settings:
+		'wght' var(--font-weight),
+		'slnt' var(--font-slant),
+		'CASL' var(--font-casual),
+		'MONO' var(--font-mono);
 }
 
 html,
@@ -17,15 +32,15 @@ body {
 html,
 .root {
 	font-size: clamp(16px, 1.25vw + 1.25vh, 96px);
-	line-height: 1.5;
+	line-height: 1.44;
 	background-color: var(--paper);
 	color: var(--ink);
 }
 
 body {
-	font-family: var(--mono);
-	font-variation-settings: 'wght' 333;
-	line-height: 1.5rem;
+	--font-weight: 333;
+	font-family: var(--font);
+	line-height: 1.68rem;
 }
 
 @import 'wallpaper';
@@ -40,57 +55,77 @@ h4,
 .h4,
 h5,
 .h5 {
-	line-height: 1.25;
+	line-height: 1.44;
 	margin-top: 1em;
 	margin-bottom: 0.5em;
 	letter-spacing: 0.012125em;
-	font-family: var(--sans);
 }
 
 h1,
 .h1 {
+	--font-weight: 999;
 	font-size: 2.34rem;
-	font-variation-settings: 'wght' 444;
 	color: transparent;
-	background-image: linear-gradient(to bottom right, var(--ink), var(--link-cold));
 	background-clip: text;
+	background-image: linear-gradient(
+		to bottom right,
+		var(--ink),
+		var(--flair),
+		var(--link-cold)
+	);
 }
 
 h2,
 .h2 {
+	--font-weight: 888;
 	font-size: 1.61rem;
-	font-variation-settings: 'wght' 777;
 	color: transparent;
-	background-image: linear-gradient(to bottom right, var(--ink), var(--link-tepid));
+	background-image: linear-gradient(
+		to bottom right,
+		var(--flair),
+		var(--link-hot),
+		var(--link-tepid)
+	);
 	background-clip: text;
 }
 
 h3,
 .h3 {
+	--font-weight: 777;
 	font-size: 1.37rem;
-	font-variation-settings: 'wght' 666;
 	color: transparent;
-	background-image: linear-gradient(to bottom right, var(--ink), var(--smoke));
+	background-image: linear-gradient(
+		to bottom right,
+		var(--flair),
+		var(--ink),
+		var(--smoke)
+	);
 	background-clip: text;
 }
 
 h4,
 .h4 {
+	--font-weight: 666;
 	font-size: 1.25rem;
-	font-variation-settings: 'wght' 555;
 	color: transparent;
-	background-image: linear-gradient(to top left, var(--ink), var(--link));
 	background-clip: text;
+	background-image: linear-gradient(to top left, var(--ink), var(--link));
 }
 
 h5,
 .h5 {
+	--font-weight: 555;
 	font-size: 1.125rem;
-	font-variation-settings: 'wght' 555;
 	font-variant: small-caps;
 	color: transparent;
-	background-image: linear-gradient(to top left, var(--ink), var(--link-cold));
 	background-clip: text;
+	background-image: linear-gradient(to top left, var(--ink), var(--link-cold));
+}
+
+p {
+	--font-weight: 320;
+	--font-casual: 0.2;
+	--font-mono: 0.2;
 }
 
 p,
@@ -107,12 +142,18 @@ li > p {
 	margin: 0.5em 0;
 }
 
-em {
-	font-variation-settings: 'wght' 467;
+blockquote,
+blockquote p {
+	--font-weight: 367;
+	--font-slant: -7;
+	--font-casual: 0.7;
+	font-size: 107%;
+	line-height: 1.68;
 }
 
-strong {
-	font-variation-settings: 'wght' 637;
+blockquote p {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 @import './lists';
@@ -121,9 +162,7 @@ blockquote {
 	margin-left: 0.75em;
 	padding-left: 0.75em;
 	border-left: 0.125em dashed;
-	font-style: italic;
-	font-weight: 500;
-	font-variation-settings: 'wght' 555;
+	align-self: flex-start;
 }
 
 /* Let's make sure all's aligned */
@@ -144,6 +183,19 @@ hr.part {
 	hr.part {
 		margin-right: 0;
 	}
+}
+
+em {
+	--font-slant: -14;
+	--font-weight: 367;
+	--font-casual: 0.2;
+	--font-wonk: 0;
+	--font-soft: 12;
+}
+
+strong {
+	--font-weight: 633;
+	--font-casual: 0.8;
 }
 
 a,
@@ -183,8 +235,10 @@ sub {
 }
 
 pre {
+	--font-mono: 1;
+	--font-casual: 0.3;
+	--font-weight: 336;
 	font-size: 0.8rem;
-	font-family: var(--mono);
 }
 
 .termLink pre {
@@ -214,6 +268,7 @@ textarea {
 	color: var(--ink);
 }
 
+/* @import 'core'; */
 @import 'trees';
 @import 'switches';
 @import 'tables';

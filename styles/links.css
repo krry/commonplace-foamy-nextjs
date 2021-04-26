@@ -1,24 +1,17 @@
 a {
+	--font-casual: 0;
+	--font-weight: 321;
+	--font-slant: -6;
+	font-family: var(--font);
 	color: var(--link);
 	transition: all 111ms ease-out;
 	text-decoration: none;
-	font-family: var(--sans);
-	font-variation-settings: 'wght' 444;
-}
-
-.termLink {
-	display: block;
-	cursor: pointer;
-}
-
-.termLink:hover pre,
-.termLink:focus pre {
-	/* opacity: 0.5; */
-	color: var(--link);
 }
 
 a:hover,
 a:focus {
+	--font-slant: 0;
+	--font-weight: 654;
 	color: var(--link-hot);
 }
 
@@ -39,5 +32,16 @@ a:visited:focus {
 .wikiLink:hover {
 	text-decoration: none;
 	outline: 2px dashed;
-	outline-offset: 2px;
+	color: var(--link);
+}
+
+.termLink {
+	display: block;
+	cursor: pointer;
+}
+
+.termLink:hover pre,
+.termLink:focus pre {
+	/* opacity: 0.5; */
+	color: var(--link);
 }

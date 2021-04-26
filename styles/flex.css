@@ -9,3 +9,18 @@
 .flex.col.half {
 	flex: 1 0 50%;
 }
+
+.ib {
+	display: inline-block;
+}
+
+.iconGallery {
+	flex-direction: row;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+
+	& svg {
+		margin: 2vw;
+	}
+}

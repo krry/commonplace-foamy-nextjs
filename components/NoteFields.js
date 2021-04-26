@@ -1,5 +1,5 @@
 function arrayFromCommaList(list) {
-	return list.split(',').map((w) => w.trim())
+	return list.split(',').map(w => w.trim())
 }
 
 export default function NoteFields({ metadata }) {
@@ -15,7 +15,7 @@ export default function NoteFields({ metadata }) {
 	}
 	return (
 		<>
-			<dl>
+			<dl className='fields'>
 				<dt>Title</dt>
 				<dd>{fields.title}</dd>
 				<dt>Time</dt>

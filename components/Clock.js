@@ -11,5 +11,5 @@ export default function Clock() {
 		return () => clearInterval(timer)
 	})
 
-	return <h3 className="clock brobding">{ms}</h3>
+	return <h3 className='clock brobding'>{ms}</h3>
 }

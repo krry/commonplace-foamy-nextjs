@@ -7,7 +7,7 @@ export default NextAuth({
 	providers: [
 		Providers.GitHub({
 			clientId: GITHUB_ID,
-			clientSecret: GITHUB_SECRET
+			clientSecret: GITHUB_SECRET,
 		}),
 		// ...add more providers here
 	],
@@ -25,9 +25,9 @@ export default NextAuth({
 				token.accessToken = account.accessToken
 			}
 			// if (user) console.log('nextauth user', user)
-			// if (profile) console.log('nextauth profile', profile)
+			if (profile) console.log('nextauth profile', profile)
 			// if (account) console.log('nextauth account', account)
-			// if (isNewUser) console.log('nextauth isNewUser', isNewUser)
+			if (isNewUser) console.log('nextauth isNewUser', isNewUser)
 			return token
 		},
 		async session(session, token) {
@@ -36,7 +36,7 @@ export default NextAuth({
 			// console.log('nextauth token', token)
 			session.accessToken = token.accessToken
 			return session
-		}
+		},
 	},
 	// pages: {
 	// signIn: '/auth/signin',

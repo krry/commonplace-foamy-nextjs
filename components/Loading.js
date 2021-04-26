@@ -15,7 +15,7 @@ export default function Loading() {
 	let [loading] = useState(true)
 	let [color] = useState(flair)
 	return (
-		<div className="loading-rack">
+		<div className='loading-rack'>
 			<CircleLoader color={color} loading={loading} css={override} size={loaderHeight} />
 			{/* <button className="btn" onClick={() => setLoading(!loading)}>Toggle Loader</button> */}
 			{/* <input
