@@ -20,6 +20,10 @@
 	text-align: left;
 	margin: 0 auto;
 	max-width: 64ch;
+
+	@media (min-width: 768px) and (min-height: 536px) {
+		padding: 0 4vw 0 8vw;
+	}
 }
 
 .fuselage p {
@@ -46,7 +50,6 @@
 	width: 100vw;
 
 	@media (min-width: 768px) and (min-height: 536px) {
-		padding: 0 4vw 0 8vw;
 		width: auto;
 	}
 }
@@ -62,9 +65,10 @@
 		justify-content: flex-start;
 		align-items: flex-end;
 		text-align: right;
-		flex-basis: 32%;
+		flex-basis: 27%;
 		min-width: 240px;
-		max-width: 32vw;
+		max-width: 27vw;
+		padding: 0 1vw;
 	}
 }
 
