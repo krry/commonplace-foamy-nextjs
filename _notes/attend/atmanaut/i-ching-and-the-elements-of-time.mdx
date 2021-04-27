@@ -1,7 +1,7 @@
 ---
 author: Kerrbear
 date: 2019-03-22T16:48:00-05:00
-tags: Non-Occidental, spacetime, buddy system, cleromancy, i ching
+tags: non-occidental, spacetime, buddy system, cleromancy, i ching, yijing, divination
 title: I Ching and the Elements of Time
 title_sub: A first look at the Book of Changes
 title_lead: A headlong dive into the divine
@@ -49,14 +49,16 @@ After tossing the three coins, we'll have a total of 6, 7, 8, or 9. Each of thes
 
 My coin tosses amount to 6 8 8 8 6 7. Drawing in lines from the bottom reveals:
 
+```sh
     7 -------     ------- 	   -------
     6 ---x---     --- --- 	   -------
     8 --- ---  =  --- ---  =>  --- ---
     8 --- ---  =  --- ---  =>  --- ---
     8 --- ---     --- --- 	   --- ---
     6 ---x---     --- --- 	   -------
-    			   23 Po becomes 42 I
+						23 Po becomes 42 I
                   Splitting	   Increase
+```
 
 Relaying this to the Rust library via CLI yields:
 
@@ -79,10 +81,10 @@ We assume a tossed coin has an equal chance of landing on either of its two side
     000 - tail tail tail
     001 - tail tail head
     010 - tail head tail
-    011 - and so on...
-    100
-    101
-    110
-    111
+    011 - and so on…
+    100 - head tail tail
+    101 - head tail head
+    110 - head head tail
+    111 - head head head
 
 To select one of 64 permutations with equal probability, we could flip six coins in succession, as 2 to the 6th power is 64. But in casting lots for the I Ching, we are not only manifesting one of 64 hexagrams, but an interwoven relationship between two of the 64. For this we need more computing power.

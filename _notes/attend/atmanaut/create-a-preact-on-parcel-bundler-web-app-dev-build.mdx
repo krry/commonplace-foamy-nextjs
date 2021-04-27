@@ -23,20 +23,20 @@ If you want the paper airplane of dev frameworks, look no further. If you want t
 
 #### 1. First, we draw a blank... dir.
 
-```shell
+```sh
 mkdir -p preact-parcel-app/src    # -p flag makes parents
 cd preact-parcel-app
 ```
 
 #### 2. I like to let `yarn` initialize the dir.
 
-```shell
+```sh
 yarn init -y                      # -y flag says 'yes'
 ```
 
 #### 3. Then have `yarn` install our slim dependencies.
 
-```shell
+```sh
 yarn add -D parcel-bundler        # -D flag to --save-dev
 yarn add preact preact-compat     # compat with react methods
 ```
@@ -138,7 +138,7 @@ The cool part about these little runcoms is how portable they are. Just copy and
 
 Save that file. You may have to stop and restart parcel, you may not. The other way to add features to the Parcel build is via `yarn`/`npm`. So [if you want to write your styles in Sass](https://parceljs.org/scss.html), there's a one-liner for that:
 
-```shell
+```sh
 yarn add -D sass
 ```
 
