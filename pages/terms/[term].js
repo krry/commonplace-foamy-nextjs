@@ -14,12 +14,16 @@ export const getStaticPaths = async () => {
 	// sort the array alphabetically
 	// dedupe the items in the array with a Set
 	// construct a paths object with the terms
-	const paths = terms.sort().map(term => ({
-		params: {
-			slug: `/terms/${term.slice(1)}`,
-			term: term.slice(1),
-		},
-	}))
+	const paths = terms.sort().map(term => {
+		if (!term || !term.slice(1)) return
+
+		return {
+			params: {
+				slug: `/terms/${term.slice(1).toLowerCase()}`,
+				term: term.slice(1).toLowerCase(),
+			},
+		}
+	})
 	// console.log('paths count', paths.length)
 	// console.log('paths', paths)
 	// an array containing the #terms found in the mdx docs
@@ -32,9 +36,10 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
 	const notes = await getNotesWithTerm(params.term)
 	// console.log('props received notes with term', params.term, notes)
-	if (!notes) {
+	if (!notes || !notes.length || !notes[0].term) {
 		return {
 			notFound: true,
+			props: { notes: [{ term: 'null' }] },
 		}
 	}
 	return {
@@ -44,7 +49,6 @@ export const getStaticProps = async ({ params }) => {
 
 const TermPage = ({ notes }) => {
 	const router = useRouter()
-	const term = notes?.length ? notes[0].term : 'term'
 
 	if (router.isFallback) {
 		return (
@@ -52,21 +56,21 @@ const TermPage = ({ notes }) => {
 				<Loading />
 			</Layout>
 		)
-	} else {
-		return (
-			<Layout>
-				<h1>{'#' + term}</h1>
-				{notes.slice().map((note, index) => (
-					<Link href={'/' + note?.slug} key={index}>
-						<div className='termLink'>
-							<h2>👉 {note.title}</h2>
-							<pre>{note.excerpt}</pre>
-						</div>
-					</Link>
-				))}
-			</Layout>
-		)
 	}
+	const term = notes[0].term ?? 'term'
+	return (
+		<Layout>
+			<h1>{'#' + term}</h1>
+			{notes.slice().map((note, index) => (
+				<Link href={'/' + note?.slug} key={index}>
+					<div className='termLink'>
+						<h2>👉 {note.title}</h2>
+						<pre>{note.excerpt}</pre>
+					</div>
+				</Link>
+			))}
+		</Layout>
+	)
 }
 
 export default TermPage

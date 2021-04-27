@@ -3,7 +3,7 @@
 	--font-casual: 0;
 	font-family: var(--font);
 	border: 0.125em solid var(--cloud);
-	border-radius: 0.25em;
+	border-radius: calc(0.5vw + 0.5vh);
 	background-color: var(--glass);
 	color: var(--flair);
 	font-size: 1em;
@@ -11,6 +11,7 @@
 	margin: 0.425rem;
 	cursor: pointer;
 	transition: all 367ms ease-out;
+	line-height: 1.44;
 }
 
 .btn:hover,

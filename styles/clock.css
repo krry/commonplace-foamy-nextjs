@@ -1,0 +1,23 @@
+.brobding {
+	/* font-size: clamp(5rem, 12vw + 12vh, 25vw); */
+	text-align: center;
+	opacity: 20%;
+	pointer-events: none;
+}
+
+.clock {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	height: 100vh;
+	line-height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.clock span {
+	flex: 1 0 auto;
+}

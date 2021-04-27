@@ -62,6 +62,20 @@ ol ul {
 	line-height: 1;
 }
 
+ul.termList {
+	list-style: none;
+
+	& li {
+		padding: 0 0.5em;
+		margin: 0;
+		display: inline-block;
+
+		&::before {
+			content: '';
+		}
+	}
+}
+
 .fields {
 	--font-mono: 1;
 	--font-casual: 0;

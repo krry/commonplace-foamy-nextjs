@@ -277,19 +277,7 @@ textarea {
 @import 'flex';
 @import 'search';
 @import 'btn';
-
-.brobding {
-	font-size: clamp(5rem, 25vw + 25vh, 100vw);
-	text-align: center;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	margin: auto;
-	opacity: 20%;
-	pointer-events: none;
-}
+@import 'clock';
 
 input,
 button,

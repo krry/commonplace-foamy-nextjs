@@ -163,21 +163,21 @@ ul.top {
 		margin-left: 0.3em;
 	}
 
-	&.flipX {
-		transform: scaleX(-1);
-	}
-
-	&.flipY {
-		transform: scaleY(-1);
-	}
-
-	&.flipXY {
-		transform: scaleX(-1) scaleY(-1);
-	}
-
 	&.spinning {
 		animation: spin 750ms infinite linear;
 	}
+}
+
+.flipX {
+	transform: scaleX(-1);
+}
+
+.flipY {
+	transform: scaleY(-1);
+}
+
+.flipXY {
+	transform: scaleX(-1) scaleY(-1);
 }
 
 @keyframes spin {
