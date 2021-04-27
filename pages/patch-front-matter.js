@@ -4,7 +4,7 @@ import { patchMissingFrontMatter } from '../lib/frontmatter'
 
 const root = process.cwd()
 
-export default function Test ({ filesFixed }) {
+export default function Test({ filesFixed }) {
 	return (
 		<Layout>
 			<h1>Patching Front Matter</h1>
@@ -22,7 +22,7 @@ export default function Test ({ filesFixed }) {
 	)
 }
 
-export async function getStaticProps () {
+export async function getStaticProps() {
 	// this dirPath determines which files' front matter is patched
 	// might be helpful for this to come in as a param
 	const dirPath = path.join(root, 'private')

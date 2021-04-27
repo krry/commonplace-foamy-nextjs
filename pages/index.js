@@ -4,17 +4,16 @@ import SiteNav from '../components/SiteNav'
 import CopyLeft from '../components/CopyLeft'
 import { GiFlyingTrout } from 'react-icons/gi'
 
-export default function Index () {
+export default function Index() {
 	return (
 		<Layout>
 			<SiteNav location='home' />
 			<hr />
 			<footer style={{ textAlign: 'center' }}>
 				<p>
-					<GiFlyingTrout className='icon flipX after' />
-					{' '}
-					Welcome to the <Link href='/intend/commonplace-book'>Commonplace&nbsp;Book</Link> of&nbsp;<Link href='/intend/who-i-am'>Kerry&nbsp;Snyder</Link>
-					{' '}
+					<GiFlyingTrout className='icon flipX after' /> Welcome to the{' '}
+					<Link href='/intend/commonplace-book'>Commonplace&nbsp;Book</Link>{' '}
+					of&nbsp;<Link href='/intend/who-i-am'>Kerry&nbsp;Snyder</Link>{' '}
 					<GiFlyingTrout className='icon' />
 				</p>
 				<CopyLeft />

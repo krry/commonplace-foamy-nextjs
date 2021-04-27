@@ -4,7 +4,19 @@ module.exports = {
 		es2021: true,
 		node: true,
 	},
-	extends: ['eslint:recommended', 'plugin:react/recommended'],
+	plugins: ['react'],
+	settings: {
+		react: {
+			version: 'detect',
+		},
+		'mdx/code-blocks': true,
+	},
+	extends: [
+		'eslint:recommended',
+		'plugin:mdx/recommended',
+		'plugin:react/recommended',
+		'plugin:prettier/recommended',
+	],
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,
@@ -12,19 +24,13 @@ module.exports = {
 		ecmaVersion: 12,
 		sourceType: 'module',
 	},
-	plugins: ['react'],
-	settings: {
-		react: {
-			version: 'detect',
-		},
-	},
 	rules: {
-		indent: ['error', 'tab'],
-		quotes: ['error', 'single'],
-		'jsx-quotes': ['error', 'prefer-single'],
 		semi: ['error', 'never'],
-		'linebreak-style': ['error', 'unix'],
+		indent: ['error', 'tab'],
+		// quotes: ['warn', 'single'],
 		'react/prop-types': 'off',
 		'react/react-in-jsx-scope': 'off',
+		'linebreak-style': ['error', 'unix'],
+		'jsx-quotes': ['error', 'prefer-single'],
 	},
 }

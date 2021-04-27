@@ -1,6 +1,6 @@
 {
 	"name": "commonplace",
-	"version": "0.3.2",
+	"version": "0.3.3",
 	"license": "CC-BY-NC-SA-4.0",
 	"repository": {
 		"git": "git@github.com:krry/commonplace.git"
@@ -10,7 +10,7 @@
 		"dev:ssl": "node server.js",
 		"dev:watch": "next-remote-watch ./_notes",
 		"build": "next build",
-		"lint": "eslint ./ --fix --ext js",
+		"lint": "eslint ./ --ext js --fix",
 		"cache": "node lib/cache.js",
 		"start": "next start",
 		"prepare": "husky install"
@@ -44,16 +44,21 @@
 	"devDependencies": {
 		"babel-plugin-superjson-next": "^0.2.3",
 		"eslint": "^7.24.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-mdx": "^1.12.0",
+		"eslint-plugin-prettier": "^3.4.0",
 		"eslint-plugin-react": "^7.23.2",
 		"lint-staged": ">=10",
 		"next-remote-watch": "^1.0.0",
 		"postcss-advanced-variables": "^3.0.1",
 		"postcss-preset-env": "^6.7.0",
 		"prepend-file": "^2.0.0",
+		"prettier": "^2.2.1",
 		"remark-external-links": "^8.0.0",
 		"remark-images": "^2.0.0",
 		"remark-inline-links": "5.0.0",
 		"remark-numbered-footnote-labels": "^1.1.0",
+		"remark-preset-prettier": "^0.4.1",
 		"remark-unwrap-images": "^2.0.0",
 		"remark-wiki-link": "1.0.2",
 		"stylelint-config-standard": "^21.0.0"

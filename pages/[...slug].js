@@ -7,13 +7,13 @@ import { mdxFilePaths, getFileBySlug } from '../lib/mdx'
 export const getStaticPaths = async () => {
 	const paths = mdxFilePaths
 		// Remove file extensions for page paths
-		.map((path) => path.replace(/\.mdx?$/, ''))
+		.map(path => path.replace(/\.mdx?$/, ''))
 		// Map the path into the static paths object required by Next.js
-		.map((slug) => ({ params: { slug: slug.split('/') } }))
+		.map(slug => ({ params: { slug: slug.split('/') } }))
 
 	return {
 		paths,
-		fallback: false
+		fallback: false,
 	}
 }
 
@@ -29,7 +29,7 @@ export const getStaticProps = async ({ params }) => {
 	return { props: note }
 }
 
-export default function NotePage ({ mdxSource, frontMatter }) {
+export default function NotePage({ mdxSource, frontMatter }) {
 	// console.log('frontMatter', frontMatter);
 	if (!mdxSource) return <ErrorPage statusCode={404} />
 	const content = hydrate(mdxSource, { components: MDXComponents })

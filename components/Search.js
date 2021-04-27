@@ -1,8 +1,8 @@
-import {useCallback, useRef, useState} from 'react'
+import { useCallback, useRef, useState } from 'react'
 import Link from 'next/link'
-import {useHotkeys} from 'react-hotkeys-hook'
+import { useHotkeys } from 'react-hotkeys-hook'
 
-export default function Search () {
+export default function Search() {
 	const searchRef = useRef(null)
 	const inputRef = useRef(null)
 	const [query, setQuery] = useState('')
@@ -15,7 +15,7 @@ export default function Search () {
 		inputRef.current.addEventListener('keydown', handleKeydown)
 	})
 
-	function handleKeydown (evt) {
+	function handleKeydown(evt) {
 		if (evt.key === 'Escape') {
 			inputRef.current.blur()
 			// console.log('escaped', evt.key)
@@ -30,7 +30,7 @@ export default function Search () {
 
 	const searchEndpoint = query => `/api/search?q=${query}`
 
-	const onChange = useCallback((event) => {
+	const onChange = useCallback(event => {
 		const query = event.target.value
 		setQuery(query)
 		if (query.length) {
@@ -47,7 +47,7 @@ export default function Search () {
 		window.addEventListener('click', onClick)
 	}, [])
 
-	const onClick = useCallback((event) => {
+	const onClick = useCallback(event => {
 		if (searchRef.current && !searchRef.current.contains(event.target)) {
 			setActive(false)
 			window.removeEventListener('click', onClick)
@@ -55,10 +55,7 @@ export default function Search () {
 	}, [])
 
 	return (
-		<div
-			className='searchContainer'
-			ref={searchRef}
-		>
+		<div className='searchContainer' ref={searchRef}>
 			<input
 				ref={inputRef}
 				type='search'
@@ -70,16 +67,15 @@ export default function Search () {
 			/>
 			{active && results.length > 0 && (
 				<ul className='results'>
-					{results.map(({slug, title}, index) => {
+					{results.map(({ slug, title }, index) => {
 						return (
-							<li className='result' key={slug} tabIndex={index+1}>
+							<li className='result' key={slug} tabIndex={index + 1}>
 								<Link href='/[slug]' as={`/${slug}`}>
 									<a>{title}</a>
 								</Link>
 							</li>
 						)
-					}
-					)}
+					})}
 				</ul>
 			)}
 		</div>
