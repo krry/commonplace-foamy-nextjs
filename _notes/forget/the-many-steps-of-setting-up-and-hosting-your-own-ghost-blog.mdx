@@ -25,7 +25,7 @@ I tried Heroku first (they tend to wipe Ghost databases unless you jump through 
 
 6. Get latest system software
 
-```sh
+```bash
 sudo apt-get upgrade
 sudo apt-get git
 sudo apt-get nodejs
@@ -63,7 +63,7 @@ git remote add git@github.com:<your_github_username>/<ghost_repo>.git
    copy your RSA key to your local system clipboard, then paste it into [Github's list of RSA keys on your account](https://github.com/settings/ssh)
 9. Clone dat repo into a nice spot
 
-```sh
+```bash
 mkdir /var/www/ghost
 cd /var/www/ghost
 git clone git@github.com:<github_username>/<github_repo_name>.git
@@ -75,7 +75,7 @@ git clone git@github.com:<github_username>/<github_repo_name>.git
     `sudo curl https://raw.githubusercontent.com/TryGhost/Ghost-Config/master/init.d/ghost -o /etc/init.d/ghost`
     just a trim here, and a trim there:
 
-```sh
+```bash
 	vi /etc/init.d/ghost
 GHOST_ROOT=/path/to/ghost
 DAEMON=<NODE_PATH>
@@ -87,7 +87,7 @@ DAEMON=<NODE_PATH>
     `cut -d: -f1 /etc/passwd`
 12. Set the permissions so that the 'ghost' has partial `chownership` and can `chmodify` important files like `config.js` once deployed
 
-```sh
+```bash
 	sudo chown -R ghost:ghost /var/www/ghost
 sudo chmod 755 /etc/init.d/ghost
 ```
@@ -100,7 +100,7 @@ sudo chmod 755 /etc/init.d/ghost
     `vi /etc/nginx/sites-available/ghost.conf`
     in there make the configs say right things
 
-```js
+```javascript
 server {
     listen 80;
     server_name <your_host_url.tld>;
@@ -113,7 +113,7 @@ server {
 }
 ```
 
-```js
+```javascript
 server {
     listen 0.0.0.0:80;
     server_name <your.domain.name>;
@@ -147,7 +147,7 @@ or you might need to specify the `.conf` file, I'm not sure:
 
 15. Pull the ripcord. these make sure the ghost floats on its own:
 
-```sh
+```bash
 sudo update-rc.d ghost defaults
 sudo update-rc.d ghost enable
 sudo adduser <your_admin_server_username> ghost
@@ -161,7 +161,7 @@ sudo adduser <your_admin_server_username> ghost
 17. Build the ghost app on the server
     Install all dependencies
 
-```sh
+```bash
 npm install
 npm install --production
 ```

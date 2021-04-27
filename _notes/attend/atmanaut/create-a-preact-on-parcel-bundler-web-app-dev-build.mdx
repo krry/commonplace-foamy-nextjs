@@ -23,20 +23,20 @@ If you want the paper airplane of dev frameworks, look no further. If you want t
 
 #### 1. First, we draw a blank... dir.
 
-```sh
+```bash
 mkdir -p preact-parcel-app/src    # -p flag makes parents
 cd preact-parcel-app
 ```
 
 #### 2. I like to let `yarn` initialize the dir.
 
-```sh
+```bash
 yarn init -y                      # -y flag says 'yes'
 ```
 
 #### 3. Then have `yarn` install our slim dependencies.
 
-```sh
+```bash
 yarn add -D parcel-bundler        # -D flag to --save-dev
 yarn add preact preact-compat     # compat with react methods
 ```
@@ -71,7 +71,7 @@ At this point, if you're following along, you may realize you could just be clon
 
 #### 6. Now we need to mount the Preact app.
 
-```js
+```javascript
 // src/index.js
 import { h, render } from 'preact'
 import App from './App'
@@ -117,11 +117,13 @@ body {
 
 #### 9. P-o-P it off!
 
-    yarn dev
+```bash
+yarn dev
+```
 
 ### What dreams may come!
 
-Parcel can handle all manner of assets. It sits in wait, ready to automagically install dependencies when you start using them. There are a bunch of bundles and build features that Parcel can sniff out from a runcom or config file like: `.postcssrc, postcss.config.js, .browserslistrc, .babelrc`
+Parcel can handle all manner of assets. It sits in wait, ready to automagically install dependencies when you start using them. There are a bunch of bundles and build features that Parcel can sniff out from a runcom or config file like: `.postcssrc`, `postcss.config.js`, `.browserslistrc`, `.babelrc`
 
 The cool part about these little runcoms is how portable they are. Just copy and drop them into a new project. For instance, [let's say you want to autoprefix your css](https://parceljs.org/css.html). Just add autoprefixer settings to a runcom for PostCSS: `.postcssrc` or `postcss.config.js` will work.
 
@@ -138,7 +140,7 @@ The cool part about these little runcoms is how portable they are. Just copy and
 
 Save that file. You may have to stop and restart parcel, you may not. The other way to add features to the Parcel build is via `yarn`/`npm`. So [if you want to write your styles in Sass](https://parceljs.org/scss.html), there's a one-liner for that:
 
-```sh
+```bash
 yarn add -D sass
 ```
 

@@ -6,13 +6,13 @@ title: Person Reaction Interest Matrix
 
 # Person Reaction Interest Matrix
 
-A reaction can be emotional or interest-based.  We capture reactions by allowing users to upvote tags that closely resemble their reaction to the content.
+A reaction can be emotional or interest-based. We capture reactions by allowing users to upvote tags that closely resemble their reaction to the content.
 
 Reactions may also have more than one person in context, for example when a user wishes to share his or her reaction to a GIF with another person.
 
 Next GIF has the same [emo tag, interest tag, author] and the highest number of similarities with the current GIF within the person-reaction-interest-matrix (PRIM).
 
-```js
+```javascript
 SocialMatrix.prototype = {
 
 const PRIM_factors = {
@@ -31,23 +31,25 @@ const PRIM_factors = {
 	interest,
 }
 ```
+
 ## HUNH!?
 
 PRIM tracks collisions of matrix factors for each GIF in the system. A collision may occur between 2 and n of the factors.
 
-GIFs have views, and reactions, which have	emotions or interests and views.
+GIFs have views, and reactions, which have emotions or interests and views.
 
 ## Counts of user behaviors
-| entity key | what it counts |
-| --: | -- |
-| gif.views				    				| number of views |
-| gif.reactions               | number of reactions captured (emotions + interests) |
-| gif.reactions.person        | number of reactions captured from each person |
-| gif.emotions                | number of emotions captured |
-| gif.emotions.person         | number of emotions captured from each person |
-| gif.interests               | number of interests captured |
-| gif.interests.person        | number of interests captured from each person |
-| gif.reactions.shared        | number of reactions directed at a person |
-| gif.reactions.shared.person | number of reactions directed at each person |
-| gif.interests.shared        | number of interests directed at a person |
-| gif.interests.shared.person | number of interests directed at each person |
+
+|                  entity key | what it counts                                      |
+| --------------------------: | --------------------------------------------------- |
+|                   gif.views | number of views                                     |
+|               gif.reactions | number of reactions captured (emotions + interests) |
+|        gif.reactions.person | number of reactions captured from each person       |
+|                gif.emotions | number of emotions captured                         |
+|         gif.emotions.person | number of emotions captured from each person        |
+|               gif.interests | number of interests captured                        |
+|        gif.interests.person | number of interests captured from each person       |
+|        gif.reactions.shared | number of reactions directed at a person            |
+| gif.reactions.shared.person | number of reactions directed at each person         |
+|        gif.interests.shared | number of interests directed at a person            |
+| gif.interests.shared.person | number of interests directed at each person         |

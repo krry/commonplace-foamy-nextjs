@@ -74,7 +74,7 @@ To serve a wide array of screens, especially the retina screens that have 2x res
 
 These 1x and 2x images can be optimized for size and quality with ImageOptim and ImageAlpha from the command line:
 
-```sh
+```bash
 cd dir_with_images
 imageoptim --imagealpha '**/*.png' '**/*.jpg'
 ```
@@ -91,7 +91,7 @@ taxonomies:
 
 Then you can use it in `YAML` front matter like so:
 
-```md
+```markdown
 ---
 title: An article por ejemplo
 things: bunnicula, flying saucers
@@ -113,12 +113,10 @@ External links are given `target=_blank` thanks to the `BlackFriday` markdown co
 
 For internal links, use the standard markdown link syntax or a reference link.
 
-```md
+```markdown
 [This is a standard link](/code/README/)
 
 [And this is a reference link][reflink]
 
 [reflink]: /code/README/
 ```
-
-##

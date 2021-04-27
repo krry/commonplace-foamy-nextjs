@@ -49,20 +49,8 @@ After tossing the three coins, we'll have a total of 6, 7, 8, or 9. Each of thes
 
 My coin tosses amount to 6 8 8 8 6 7. Drawing in lines from the bottom reveals:
 
-```sh
-    7 -------     ------- 	   -------
-    6 ---x---     --- --- 	   -------
-    8 --- ---  =  --- ---  =>  --- ---
-    8 --- ---  =  --- ---  =>  --- ---
-    8 --- ---     --- --- 	   --- ---
-    6 ---x---     --- --- 	   -------
-						23 Po becomes 42 I
-                  Splitting	   Increase
-```
-
-Relaying this to the Rust library via CLI yields:
-
-![](/uploads/i-ching-rust-23.png)
+Relaying this into Nameless yields:
+![Splitting Apart becomes Increase](/images/yijing-cast.png)
 
 Looks like it might be time to chill on this post and do something else for a bit. "The leg of the bed is split." That doesn't bode well.
 
@@ -78,13 +66,13 @@ I, for one, will keep my eyes peeled for yarrow stalks ([which have oodles of us
 
 We assume a tossed coin has an equal chance of landing on either of its two sides. These US quarters have a head on one side, which we'll call yang, and assign a value of 1, while the other side will correspond to yin, with a value of 0. This way, each time I flip a coin, it will resolve to yin or yang, with a value of 0 or 1. Three two-sided coins flipped in succession can land 2 times 2 times 2 ways (which is to say 2 to the 3rd power or 8 ways).
 
-    000 - tail tail tail
-    001 - tail tail head
-    010 - tail head tail
-    011 - and so on…
-    100 - head tail tail
-    101 - head tail head
-    110 - head head tail
-    111 - head head head
+000 - tail tail tail
+001 - tail tail head
+010 - tail head tail
+011 - and so on…
+100 - head tail tail
+101 - head tail head
+110 - head head tail
+111 - head head head
 
 To select one of 64 permutations with equal probability, we could flip six coins in succession, as 2 to the 6th power is 64. But in casting lots for the I Ching, we are not only manifesting one of 64 hexagrams, but an interwoven relationship between two of the 64. For this we need more computing power.

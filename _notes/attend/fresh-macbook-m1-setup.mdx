@@ -1,11 +1,12 @@
 # Fresh MacBook Air M1 Web Dev Setup
+
 ## by [@krry](https://github.com/krry/)
 
 This time it's an M1 MacBook Air dipped in gold.
 
 First I start the Xcode command line tools downloading. That gits me `git` among other essentials. Open terminal with spotlight and then:
 
-```sh
+```bash
 xcode-select --install
 ```
 
@@ -15,12 +16,12 @@ Spectacle for window arrangement is no longer maintained, but they point me to [
 
 Then I launch Safari to get:
 
-* Chrome or [Chromium](https://chromium.googlesource.com/chromium/src.git/+/master/docs/mac_arm64.md)
-* [VSCode](https://code.visualstudio.com/docs/?dv=darwinarm64)
-* [iTerm2](https://iterm2.com/)
-* [Notion](https://notion.so)
-* [Figma](https://figma.com)
-* [Zoom](https://zoom.us)
+- Chrome or [Chromium](https://chromium.googlesource.com/chromium/src.git/+/master/docs/mac_arm64.md)
+- [VSCode](https://code.visualstudio.com/docs/?dv=darwinarm64)
+- [iTerm2](https://iterm2.com/)
+- [Notion](https://notion.so)
+- [Figma](https://figma.com)
+- [Zoom](https://zoom.us)
 
 Some offer a version tuned for Apple Silicon.
 
@@ -32,18 +33,19 @@ Now I am getting close to operable. I'll need to [generate some new RSA keys](ht
 
 In iTerm2, I install [`brew`](https://brew.sh):
 
-```sh
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
 This set my `$BREW_PREFIX` to `/opt/homebrew/bin' when I had been accustomed to it being `/usr/local`. I have not gleaned the reason or the full impact of this yet. But everything seems to be working. I caught a rumor that it might make it difficult to run the Rust suite via Homebrew.
 
 Once I have `brew` available, I like to enrich my prompt with [Starship](https://starship.rs), which requires a [nerd font](https://nerdfonts.com) or two. Fira Code has great ligatures.
 
-I also will need Fish Shell before long. I trust that Ol' Bash will always be there. And **`zsh`** somehow` hasn't made it out of the 90s yet. So that leaves me with a few options. It starts with `brew install fish` and there is [plenty more on the fish setup here](./fish/fish-setup.md)
+I also will need Fish Shell before long. I trust that Ol' Bash will always be there. And **`zsh`** somehow`hasn't made it out of the 90s yet. So that leaves me with a few options. It starts with`brew install fish` and there is [plenty more on the fish setup here](./fish/fish-setup.md)
 
 Fish needs `fisher` to manage its packages, which can easily come in from Github if we know the author and repo names. E.g.,
 
-```fish
+```bash
 fisher install edc/bass # use bash scripts in fish
 \ laughedelic/pisces # for completion of pairs
 \ FabioAntunes/fish-nvm # nvm in fish
@@ -65,6 +67,7 @@ It might be faster tho. [Kamadhenu](https://github.com/krry/kamadhenu) comes up 
 Next I'll try to get a simple Next.js app running locally. I may decide to offshore such tasks to GitPod, and then all this will have been futile 😜
 
 Bonus!!!
+
 ## CLI commands installed via Brew
 
 - `cowsay`
@@ -109,4 +112,3 @@ Bonus!!!
 - `yarn`
 - `z` - jump around
 - `zenith` - better `vtop`
-
