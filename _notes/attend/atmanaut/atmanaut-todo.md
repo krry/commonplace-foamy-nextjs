@@ -1,0 +1,13 @@
+---
+title: Atmanaut Todo
+date: 2019-03-01 00:00:00 -0600
+tags: todo
+---
+
+# Atmanaut Todo
+
+- [x] Explanation vs. Description
+- [ ] Expectation as the seed of disappointment
+- [ ] Autonomy: fuel for happiness
+- [ ] Pervasive Sovereignty
+- [ ] FromTo: A Changemap

@@ -1,0 +1,23 @@
+---
+date: 2020-09-27T14:11:37+00:00
+title: Robber Baron or the Head Judgmeister
+author: Kerrbear
+tags: polarity, tyranny, separate self, interbeing,
+---
+
+# Robber Baron or the Head Judgmeister
+
+> It may be better to live under robber barons than under omnipotent moral busybodies. The robber baron’s cruelty may sometimes sleep, his cupidity may at some point be satiated; but those who torment us for our own good will torment us without end for they do so with the approval of their own conscience. They may be more likely to go to Heaven yet at the same time likelier to make a Hell of earth.
+> <cite>C.S. Lewis</cite>
+
+I hear echoes of a childhood dilemma, recalling my early struggles against Catholic authority. They seemed to get off on stamping enjoyable experiences as sins. The things I wanted to do were wrong, and what they demanded was right I didn't like. I could find no other rationale but paradoxical sadism.
+
+I see now they were scared, ruled by fear of damnation, fear of rejection, fear of inadequacy, of isolation. These are maladies of many if not all creatures who imagine themselves as stopping at their skin, separate from the world.
+
+The robber barons too have fears. They will pillage and plunder, amass fortunes in the pursuit of immortality in one sense or another, be it legacy like Rockefeller or Carnegie, or progress like Musk or Bezos, or actual immortality like Diamandis and Ponce de Leon. For with so much promise and wonder in the world, and conceiving of themselves as irreparably separate from the world and all others, they fear not being.
+
+Their love of life and fear of death wind together into a helical trunk of unmatched ambition. Teetering on towering principles, but without moral judgment, they can and will enslave the masses as workers, voters, peons: any who are too lazy to save themselves from themselves, any who would prefer a sunset to a victory. The simple pleasures are not enough for the robber baron. They seek a higher peak with a thirst for the ambrosia, and would share it with the world, if only any of the Gods could be found on Olympus. So instead they dig for iridium, boil the tar sands, drill for oil, build Walmarts, write Harry Potter books.
+
+The moral busybody's tyranny can be quiet and still pervasive. The fear of life took root in them before the love of life, or fear of death, so they long for a blissful afterlife and would bring death to any who stand in their way. They recruit the unwitting masses for their campaigns of salvation, promising unknowable eternal pleasures in exchange for, at the extreme end, utter denial of self, nature, instinct, truth. They launch Crusades, build Missions, purify society, preserve nature, protect the environment, commit genocides. The more subtle moral busybody abides the perverse righteousness of their compatriots, raises the flag, sorts individuals into races, genders, generations, species, sheep, and goats, kills weeds and eradicates pests, roots for the home team, or embarks upon a lifelong quest to discover what sets humanity apart from nature or other animals, or how the human brain generates the experience of consciousness.
+
+In truth these archetypes reside within each of us, and no one of us embodies one fully and the other none.
