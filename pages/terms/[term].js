@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { getAllTerms, getNotesWithTerm } from '../../lib/mdx'
+import MDXComponents from '../../components/MDXComponents'
 import Loading from '../../components/Loading'
 import Layout from '../../components/Layout'
 import hydrate from 'next-mdx-remote/hydrate'
-import MDXComponents from '../components/MDXComponents'
 // looks through the mdx docs for #terms
 // makes a page for each one at /terms/[term]
 
