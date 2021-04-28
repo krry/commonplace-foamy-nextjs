@@ -1,10 +1,9 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { getAllTerms, getNotesWithTerm } from '../../lib/mdx'
-import MDXComponents from '../../components/MDXComponents'
 import Loading from '../../components/Loading'
 import Layout from '../../components/Layout'
-import hydrate from 'next-mdx-remote/hydrate'
+import Custom404 from '../404'
 // looks through the mdx docs for #terms
 // makes a page for each one at /terms/[term]
 
@@ -36,22 +35,24 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-	const notes = await getNotesWithTerm(params.term)
-	// console.log('props received notes with term', params.term, notes)
-	if (!notes || !notes.length || !notes[0].term) {
+	const term = params?.term ?? 'term'
+	const notes = await getNotesWithTerm(term)
+	if (!notes || !notes.length) {
 		return {
 			notFound: true,
-			props: { notes: [{ term: 'null' }] },
 		}
 	}
 	return {
-		props: { notes },
+		props: {
+			term,
+			notes,
+		},
 	}
 }
 
-const TermPage = ({ notes }) => {
+const TermPage = ({ term, notes, notFound }) => {
 	const router = useRouter()
-
+	if (notFound) return <Custom404 />
 	if (router.isFallback) {
 		return (
 			<Layout>
@@ -59,17 +60,15 @@ const TermPage = ({ notes }) => {
 			</Layout>
 		)
 	}
-	const term = notes[0].term ?? 'term'
 	return (
 		<Layout>
 			<h1>{'#' + term}</h1>
 			{notes.slice().map((note, index) => {
-				const content = hydrate(note.excerpt, { components: MDXComponents })
 				return (
 					<Link href={'/' + note?.slug} key={index}>
 						<div className='termLink'>
 							<h2>👉 {note.title}</h2>
-							<pre>{content}</pre>
+							<p>{note.excerpt}</p>
 						</div>
 					</Link>
 				)

@@ -7,7 +7,7 @@ export default function Custom404() {
 	const router = useRouter()
 	return (
 		<Layout>
-			<div className='fixed full'>
+			<div className='fixed full flex centered ghost'>
 				<h1>404</h1>
 				<h2>No Not(e) Found</h2>
 				<button className='btn' onClick={() => router.back()}>

@@ -16,6 +16,7 @@
 	line-height: 100vh;
 	justify-content: center;
 	align-items: center;
+	pointer-events: none;
 }
 
 .clock span {

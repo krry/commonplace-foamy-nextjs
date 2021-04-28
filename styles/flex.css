@@ -25,8 +25,11 @@
 	}
 }
 
-.full.fixed {
+.fixed {
 	position: fixed;
+}
+
+.full {
 	height: 100%;
 	width: 100%;
 	top: 0;
@@ -34,8 +37,14 @@
 	bottom: 0;
 	left: 0;
 	margin: auto;
-	display: flex;
+}
+
+.flex.centered {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+}
+
+.ghost {
+	pointer-events: none;
 }
