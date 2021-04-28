@@ -3,7 +3,7 @@ function arrayFromCommaList(list) {
 }
 
 export default function NoteFields({ metadata }) {
-	const tags = metadata?.tags ?? 'untagged'
+	const terms = metadata?.terms ?? 'untagged'
 	const time = metadata?.time ?? metadata?.created ?? new Date()
 
 	// console.log('time', typeof time);
@@ -11,7 +11,7 @@ export default function NoteFields({ metadata }) {
 	const fields = {
 		title: metadata?.title ?? 'Untitled',
 		time: time.toLocaleString().split(' ').slice(0, -4).join(' '),
-		tags: arrayFromCommaList(tags),
+		terms: arrayFromCommaList(terms),
 	}
 	return (
 		<>
@@ -20,10 +20,12 @@ export default function NoteFields({ metadata }) {
 				<dd>{fields.title}</dd>
 				<dt>Time</dt>
 				<dd>{fields.time}</dd>
-				<dt>Tags</dt>
-				{fields.tags.map((tag, index) => (
+				<dt>Terms</dt>
+				{fields.terms.map((term, index) => (
 					<dd key={index}>
-						<a href={'/terms/' + tag.replace(' ', '-')}>#{tag}</a>
+						<a href={'/terms/' + term.replace(/ /g, '-').toLowerCase()}>
+							{'#' + term}
+						</a>
 					</dd>
 				))}
 			</dl>

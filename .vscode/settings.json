@@ -32,7 +32,7 @@
 	"foam.edit.linkReferenceDefinitions": "withoutExtensions",
 	"foam.openDailyNote.directory": "_notes/forget/journal",
 	"foam.openDailyNote.fileExtension": "mdx",
-	"foam.openDailyNote.titleFormat": "'---'\n'title: Journal of Kerrbear 'yyyy-mm-dd\n'time: 'yyyy-mm-dd' 'HH:MM:ss\n'tags: journal '\n'---'\n\n'# 'yyyy-mm-dd\n'## Journal of Kerrbear'",
+	"foam.openDailyNote.titleFormat": "'---'\n'title: Journal of Kerrbear 'yyyy-mm-dd\n'time: 'yyyy-mm-dd' 'HH:MM:ss\n'terms: journal '\n'---'\n\n'# 'yyyy-mm-dd\n'## Journal of Kerrbear'",
 	"git.enableSmartCommit": true,
 	"git.postCommitCommand": "sync",
 	"gitdoc.enabled": false,
@@ -47,16 +47,14 @@
 	"vscodeMarkdownNotes.slugifyMethod": "github-slugger",
 	"vscodeMarkdownNotes.workspaceFilenameConvention": "uniqueFilenames",
 	"window.autoDetectColorScheme": true,
-	"workbench.colorTheme": "SynthWave '84 Blues",
+	"workbench.colorTheme": "Sia synthwave colour theme",
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[ignore]": {
 		"editor.defaultFormatter": "foxundermoon.shell-format"
 	},
-	"frontMatter.taxonomy.categories": [
-		"reading"
-	],
+	"frontMatter.taxonomy.categories": ["reading"],
 	"workbench.colorCustomizations": {
 		"activityBar.activeBackground": "#063838",
 		"activityBar.activeBorder": "#ad13ad",
