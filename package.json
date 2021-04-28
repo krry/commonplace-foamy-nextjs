@@ -1,19 +1,25 @@
 {
 	"name": "commonplace",
-	"version": "0.3.3",
+	"version": "0.3.4",
 	"license": "CC-BY-NC-SA-4.0",
+	"description": "A zettelkasten-style digital garden full of half-baked poetry and other musings.",
 	"repository": {
 		"git": "git@github.com:krry/commonplace.git"
 	},
 	"scripts": {
-		"dev": "NODE_OPTIONS='--inspect' next dev",
+		"build": "next build",
+		"cache": "node lib/cache.js",
 		"dev:ssl": "node server.js",
 		"dev:watch": "next-remote-watch ./_notes",
-		"build": "next build",
+		"dev": "NODE_OPTIONS='--inspect' next dev",
 		"lint": "eslint ./ --ext js --fix",
-		"cache": "node lib/cache.js",
-		"start": "next start",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"rss": "node ./lib/rss.js",
+		"maintain": "yarn lint && yarn cache && yarn rss",
+		"release": "yarn build && yarn maintain",
+		"stage": "yarn release && netlify deploy",
+		"prod": "yarn release && netlify deploy --prod",
+		"start": "next start"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.1.5",
@@ -37,6 +43,7 @@
 		"react-hotkeys-hook": "^3.3.0",
 		"react-icons": "^4.2.0",
 		"react-spinners": "^0.10.6",
+		"rss": "^1.2.2",
 		"stylelint": "^13.12.0",
 		"stylelint-config-prettier": "^8.0.2",
 		"superjson": "^1.7.3"
