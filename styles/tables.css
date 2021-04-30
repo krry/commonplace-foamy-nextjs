@@ -74,7 +74,6 @@ hr.dinkus {
 hr.dinkus::after {
 	color: var(--flair);
 	display: block;
-	font-family: var(--text);
 	font-size: calc(var(--unit));
 	text-align: center;
 }

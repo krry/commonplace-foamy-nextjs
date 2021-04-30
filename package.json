@@ -1,6 +1,6 @@
 {
 	"name": "commonplace",
-	"version": "0.3.4",
+	"version": "0.3.5",
 	"license": "CC-BY-NC-SA-4.0",
 	"description": "A zettelkasten-style digital garden full of half-baked poetry and other musings.",
 	"repository": {
@@ -8,14 +8,14 @@
 	},
 	"scripts": {
 		"build": "next build",
-		"cache": "node lib/cache.js",
+		"search": "node lib/cache.js",
 		"dev:ssl": "node server.js",
 		"dev:watch": "next-remote-watch ./_notes",
 		"dev": "NODE_OPTIONS='--inspect' next dev",
-		"lint": "eslint ./ --ext js --fix",
+		"lint": "eslint ./ --fix --ext js",
 		"prepare": "husky install",
 		"rss": "node ./lib/rss.js",
-		"maintain": "yarn lint && yarn cache && yarn rss",
+		"maintain": "yarn lint && yarn search && yarn rss",
 		"release": "yarn build && yarn maintain",
 		"stage": "yarn release && netlify deploy",
 		"prod": "yarn release && netlify deploy --prod",

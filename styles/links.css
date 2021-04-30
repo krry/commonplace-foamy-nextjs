@@ -24,10 +24,6 @@ a:visited:focus {
 	color: var(--link-tepid);
 }
 
-.wikiLink {
-	font-family: var(--heading);
-}
-
 .wikiLink:focus,
 .wikiLink:hover {
 	text-decoration: none;

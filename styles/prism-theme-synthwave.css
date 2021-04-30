@@ -2,8 +2,9 @@
 
 code[class*='language-'],
 pre[class*='language-'] {
+	--font-mono: 0.8;
+	--font-casual: 0;
 	color: #ff8b39;
-	font-family: var(--mono);
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;

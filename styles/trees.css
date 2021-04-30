@@ -58,7 +58,6 @@ ul.top {
 .tree.home .primary {
 	font-size: clamp(1.5rem, 2.25vw + 2.25vh, 2.25rem);
 	text-align: center;
-	font-family: var(--sans);
 	padding: 4vh 2vw 2vh;
 	margin: 2vh;
 	background: var(--glass);
@@ -79,7 +78,6 @@ ul.top {
 .tree.home .secondary {
 	font-size: clamp(1rem, 1.75vw + 1.75vh, 1.75rem);
 	text-align: center;
-	font-family: var(--heading);
 	padding: 1vh 1vw;
 }
 

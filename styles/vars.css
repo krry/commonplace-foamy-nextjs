@@ -9,7 +9,7 @@
 	--abyss: hsla(180, 24%, 12%, 0.78);
 	--abysmal: hsl(180, 24%, 8%);
 	--caulk: hsl(180, 50%, 96%);
-	--zephyr: hsl(180, 72%, 27%); /* hsl(180, 78%, 48%) */
+	--zephyr: hsl(180, 72%, 27%); /* rgb(27, 217, 217) */
 	--capri: hsl(192, 78%, 35%);
 	--azure: hsl(180, 78%, 38%);
 	--jung: hsl(168, 72%, 37%);
@@ -18,8 +18,7 @@
 	--lightning: hsl(72, 100%, 72%);
 	--marigold: hsl(48, 100%, 72%);
 	--goldilocks: hsl(32, 100%, 72%);
-	--font: 'Recursive', system-ui, sans-serif;
-	--serif: 'Fraunces', ui-serif, serif;
+	--font: 'Recursive', system-ui, sans-serif; /* for font-family */
 	--bevel: 0.25rem;
 	--header-height: 3em;
 }
