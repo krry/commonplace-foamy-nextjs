@@ -15,8 +15,7 @@ const Header = () => {
 					<ThemeSwitch />
 					<h1>
 						<GiMeshNetwork className='icon' />
-						<Link href='/'>Commonplace</Link>
-						<small>&nbsp;of an Atmanaut</small>
+						<Link href='/'>Kerrbear.wtf</Link>
 					</h1>
 				</nav>
 				{!session && loading && (
