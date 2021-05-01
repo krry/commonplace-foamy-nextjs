@@ -34,7 +34,7 @@
 	"foam.openDailyNote.fileExtension": "mdx",
 	"foam.openDailyNote.titleFormat": "'---'\n'title: Journal of Kerrbear 'yyyy-mm-dd\n'time: 'yyyy-mm-dd' 'HH:MM:ss\n'terms: journal '\n'---'\n\n'# 'yyyy-mm-dd\n'## Journal of Kerrbear'",
 	"git.enableSmartCommit": true,
-	"git.postCommitCommand": "sync",
+	// "git.postCommitCommand": "sync",
 	"gitdoc.enabled": false,
 	"insertDateString.format": " YYYY-MM-DDThh:mm:ss.SZZZZ",
 	"insertDateString.formatDate": "YYYY-MM-DD",
