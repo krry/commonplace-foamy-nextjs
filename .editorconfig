@@ -1,5 +1,5 @@
 # top-most EditorConfig file
-root=true
+root = true
 
 # Unix-style newlines with a newline ending every file
 [*]

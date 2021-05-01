@@ -27,7 +27,6 @@ module.exports = {
 	rules: {
 		semi: ['error', 'never'],
 		indent: ['error', 'tab'],
-		// quotes: ['warn', 'single'],
 		'react/prop-types': 'off',
 		'react/react-in-jsx-scope': 'off',
 		'linebreak-style': ['error', 'unix'],
