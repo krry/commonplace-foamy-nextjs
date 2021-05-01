@@ -9,7 +9,7 @@
             <link>https://commonplace.atmanaut.me</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 30 Apr 2021 22:31:57 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 01 May 2021 00:56:31 GMT</lastBuildDate>
         <atom:link href="https://commonplace.atmanaut.me/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Kerrbear]]></author>
         <pubDate>Wed, 28 Apr 2021 09:47:09 GMT</pubDate>
@@ -326,6 +326,13 @@
             <pubDate>Thu, 01 Apr 2021 09:41:53 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[The Way of Zen]]></title>
+            <link>https://commonplace.atmanaut.me/remember/the-way-of-zen</link>
+            <guid isPermaLink="true">https://commonplace.atmanaut.me/remember/the-way-of-zen</guid>
+            <dc:creator><![CDATA[Kerrbear]]></dc:creator>
+            <pubDate>Thu, 01 Apr 2021 09:41:51 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[The Simulation is Real]]></title>
             <link>https://commonplace.atmanaut.me/remember/the-simulation-is-real</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/remember/the-simulation-is-real</guid>
@@ -359,6 +366,13 @@
             <guid isPermaLink="true">https://commonplace.atmanaut.me/remember/the-only-things-that-matter-to-startups</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
             <pubDate>Thu, 01 Apr 2021 09:41:53 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The New Science of Consciousness]]></title>
+            <link>https://commonplace.atmanaut.me/remember/the-new-science-of-consciousness</link>
+            <guid isPermaLink="true">https://commonplace.atmanaut.me/remember/the-new-science-of-consciousness</guid>
+            <dc:creator><![CDATA[Kerrbear]]></dc:creator>
+            <pubDate>Thu, 01 Apr 2021 09:41:51 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[The majority of quantum theorists espouse the Copenhagen interpretation]]></title>
@@ -501,30 +515,9 @@
             <pubDate>Thu, 01 Apr 2021 09:41:53 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[The Way of Zen]]></title>
-            <link>https://commonplace.atmanaut.me/remember/notes-on-the-way-of-zen</link>
-            <guid isPermaLink="true">https://commonplace.atmanaut.me/remember/notes-on-the-way-of-zen</guid>
-            <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Thu, 01 Apr 2021 09:41:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Notes on *The New Science of Consciousness* by Paul L. Nunez]]></title>
-            <link>https://commonplace.atmanaut.me/remember/notes-on-the-new-science-of-consciousness-by-paul-l</link>
-            <guid isPermaLink="true">https://commonplace.atmanaut.me/remember/notes-on-the-new-science-of-consciousness-by-paul-l</guid>
-            <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Thu, 01 Apr 2021 09:41:51 GMT</pubDate>
-        </item>
-        <item>
             <title><![CDATA[Notes on My Big TOE]]></title>
             <link>https://commonplace.atmanaut.me/remember/notes-on-my-big-toe</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/remember/notes-on-my-big-toe</guid>
-            <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Thu, 01 Apr 2021 09:41:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[12 Rules for Life - An Antidote to Chaos]]></title>
-            <link>https://commonplace.atmanaut.me/remember/notes-on-12-rules-for-life</link>
-            <guid isPermaLink="true">https://commonplace.atmanaut.me/remember/notes-on-12-rules-for-life</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
             <pubDate>Thu, 01 Apr 2021 09:41:51 GMT</pubDate>
         </item>
@@ -1108,6 +1101,13 @@
             <guid isPermaLink="true">https://commonplace.atmanaut.me/remember/2-sacrum</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
             <pubDate>Thu, 01 Apr 2021 20:55:37 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[12 Rules for Life - An Antidote to Chaos]]></title>
+            <link>https://commonplace.atmanaut.me/remember/12-rules-for-life</link>
+            <guid isPermaLink="true">https://commonplace.atmanaut.me/remember/12-rules-for-life</guid>
+            <dc:creator><![CDATA[Kerrbear]]></dc:creator>
+            <pubDate>Thu, 01 Apr 2021 09:41:51 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Root]]></title>
@@ -5619,8 +5619,8 @@
         </item>
         <item>
             <title><![CDATA[Secret of the Golden Flower]]></title>
-            <link>https://commonplace.atmanaut.me/attend/secret-of-the-golden-flower-notes</link>
-            <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/secret-of-the-golden-flower-notes</guid>
+            <link>https://commonplace.atmanaut.me/attend/secret-of-the-golden-flower</link>
+            <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/secret-of-the-golden-flower</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
             <pubDate>Thu, 01 Apr 2021 09:41:51 GMT</pubDate>
         </item>
@@ -5896,6 +5896,13 @@
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/qualia</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
             <pubDate>Thu, 01 Apr 2021 16:42:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[qigong]]></title>
+            <link>https://commonplace.atmanaut.me/attend/qigong</link>
+            <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/qigong</guid>
+            <dc:creator><![CDATA[Kerrbear]]></dc:creator>
+            <pubDate>Fri, 30 Apr 2021 22:33:33 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Answers]]></title>
@@ -6259,7 +6266,7 @@
             <link>https://commonplace.atmanaut.me/attend/meanings-of-cjk-emoji</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/meanings-of-cjk-emoji</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Meaning]]></title>
@@ -6819,7 +6826,7 @@
             <link>https://commonplace.atmanaut.me/attend/fresh-macbook-m1-setup</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/fresh-macbook-m1-setup</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Free Will]]></title>
@@ -7407,196 +7414,196 @@
             <link>https://commonplace.atmanaut.me/attend/atmanaut/write-it-once-publish-it-everywhere</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/write-it-once-publish-it-everywhere</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Wind Chiming]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/wind-chiming</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/wind-chiming</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Wellthy Truthy]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/wellthy truthy</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/wellthy truthy</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Swinging on the Well-Being Pendulum]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/well-being-pendulum</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/well-being-pendulum</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Walks of Life]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/walks-of-life</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/walks-of-life</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[The Shape of Me]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/the-shape-of-me</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/the-shape-of-me</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[So Many Questions]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/so-many-questions</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/so-many-questions</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Seahorsing]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/seahorses</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/seahorses</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Sacred Caring Doughnut Economics]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/sacred-caring-doughnut-economics</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/sacred-caring-doughnut-economics</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Robber Baron or the Head Judgmeister]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/robber-baron-or-the-head-judgmeister</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/robber-baron-or-the-head-judgmeister</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Primed To Fall In Love]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/primed-to-fall-in-love</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/primed-to-fall-in-love</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Is That A Simulated Fork in the Real Path or a Real Fork in the Simulated Path?]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/is-that-a-simulated-fork-in-the-real-path-or-a-real-fork-in-the-simulated-path</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/is-that-a-simulated-fork-in-the-real-path-or-a-real-fork-in-the-simulated-path</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[I Ching and the Elements of Time]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/i-ching-and-the-elements-of-time</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/i-ching-and-the-elements-of-time</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[How to Lose Our Minds]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/how-to-lose-your-mind-and-find-ourself</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/how-to-lose-your-mind-and-find-ourself</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[How to Go Where It Is Nice]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/how-to-go-where-it-is-nice</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/how-to-go-where-it-is-nice</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Building Atmanaut - How This Happened]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/how-i-built-this</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/how-i-built-this</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Forest - An Organic Social Network Design]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/forest-an-organic-social-network-design</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/forest-an-organic-social-network-design</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Explanation vs Description]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/explanation-vs-description</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/explanation-vs-description</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Create a Preact-on-Parcel SPA in a Jiffy]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/create-a-preact-on-parcel-bundler-web-app-dev-build</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/create-a-preact-on-parcel-bundler-web-app-dev-build</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Cosmology - Nihilism or Mysticism]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/cosmological-nihilism</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/cosmological-nihilism</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[It's Never Too Early For Immortality]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/automatons-4-life</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/automatons-4-life</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Atmanaut Todo]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/atmanaut-todo</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/atmanaut-todo</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Atmanaut Home Poems]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/atmanaut-home-poems</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/atmanaut-home-poems</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Atmanaut.me README]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/atmanaut-README</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/atmanaut-README</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[An Atlas for We Who Ask "Why?"]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/an-atlas-for-we-who-ask-why</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/an-atlas-for-we-who-ask-why</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[About Atmanaut]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/about-atmanaut</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/about-atmanaut</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[A Theory of Otherhood and the Monorepo]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/a-monorepo-theory-of-otherhood</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/a-monorepo-theory-of-otherhood</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[A Call to Un-ism]]></title>
             <link>https://commonplace.atmanaut.me/attend/atmanaut/a-call-to-un-ism</link>
             <guid isPermaLink="true">https://commonplace.atmanaut.me/attend/atmanaut/a-call-to-un-ism</guid>
             <dc:creator><![CDATA[Kerrbear]]></dc:creator>
-            <pubDate>Fri, 30 Apr 2021 22:31:57 GMT</pubDate>
+            <pubDate>Sat, 01 May 2021 00:56:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Whatever the Question…]]></title>

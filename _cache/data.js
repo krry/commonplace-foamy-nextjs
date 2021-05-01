@@ -394,6 +394,7 @@ export const notes = [
 	{ slug: 'attend/properties-of-a-mind', title: 'Properties of a Mind' },
 	{ slug: 'attend/protein-folding', title: 'Protein Folding' },
 	{ slug: 'attend/q&a', title: 'Answers' },
+	{ slug: 'attend/qigong', title: 'qigong' },
 	{ slug: 'attend/qualia', title: 'Qualia' },
 	{ slug: 'attend/quality', title: 'Quality' },
 	{ slug: 'attend/quanta', title: 'quanta' },
@@ -452,7 +453,7 @@ export const notes = [
 		title: 'Ten Scientific Dogmas to Retire',
 	},
 	{
-		slug: 'attend/secret-of-the-golden-flower-notes',
+		slug: 'attend/secret-of-the-golden-flower',
 		title: 'Secret of the Golden Flower',
 	},
 	{ slug: 'attend/self-consciousness', title: 'Self-Consciousness' },
@@ -1724,6 +1725,10 @@ export const notes = [
 	{ slug: 'intend', title: 'Intend' },
 	{ slug: 'remember/0-the-fool', title: 'The Fool' },
 	{ slug: 'remember/1-root', title: 'Root' },
+	{
+		slug: 'remember/12-rules-for-life',
+		title: '12 Rules for Life - An Antidote to Chaos',
+	},
 	{ slug: 'remember/2-sacrum', title: 'Sacrum' },
 	{
 		slug: 'remember/20-steps-to-a-new-product',
@@ -1910,16 +1915,7 @@ export const notes = [
 	},
 	{ slug: 'remember/naturopathy-log', title: 'Naturopathy Log' },
 	{ slug: 'remember/noses-know', title: 'A nose knows not what it seeks' },
-	{
-		slug: 'remember/notes-on-12-rules-for-life',
-		title: '12 Rules for Life - An Antidote to Chaos',
-	},
 	{ slug: 'remember/notes-on-my-big-toe', title: 'Notes on My Big TOE' },
-	{
-		slug: 'remember/notes-on-the-new-science-of-consciousness-by-paul-l',
-		title: 'Notes on *The New Science of Consciousness* by Paul L. Nunez',
-	},
-	{ slug: 'remember/notes-on-the-way-of-zen', title: 'The Way of Zen' },
 	{ slug: 'remember/olivella', title: 'Olivella' },
 	{ slug: 'remember/on-destiny', title: 'On Destiny, Evolutionarily Speaking' },
 	{ slug: 'remember/on-living-forever', title: 'Living Forever' },
@@ -1964,6 +1960,10 @@ export const notes = [
 			'The majority of quantum theorists espouse the Copenhagen interpretation',
 	},
 	{
+		slug: 'remember/the-new-science-of-consciousness',
+		title: 'The New Science of Consciousness',
+	},
+	{
 		slug: 'remember/the-only-things-that-matter-to-startups',
 		title: 'The only things that matter to a startup',
 	},
@@ -1974,6 +1974,7 @@ export const notes = [
 	{ slug: 'remember/the-path-to-quality', title: 'The Path to Quality' },
 	{ slug: 'remember/the-selfish-team', title: 'The Selfish Team' },
 	{ slug: 'remember/the-simulation-is-real', title: 'The Simulation is Real' },
+	{ slug: 'remember/the-way-of-zen', title: 'The Way of Zen' },
 	{ slug: 'remember/tiresias-restored', title: 'Tiresias Restored' },
 	{
 		slug: 'remember/truth-a-la-william-james',
