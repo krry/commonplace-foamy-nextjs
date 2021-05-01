@@ -1133,26 +1133,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/inconsolata@^4.2.2":
-  version "4.2.2"
-  resolved "https://registry.npmjs.org/@fontsource/inconsolata/-/inconsolata-4.2.2.tgz"
-  integrity sha512-r05K64Mbqu1nI8I779i18rhokiJqrBAoBN6heRwqnXW5h1E+ZRlWlBt3MuW1HcFBxWiyhPV9h4e3DN+X8eM3hA==
-
-"@fontsource/museomoderno@^4.2.2":
-  version "4.2.2"
-  resolved "https://registry.npmjs.org/@fontsource/museomoderno/-/museomoderno-4.2.2.tgz"
-  integrity sha512-iXAl17UEo2GvmSZQSDRKAnqePieZ1YTM5vfFeqaCcIDCttjWMUKGCgNLe58ejKqqk0UekmaKDKa0ESTRWANMVw==
-
-"@fontsource/quicksand@^4.2.2":
-  version "4.2.2"
-  resolved "https://registry.npmjs.org/@fontsource/quicksand/-/quicksand-4.2.2.tgz"
-  integrity sha512-YaEG3b5eST4eyj2E28tkJJwnUSMP/zvxI7K/Nx9mkk5aqgDp2WJFzcQ84MFnFVwgy+mZodpzPaPJ6KGtv0q/lg==
-
-"@fontsource/roboto-slab@^4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/roboto-slab/-/roboto-slab-4.2.2.tgz#c157defbafbfa0ae45f00585a3ea49caf8bd338e"
-  integrity sha512-g1MNNpUXk8QpoHQeVuYtPL5abvUoUv0qFXDNhf3/0ABgMQ3TZwm/e9dHFvWKoNp0HFrC1Y2W3tBtUbX25w0nIA==
-
 "@hapi/accept@5.0.1":
   version "5.0.1"
   resolved "https://registry.npmjs.org/@hapi/accept/-/accept-5.0.1.tgz"
