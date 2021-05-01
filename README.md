@@ -1,6 +1,6 @@
-# commonplace
+# The Commonplace of Kerrbear
 
-My humble [[commonplace]] which:
+My humble commonplace "book" which:
 
 - is effectively a digital garden
 - uses the Zettelkasten method
@@ -9,3 +9,4 @@ My humble [[commonplace]] which:
 - sails the open-source, data-sovereign seas with [Foam](https://foambubble.github.io)
 - can also be maintained with [Obsidian](https://obsidian.md)
 - is auto-published with [Vercel](https://vercel.com) whenever I **_Ship It!_**™
+- that lives at [kerrbear.wtf](https://kerrbear.wtf)

@@ -1,6 +1,6 @@
 {
-	"name": "commonplace",
-	"version": "0.3.5",
+	"name": "commonplace-kerrbear",
+	"version": "0.3.6",
 	"license": "CC-BY-NC-SA-4.0",
 	"description": "A zettelkasten-style digital garden full of half-baked poetry and other musings.",
 	"repository": {
@@ -17,18 +17,14 @@
 		"maintain": "yarn lint && yarn search && yarn rss",
 		"prepare": "husky install",
 		"prod": "yarn release && netlify deploy --prod",
-		"release": "yarn build && yarn maintain",
+		"rehearse": "yarn build && yarn maintain",
 		"rss": "node ./lib/rss.js",
 		"search": "node lib/cache.js",
-		"stage": "yarn release && netlify deploy",
+		"stage": "yarn rehearse && netlify deploy",
 		"start": "next start"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.1.5",
-		"@fontsource/inconsolata": "^4.2.2",
-		"@fontsource/museomoderno": "^4.2.2",
-		"@fontsource/quicksand": "^4.2.2",
-		"@fontsource/roboto-slab": "^4.2.2",
 		"fs-readdir-recursive": "^1.1.0",
 		"fuse.js": "^6.4.6",
 		"fuzzy-search": "^3.2.1",

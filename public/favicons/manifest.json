@@ -1,7 +1,7 @@
 {
-	"name": "Commonplace",
-	"description": "My commonplace to store, evolve, and share wild ideas",
-	"short_name": "Commonplace",
+	"name": "The Commonplace of Kerrbear WTF",
+	"description": "A zettelkasten-style digital garden for Kerrbear's extra brains",
+	"short_name": "Kerrbear WTF",
 	"icons": [
 		{
 			"src": "/favicons/favicon-72x72.png",
