@@ -10,7 +10,7 @@ export default function CopyLeft() {
 				©
 			</span>
 			<span> {thisYear} </span>
-			<Link href='https://atmanautica.com'>Atmanautica</Link>
+			<Link href='https://krry.dev'>Atmanautica</Link>
 		</h6>
 	)
 }

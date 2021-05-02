@@ -434,6 +434,7 @@ export const notes = [
 	},
 	{ slug: 'attend/reading', title: 'Reading' },
 	{ slug: 'attend/reality', title: 'Reality' },
+	{ slug: 'attend/recapture-the-rapture', title: 'Recapture The Rapture' },
 	{ slug: 'attend/recognition', title: 'Recognition' },
 	{ slug: 'attend/rejection', title: 'rejection' },
 	{ slug: 'attend/relativity', title: 'relativity' },
@@ -889,6 +890,8 @@ export const notes = [
 	{ slug: 'forget/journal/2021-resolutions', title: '2021 Resolutions' },
 	{ slug: 'forget/journal/covision', title: 'Covision' },
 	{ slug: 'forget/journal/cumulative-culture', title: 'Cumulative Culture' },
+	{ slug: 'forget/journal/enthea-design', title: 'Enthea Design' },
+	{ slug: 'forget/journal/entify', title: 'entify' },
 	{
 		slug: 'forget/journal/herd-immunity-requires-a-hive-mentality',
 		title: 'Herd immunity requires a hive mentality',
