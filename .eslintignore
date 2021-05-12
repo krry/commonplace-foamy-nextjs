@@ -4,7 +4,6 @@ out
 .vercel
 .tags
 .mdx
-# .eslintrc.js
-# .prettierrc.js
 /.*.js
 *.config.js
+public
