@@ -1,7 +1,7 @@
 {
 	"name": "commonplace-kerrbear",
 	"version": "0.3.7",
-	"license": "CC-BY-NC-SA-4.0",
+	"license": "MIT",
 	"description": "A zettelkasten-style digital garden full of half-baked poetry and other musings.",
 	"repository": {
 		"git": "git@github.com:krry/commonplace.git"
