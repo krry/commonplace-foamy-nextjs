@@ -1,1 +1,128 @@
-if(!self.define){const e=e=>{"require"!==e&&(e+=".js");let a=Promise.resolve();return i[e]||(a=new Promise((async a=>{if("document"in self){const i=document.createElement("script");i.src=e,document.head.appendChild(i),i.onload=a}else importScripts(e),a()}))),a.then((()=>{if(!i[e])throw new Error(`Module ${e} didn’t register its module`);return i[e]}))},a=(a,i)=>{Promise.all(a.map(e)).then((e=>i(1===e.length?e[0]:e)))},i={require:Promise.resolve(a)};self.define=(a,n,c)=>{i[a]||(i[a]=Promise.resolve().then((()=>{let i={};const s={uri:location.origin+a.slice(1)};return Promise.all(n.map((a=>{switch(a){case"exports":return i;case"module":return s;default:return e(a)}}))).then((e=>{const a=c(...e);return i.default||(i.default=a),i}))})))}}define("./sw.js",["./workbox-ea903bce"],(function(e){"use strict";importScripts(),self.skipWaiting(),e.clientsClaim(),e.precacheAndRoute([{url:"/_next/static/YhIEYnHkN87RIpcieonUa/_buildManifest.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/YhIEYnHkN87RIpcieonUa/_ssgManifest.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/545f34e4-5825b3553c2aa3bdf01c.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/636-876c0c2e7961f963e027.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/736-ae10258c133cf6d3aceb.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/829-1c256da0364eb831fafb.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/928-9710ece093a3510545de.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/995-f55609825a2a4fadbb5d.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/commons-ad140d54c78937afe611.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/framework-5172ae490eea39502d9b.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/main-2fdefdc1d541da39cea8.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/pages/%5B...slug%5D-10dfa5a6f538b6d3271d.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/pages/404-914518256e1832988152.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/pages/_app-5f1d1dbc8042fe1a0fb5.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/pages/_error-5ff25ffdb3d68d9380f9.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/pages/all-notes-70f895e91fd6ccb447ee.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/pages/index-f6830b947d3499cd78d1.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/pages/patch-front-matter-0d0c1c86ff8a4227d89e.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/pages/terms-3e7a92e0f2c9cf6de848.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/pages/terms/%5Bterm%5D-f64532f6343681ddcaad.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/polyfills-8683bd742a84c1edd48c.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/chunks/webpack-a604812e6e55d31cac90.js",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/_next/static/css/8bc820ff60652d03a4de.css",revision:"YhIEYnHkN87RIpcieonUa"},{url:"/docs/An Introduction to Digital Philosophy.pdf",revision:"df5949c4212e49abdf2be68b8e628827"},{url:"/docs/Calculating Space - Konrad Zuse.pdf",revision:"fdf0cce3d0714bf626c2e2dab340fd39"},{url:"/docs/Notes on Sheldrake - Science Set Free.html",revision:"1fc7514259a365a968e46cd5efe7ef8b"},{url:"/docs/Notes on Unified Reality Theory The Evolution of Existence into Experience.html",revision:"2a2413351f5fa7e9a93ffee307ba2289"},{url:"/docs/Ollie and the Well of Being.gdoc",revision:"ce222c2ce4de91488ebf93604a246c9e"},{url:"/docs/Ollie and the Well of Being.pdf",revision:"8345b045a9699659aec77f05ee9abf7a"},{url:'/docs/Reading "My Big Toe, Awakening, Discovery, Inner Workings: A Trilogy Unifying Philosophy, Physics, and Metaphysics".gdoc',revision:"dab5fe6d2553967d58f004334761a7bb"},{url:"/docs/Reading the Kybalion - A Study of The Hermetic Philosophy- Notebook.html",revision:"10a87b90193f0dc912c931b4ac6f5a3c"},{url:"/docs/Sciurch_V1(4).pdf",revision:"dbfaaf7ce00a6e9906df412fe6697c23"},{url:"/docs/Sciurch_V1(5).pdf",revision:"07aa658f6b0d5c32af1eeba5f7560cdb"},{url:"/docs/Sciurch_V1-I Ching.pdf",revision:"03298e1681458aeb8e5a4f7519bba838"},{url:"/docs/Sciurch_V1-Lun Yu - Analects of Confucius.pdf",revision:"27e97dbc1355e7ca79ccbd230bd7f833"},{url:"/docs/Sciurch_V1-Tao Te Ching.pdf",revision:"80624d7d149f83eb5d07fa350bcffcbd"},{url:"/docs/Spin-Mediated Consciousness - Huping Hu and Maoxin Wu.pdf",revision:"6bf845f84e607d5594112a31b77a6825"},{url:"/docs/The Physical World as a Virtual Reality - Brian Whitworth.pdf",revision:"59167354ed09b3cd34809e13425dcabb"},{url:"/docs/The Well of Being (edited by Luis).gdoc",revision:"6078ed0f6bbde2dbad9780a32451dc83"},{url:"/docs/The Well of Being, print01.pdf",revision:"6680c2c5da9a0ace20d719f930fc4665"},{url:"/docs/The Well of Being, print02.pdf",revision:"2943052255d1b3f6cf6e2e80c862d2d2"},{url:"/docs/The emergence of the physical world from information processing - Brian Whitworth.pdf",revision:"e65d20f3f6db6553d3962e775ab65e93"},{url:"/docs/YesChef.pdf",revision:"34f268639982a7c6b489d0124776e5df"},{url:"/docs/commonplace.svg",revision:"b933cacf662462dc101a3098c9832527"},{url:"/docs/constructor theory of life - chiara marletto.pdf",revision:"be06273ff15cc88a70a37673882cd1de"},{url:"/docs/the simulation argument - nick bostrom.pdf",revision:"81e2bc940f5ac2d6de158a848ab8e533"},{url:"/favicons/browserconfig.xml",revision:"a4481f947e4584f2760ba19063d6dbf8"},{url:"/favicons/favicon-114x114.png",revision:"f610791e383a1f53acb549a500f4ad07"},{url:"/favicons/favicon-120x120.png",revision:"937d24ee2774d56a8b503b8cb0647a43"},{url:"/favicons/favicon-128x128.png",revision:"5bbad5bc8aaa87a0496718ce8aac1e60"},{url:"/favicons/favicon-144x144.png",revision:"da1519e5cc6c5c22331d13d5ec87d2de"},{url:"/favicons/favicon-150x150.png",revision:"fc6437e7d886ae571aad5a24d055e553"},{url:"/favicons/favicon-152x152.png",revision:"cccc20a72cd23af31a07463adda6ce73"},{url:"/favicons/favicon-16x16.png",revision:"37b1f839b33faf3ad6217df7b0b2608f"},{url:"/favicons/favicon-180x180.png",revision:"f16584b9756f16363595da1a7326ed80"},{url:"/favicons/favicon-192x192.png",revision:"e63a598e77351ad39b75229e6b84da49"},{url:"/favicons/favicon-310x310.png",revision:"aef0f3e525547d93ecacf3447341f503"},{url:"/favicons/favicon-32x32.png",revision:"0af528f32ba5ce3de30b14a5b31cd738"},{url:"/favicons/favicon-384x384.png",revision:"298d314335071782ad72d2330ed0368e"},{url:"/favicons/favicon-512x512.png",revision:"829ecdc6d1063c7f35e781e466a726a1"},{url:"/favicons/favicon-57x57.png",revision:"0c9cb521062786b94c853787e503d7aa"},{url:"/favicons/favicon-60x60.png",revision:"549b9a73d15d8d0a5f7fa78eb896aa37"},{url:"/favicons/favicon-70x70.png",revision:"5ee6c6ebf60011c614cf81dbe7e4661a"},{url:"/favicons/favicon-72x72.png",revision:"e6616d128ee2fa2624c2931e1bcd67de"},{url:"/favicons/favicon-76x76.png",revision:"92c0a4ae5717496aa7b5823146c47bce"},{url:"/favicons/favicon-96x96.png",revision:"2e42bae3c219b4ee6a0a9f135e58f183"},{url:"/favicons/favicon.ico",revision:"7f91bd4a0d2a2a85913b2c0fc0e1bc9d"},{url:"/favicons/manifest.json",revision:"445766b82b0f0368a4cd8e73bb40df41"},{url:"/feed.xml",revision:"76ed71fee0c180a51117f6ab2b740ee8"},{url:"/fonts/recursive.woff2",revision:"ed8af16461534156ecebcf3f0362b8a8"},{url:"/images/2021-03-05-10-16-02.png",revision:"8e84bd4b8a4dae4822010517736a8f66"},{url:"/images/2021-03-05-10-43-55.png",revision:"c13a3fcf7d0046beabba2be6e0c87949"},{url:"/images/Chuck_Close's_Big_Self_Portrait.jpg",revision:"63b1f9055313086145f1286d3c0ca6f6"},{url:"/images/Hoffman-conscious-agents.png",revision:"2ef27cb8d5892d4c770cfd6337928304"},{url:"/images/Hulk_Hogan_Wrestlemanix_IX.jpg",revision:"f3241d1deeb6c62fab03350821a94089"},{url:"/images/IaaI-lotus.png",revision:"642cf118f9a3d629b9782347cc9593fa"},{url:"/images/Standard_Model_of_Elementary_Particles.png",revision:"84d88ccfa5374374a0c954fd61692a10"},{url:"/images/Stone-of-Davasko.jpg",revision:"d118aa5280ebad518175ed3914ccb920"},{url:"/images/The_Hindu_Kush_and_Passes_Between_the_Kabul_and_Oxus_WDL475.png",revision:"22595758ab1b291a9f30c5649faa359d"},{url:"/images/book-club-header-shall-we-begin.jpg",revision:"b435b0490b98a04bba6eb8c695523f83"},{url:"/images/book-club-header-shall-we-begin.png",revision:"00a2231edac0782e867f2ca0beaf24a6"},{url:"/images/butter-postulate.png",revision:"1d634537c43baa536bd3813ac9a84809"},{url:"/images/constellation-logo.svg",revision:"aac988431b85796457e9f9123b22a7b5"},{url:"/images/daily schedule.png",revision:"32978024d0e6eb4ec2fc3de86b9c8685"},{url:"/images/dudeinlimo2.jpg",revision:"e82d687e3b01cb4e5e6381309e6c4f37"},{url:"/images/excalidrawn.png",revision:"74b678b3a6bcd13306bfc8947e300756"},{url:"/images/excalidrawn.svg",revision:"c86d0e8e67ab908e44f00ba5887e413c"},{url:"/images/fall-of-icarus.jpg",revision:"2cab442a16ef0a6e69581d97da96b35d"},{url:"/images/hindu-kush-from-apollo-9.jpg",revision:"2e3bbb80c97bc2cc12e1d1852ab598ba"},{url:"/images/i-care-about-this-alot.png",revision:"9eca26f83842c6438695a910e3c8cdf2"},{url:"/images/image_0.png",revision:"a391c05edbcebcd8dc27b0b8e7e8dfba"},{url:"/images/image_picker8275955174599326002.jpg",revision:"a51b39131c0b3db2c4d2c57f22177ad7"},{url:"/images/information integration theory feedback loop.png",revision:"d971fa385acc6d888420ce4fc81eeda3"},{url:"/images/le-sigh.gif",revision:"0ff6f505c9a225cc1d8cf40c60d5424f"},{url:"/images/lotus.jpg",revision:"3ac13702812ab92ba1a0d50c497e9ac7"},{url:"/images/lotus.webp",revision:"db64538356697e9e0fe9968af8666c66"},{url:"/images/luis-del-rio-camacho-43059-unsplash.jpg",revision:"c4b704ee5d626a8db5b118e5af6185b4"},{url:"/images/macbook bros.jpg",revision:"190b8cde060d2cba6bb2342dad4ae797"},{url:"/images/matrix_goo_pods.jpg",revision:"d0af3a3a51ef4f167c64dfe1568e5e3f"},{url:"/images/not-a-plumbus.jpg",revision:"8cb2f83b0878da82c2006ec6cfee2c8a"},{url:"/images/pando-landscape.jpg",revision:"2418c863c0d87ef1b03f477fcaf0a6fe"},{url:"/images/service battery.png",revision:"b29fb6e51c14ff4865ee5d7624ae1400"},{url:"/images/the-treachery-of-images-this-is-not-a-pipe-1948.jpg",revision:"f1a02f68083921ea9d7f8b9acec4d844"},{url:"/images/where-shall-we-begin.jpg",revision:"2cd3c5505151c92fb770aeb10b5f73f9"},{url:"/images/yijing-cast.png",revision:"a2efc511212fa741940807b7f8346e73"},{url:"/logos/bagua.png",revision:"c8fe196946ab4ee14ac09ec64a3f6b20"},{url:"/logos/bloock.png",revision:"1c7a3f21b3a08c539c2be71a74fc7c7a"},{url:"/logos/bloor050.png",revision:"16ff92bcc82e0e6ef485838e8cfdd587"},{url:"/logos/logo-commonplace-side-indigo.svg",revision:"faead30d99d4dbcb95b16dee9592eec9"},{url:"/logos/logo-commonplace-side.svg",revision:"a3b77e2a734af051bde31c9f8ac6e1f0"},{url:"/logos/logo-commonplace-walk.svg",revision:"977f3b3915541856da8b8a1e3d8fd594"},{url:"/logos/logo-commonplace-wordmark.svg",revision:"819f2c4b80eafa70b705bebf595393ff"},{url:"/logos/logo-commonplace.svg",revision:"b933cacf662462dc101a3098c9832527"}],{ignoreURLParametersMatching:[]}),e.cleanupOutdatedCaches(),e.registerRoute("/",new e.NetworkFirst({cacheName:"start-url",plugins:[{cacheWillUpdate:async({request:e,response:a,event:i,state:n})=>a&&"opaqueredirect"===a.type?new Response(a.body,{status:200,statusText:"OK",headers:a.headers}):a}]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:googleapis|gstatic)\.com\/.*/i,new e.CacheFirst({cacheName:"google-fonts",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:31536e3,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,new e.StaleWhileRevalidate({cacheName:"static-font-assets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,new e.StaleWhileRevalidate({cacheName:"static-image-assets",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\/_next\/image\?url=.+$/i,new e.StaleWhileRevalidate({cacheName:"next-image",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\.(?:mp3|mp4)$/i,new e.StaleWhileRevalidate({cacheName:"static-media-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\.(?:js)$/i,new e.StaleWhileRevalidate({cacheName:"static-js-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\.(?:css|less)$/i,new e.StaleWhileRevalidate({cacheName:"static-style-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\/_next\/data\/.+\/.+\.json$/i,new e.StaleWhileRevalidate({cacheName:"next-data",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute(/\.(?:json|xml|csv)$/i,new e.NetworkFirst({cacheName:"static-data-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;const a=e.pathname;return!a.startsWith("/api/auth/")&&!!a.startsWith("/api/")}),new e.NetworkFirst({cacheName:"apis",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:16,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;return!e.pathname.startsWith("/api/")}),new e.NetworkFirst({cacheName:"others",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400,purgeOnQuotaError:!0})]}),"GET")}));
+/**
+ * Copyright 2018 Google Inc. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+// If the loader is already loaded, just stop.
+if (!self.define) {
+  const singleRequire = name => {
+    if (name !== 'require') {
+      name = name + '.js';
+    }
+    let promise = Promise.resolve();
+    if (!registry[name]) {
+      
+        promise = new Promise(async resolve => {
+          if ("document" in self) {
+            const script = document.createElement("script");
+            script.src = name;
+            document.head.appendChild(script);
+            script.onload = resolve;
+          } else {
+            importScripts(name);
+            resolve();
+          }
+        });
+      
+    }
+    return promise.then(() => {
+      if (!registry[name]) {
+        throw new Error(`Module ${name} didn’t register its module`);
+      }
+      return registry[name];
+    });
+  };
+
+  const require = (names, resolve) => {
+    Promise.all(names.map(singleRequire))
+      .then(modules => resolve(modules.length === 1 ? modules[0] : modules));
+  };
+  
+  const registry = {
+    require: Promise.resolve(require)
+  };
+
+  self.define = (moduleName, depsNames, factory) => {
+    if (registry[moduleName]) {
+      // Module is already loading or loaded.
+      return;
+    }
+    registry[moduleName] = Promise.resolve().then(() => {
+      let exports = {};
+      const module = {
+        uri: location.origin + moduleName.slice(1)
+      };
+      return Promise.all(
+        depsNames.map(depName => {
+          switch(depName) {
+            case "exports":
+              return exports;
+            case "module":
+              return module;
+            default:
+              return singleRequire(depName);
+          }
+        })
+      ).then(deps => {
+        const facValue = factory(...deps);
+        if(!exports.default) {
+          exports.default = facValue;
+        }
+        return exports;
+      });
+    });
+  };
+}
+define("./sw.js",['./workbox-6b19f60b'], function (workbox) { 'use strict';
+
+  /**
+  * Welcome to your Workbox-powered service worker!
+  *
+  * You'll need to register this file in your web app.
+  * See https://goo.gl/nhQhGp
+  *
+  * The rest of the code is auto-generated. Please don't update this file
+  * directly; instead, make changes to your Workbox build configuration
+  * and re-run your build process.
+  * See https://goo.gl/2aRDsh
+  */
+
+  importScripts();
+  self.skipWaiting();
+  workbox.clientsClaim();
+  workbox.registerRoute("/", new workbox.NetworkFirst({
+    "cacheName": "start-url",
+    plugins: [{
+      cacheWillUpdate: async ({
+        request,
+        response,
+        event,
+        state
+      }) => {
+        if (response && response.type === 'opaqueredirect') {
+          return new Response(response.body, {
+            status: 200,
+            statusText: 'OK',
+            headers: response.headers
+          });
+        }
+
+        return response;
+      }
+    }]
+  }), 'GET');
+  workbox.registerRoute(/.*/i, new workbox.NetworkOnly({
+    "cacheName": "dev",
+    plugins: []
+  }), 'GET');
+
+});
+//# sourceMappingURL=sw.js.map
