@@ -2,7 +2,7 @@ import { useCallback, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useHotkeys } from 'react-hotkeys-hook'
 
-export default function Search() {
+export default function Search(): JSX.Element {
 	const searchRef = useRef(null)
 	const inputRef = useRef(null)
 	const [query, setQuery] = useState('')

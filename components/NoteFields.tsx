@@ -2,7 +2,7 @@ function arrayFromCommaList(list) {
 	return list.split(',').map(w => w.trim())
 }
 
-export default function NoteFields({ metadata }) {
+export default function NoteFields({ metadata }): JSX.Element {
 	const terms = metadata?.terms ?? 'untagged'
 	const time = metadata?.time ?? metadata?.created ?? new Date()
 

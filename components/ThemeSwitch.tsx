@@ -9,7 +9,7 @@ export const themes = [
 	{ name: 'fuch', emoji: '🌺' },
 ]
 
-export default function ThemeSwitch() {
+export default function ThemeSwitch(): JSX.Element {
 	const { theme, setTheme } = useTheme()
 	let dex = themes.findIndex(node => node.name === theme) ?? 0
 	let themoji = themes[dex]?.emoji ?? '🌳'

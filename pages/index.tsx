@@ -4,9 +4,9 @@ import SiteNav from '../components/SiteNav'
 import CopyLeft from '../components/CopyLeft'
 import { GiFlyingTrout } from 'react-icons/gi'
 
-export default function Index() {
+export default function Index(): JSX.Element {
 	return (
-		<Layout>
+		<Layout metadata="">
 			<SiteNav location='home' />
 			<hr />
 			<footer style={{ textAlign: 'center' }}>

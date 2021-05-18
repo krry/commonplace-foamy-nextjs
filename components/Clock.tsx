@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Animals from './Animals'
 
-export default function Clock() {
+export default function Clock(): JSX.Element {
 	const [ms, setMs] = useState(1)
 
 	useEffect(() => {

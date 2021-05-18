@@ -8,7 +8,7 @@ const override = css`
 	border-color: blue;
 `
 
-export default function Loading() {
+export default function Loading(): JSX.Element {
 	const windowed = typeof window !== 'undefined'
 	const flair = windowed
 		? getComputedStyle(document.documentElement).getPropertyValue('--flair')

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-function verifyRelativityOfHref(href) {
+function verifyRelativityOfHref(href): string {
 	const router = useRouter()
 	// console.log('href of link is', href)
 	// does the `href` start with something besides a letter or number?
@@ -22,7 +22,7 @@ function verifyRelativityOfHref(href) {
 	}
 }
 
-const AnchorTag = props => {
+const AnchorTag = (props): JSX.Element => {
 	const { href, title, target, children } = props
 	const shouldBeSimpleLink = target || href.startsWith('#')
 	if (shouldBeSimpleLink) {

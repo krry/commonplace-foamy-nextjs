@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import config from '../site.config'
 
-const Meta = () => {
+const Meta = (): JSX.Element => {
 	return (
 		<Head>
 			{/* thanks to https://favycon.app/ for these */}

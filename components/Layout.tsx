@@ -2,7 +2,7 @@ import Meta from './Meta'
 import SideBar from './SideBar'
 import Header from './Header'
 
-export default function Layout({ children, metadata }) {
+export default function Layout({ children, metadata }): JSX.Element {
 	// console.log('layout props', metadata)
 	return (
 		<>

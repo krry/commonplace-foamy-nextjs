@@ -3,7 +3,7 @@ import Link from 'next/link'
 const now = new Date()
 const thisYear = now.getFullYear()
 
-export default function CopyLeft() {
+export default function CopyLeft(): JSX.Element {
 	return (
 		<h6>
 			<span style={{ transform: 'scaleX(-1)', display: 'inline-block' }}>

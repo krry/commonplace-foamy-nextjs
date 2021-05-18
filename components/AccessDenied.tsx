@@ -1,6 +1,6 @@
 import { signIn } from 'next-auth/client'
 
-export default function AccessDenied() {
+export default function AccessDenied(): JSX.Element {
 	return (
 		<>
 			<h1>Access Denied</h1>

@@ -17,7 +17,7 @@ import {
 	GiBabyFace,
 } from 'react-icons/gi'
 
-export default function SiteNav({ location }) {
+export default function SiteNav({ location }): JSX.Element {
 	return (
 		<nav className={'tree ' + location}>
 			<ul className='top'>

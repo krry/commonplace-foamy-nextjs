@@ -7,7 +7,7 @@ function rand(ceiling) {
 	return Math.floor(Math.random() * ceiling)
 }
 
-const Animals = ({ count }) => {
+const Animals = ({ count }): JSX.Element => {
 	const animals = []
 	for (let i = 0; i < count; i++) {
 		animals.push(

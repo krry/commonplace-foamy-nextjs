@@ -1,6 +1,6 @@
 import NextImage from 'next/image'
 
-export default function Image(props) {
+export default function Image(props): JSX.Element {
 	let { src, alt, width = 600, height = 460, layout = 'intrinsic' } = props
 	if (src.includes('?')) {
 		const dimensions = src.split('?')
