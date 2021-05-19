@@ -3,10 +3,10 @@
  * following [@matswainson's lead](https://medium.com/@matswainson/building-a-search-component-for-your-next-js-markdown-blog-9e75e0e7d210)
  */
 
-const fs = require('fs')
-const path = require('path')
-const read = require('fs-readdir-recursive')
-const matter = require('gray-matter')
+import fs from 'fs'
+import path from 'path'
+import read from 'fs-readdir-recursive'
+import matter from 'gray-matter'
 
 function getNotes() {
 	const notesDir = path.join(process.cwd(), '_notes')
@@ -27,13 +27,17 @@ function getNotes() {
 
 const fileContents = `export const notes = ${getNotes()}`
 
-try {
-	fs.readdirSync('_cache')
-} catch (e) {
-	fs.mkdirSync('_cache')
+function cache() {
+	try {
+		fs.readdirSync('_cache')
+	} catch (e) {
+		fs.mkdirSync('_cache')
+	}
+
+	fs.writeFile('_cache/data.js', fileContents, function (err) {
+		if (err) return console.error('error writing to cache', err)
+		console.info('notes cached for search')
+	})
 }
 
-fs.writeFile('_cache/data.js', fileContents, function (err) {
-	if (err) return console.error('error writing to cache', err)
-	console.info('notes cached for search')
-})
+export default cache
