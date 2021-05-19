@@ -1,22 +1,25 @@
 {
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.fontSize": 16,
 	"editor.fontLigatures": true,
+	"editor.formatOnSave": true,
 	"editor.minimap.enabled": false,
 	"editor.overviewRulerBorder": false,
 	"editor.wrappingIndent": "indent",
-	"[markdown]": {
-		"editor.lineHeight": 24,
-		"editor.quickSuggestions": true,
-		"editor.suggest.showSnippets": false,
-		"editor.wordBasedSuggestions": false
-	},
-	"editor.formatOnSave": true,
 	"[javascriptreact]": {
 		"editor.formatOnSave": false
 	},
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
+	"[markdown]": {
+		"editor.lineHeight": 24,
+		"editor.parameterHints.enabled": false,
+		"editor.quickSuggestions": false,
+		"editor.quickSuggestionsDelay": 1000000,
+		"editor.suggestOnTriggerCharacters": false,
+		"editor.suggest.showSnippets": false,
+		"editor.wordBasedSuggestions": false
 	},
 	"files.associations": {
 		"*.md": "mdx"
