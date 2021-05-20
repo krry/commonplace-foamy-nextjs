@@ -22,7 +22,10 @@ export default function ThemeSwitch(): JSX.Element {
 
 	return (
 		<>
-			<button type='button' className='themeSwitch' onClick={nextTheme}>
+			<button
+				type='button'
+				className={['themeSwitch', 'buoy', 'l', 'b'].join(' ')}
+				onClick={nextTheme}>
 				<span>{themoji}</span>
 				<span aria-hidden='true' hidden>
 					{theme + 'mode'}

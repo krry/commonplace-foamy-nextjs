@@ -1,14 +1,10 @@
 .themeSwitch {
-	position: fixed;
 	font-size: clamp(2rem, 3vw + 3vh, 4rem);
 	border-radius: 100%;
 	outline: none;
 	border: none;
 	background: none;
-	bottom: clamp(1.5rem, 1vw + 1vh, 3rem);
-	left: 2vw;
 	cursor: pointer;
-	z-index: 5;
 }
 
 .themeSwitch:focus {
@@ -20,4 +16,21 @@
 	flex-flow: column nowrap;
 	justify-content: center;
 	height: calc(100vh - clamp(3rem, 3vw + 3vh, 5rem));
+}
+
+.buoy {
+	position: fixed;
+	z-index: 5;
+}
+
+.buoy.b {
+	bottom: clamp(1.5rem, 1vw + 1vh, 3rem);
+}
+
+.buoy.l {
+	left: 2vw;
+}
+
+.buoy.r {
+	right: 2vw;
 }
