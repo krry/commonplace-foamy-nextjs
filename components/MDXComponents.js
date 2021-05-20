@@ -1,6 +1,6 @@
-import AnchorTag from '../components/AnchorTag'
-import CodeBlock from '../components/CodeBlock'
-import Image from '../components/Image'
+import AnchorTag from './AnchorTag'
+import CodeBlock from './CodeBlock'
+import Image from './Image'
 import {
 	GiLightningBow,
 	GiElephantHead,
