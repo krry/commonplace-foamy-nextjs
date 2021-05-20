@@ -1,8 +1,8 @@
-const fs = require('fs')
-const path = require('path')
-const RSS = require('rss')
-const matter = require('gray-matter')
-const read = require('fs-readdir-recursive')
+import fs from 'fs'
+import path from 'path'
+import RSS from 'rss'
+import matter from 'gray-matter'
+import read from 'fs-readdir-recursive'
 
 const root = process.cwd()
 const mdxDirPath = path.join(root, '_notes')
@@ -70,3 +70,5 @@ function generateRss() {
 }
 
 generateRss()
+
+export {}
