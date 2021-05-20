@@ -50,7 +50,7 @@
 	"vscodeMarkdownNotes.slugifyMethod": "github-slugger",
 	"vscodeMarkdownNotes.workspaceFilenameConvention": "uniqueFilenames",
 	"window.autoDetectColorScheme": true,
-	"workbench.colorTheme": "Material Synthwave",
+	"workbench.colorTheme": "Summer Vacation (Dark)",
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
