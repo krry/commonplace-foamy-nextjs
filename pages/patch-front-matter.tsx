@@ -6,7 +6,7 @@ const root = process.cwd()
 
 export default function Test({ filesFixed }) {
 	return (
-		<Layout>
+		<Layout metadata=''>
 			<h1>Patching Front Matter</h1>
 			<div className='flex row'>
 				<div className='flex col'>

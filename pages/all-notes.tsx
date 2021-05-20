@@ -23,7 +23,7 @@ export default function AllNotes({ allNotes }) {
 	// If no session exists, display access denied message
 	if (!session) {
 		return (
-			<Layout>
+			<Layout metadata=''>
 				<AccessDenied />
 			</Layout>
 		)
@@ -31,7 +31,7 @@ export default function AllNotes({ allNotes }) {
 
 	// If session exists, display content
 	return (
-		<Layout>
+		<Layout metadata=''>
 			<h1>All Notes</h1>
 			<dl>
 				{allNotes.slice().map((note, index) => (

@@ -6,7 +6,7 @@ import Clock from '../components/Clock'
 export default function Custom404() {
 	const router = useRouter()
 	return (
-		<Layout>
+		<Layout metadata=''>
 			<div className='fixed full flex centered ghost'>
 				<h1>404</h1>
 				<h2>No Not(e) Found</h2>

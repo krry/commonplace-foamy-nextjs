@@ -55,13 +55,13 @@ const TermPage = ({ term, notes, notFound }) => {
 	if (notFound) return <Custom404 />
 	if (router.isFallback) {
 		return (
-			<Layout>
+			<Layout metadata=''>
 				<Loading />
 			</Layout>
 		)
 	}
 	return (
-		<Layout>
+		<Layout metadata=''>
 			<h1>{'#' + term}</h1>
 			{notes.slice().map((note, index) => {
 				return (

@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
 const TermsPage = ({ terms }) => {
 	if (terms) {
 		return (
-			<Layout>
+			<Layout metadata=''>
 				<h1>All Terms</h1>
 				<ul className='termList'>
 					{terms.slice().map((term, index) => (
