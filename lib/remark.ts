@@ -1,9 +1,9 @@
-const remarkImages = require('remark-images')
-const remarkFootnote = require('remark-numbered-footnote-labels')
-const remarkInlineLinks = require('remark-inline-links')
-const remarkExternalLinks = require('remark-external-links')
-const remarkUnwrapImages = require('remark-unwrap-images')
-const remarkWikiLink = require('remark-wiki-link')
+import remarkImages from 'remark-images'
+import remarkFootnote from 'remark-numbered-footnote-labels'
+import remarkInlineLinks from 'remark-inline-links'
+import remarkExternalLinks from 'remark-external-links'
+import remarkUnwrapImages from 'remark-unwrap-images'
+import remarkWikiLink from 'remark-wiki-link'
 
 const remarkPlugins = [
 	remarkImages,
@@ -20,4 +20,4 @@ const remarkPlugins = [
 	],
 ]
 
-module.exports = remarkPlugins
+export default remarkPlugins
