@@ -8,16 +8,16 @@ let titless
 export function removeFrontMatter(filename) {
 	fs.readFile(filename, function (err, data) {
 		if (!err) {
-			data = data.toString()
-			const openFencePosition = data.toString().indexOf('---\n')
+			const dataString = data.toString()
+			const openFencePosition = dataString.indexOf('---\n')
 			if (openFencePosition !== -1) {
-				const closeFencePosition = data
+				const closeFencePosition = dataString
 					.toString()
 					.substr(openFencePosition + 1)
 					.indexOf('---\n')
 				if (closeFencePosition !== -1) {
-					data = data.substr(closeFencePosition + 5)
-					fs.writeFile(filename, data, function (err) {
+					const content = dataString.substr(closeFencePosition + 5)
+					fs.writeFile(filename, content, function (err) {
 						if (err) console.error('error writing file', err)
 					})
 				}
