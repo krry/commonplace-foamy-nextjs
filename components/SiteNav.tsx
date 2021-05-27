@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useSession } from 'next-auth/client'
 import {
 	GiLightningBow,
 	GiElephantHead,
@@ -18,6 +19,8 @@ import {
 } from 'react-icons/gi'
 
 export default function SiteNav({ location }): JSX.Element {
+	const [session] = useSession()
+	const dev = process.env.NODE_ENV === 'development'
 	return (
 		<nav className={'tree ' + location}>
 			<ul className='top'>
@@ -115,7 +118,7 @@ export default function SiteNav({ location }): JSX.Element {
 						</li>
 					</ul>
 				</li>
-				<div className='primary trans'>
+				<ul className='primary trans'>
 					<li className='secondary'>
 						<Link href='/remember'>
 							<a>
@@ -125,6 +128,7 @@ export default function SiteNav({ location }): JSX.Element {
 						</Link>
 					</li>
 					<li className='secondary'>
+						{/* TODO: make forget link dead unless logged in? */}
 						<Link href='/forget'>
 							<a>
 								Forget
@@ -156,7 +160,21 @@ export default function SiteNav({ location }): JSX.Element {
 							</a>
 						</Link>
 					</li>
-				</div>
+				</ul>
+				{(session || dev) && (
+					<ul className='primary trans'>
+						<li className='secondary'>
+							<Link href='/terms'>
+								<a>All Terms</a>
+							</Link>
+						</li>
+						<li className='secondary'>
+							<Link href='/all-notes'>
+								<a>All Notes</a>
+							</Link>
+						</li>
+					</ul>
+				)}
 			</ul>
 		</nav>
 	)

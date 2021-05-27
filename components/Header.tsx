@@ -7,6 +7,7 @@ import { signIn, signOut, useSession } from 'next-auth/client'
 
 const Header = (): JSX.Element => {
 	const [session, loading] = useSession()
+	const dev = process.env.NODE_ENV === 'development'
 
 	return (
 		<>
@@ -35,9 +36,9 @@ const Header = (): JSX.Element => {
 						</button>
 					</div>
 				)}
+				{(session || dev) && <Search />}
 				{session && (
 					<>
-						<Search />
 						{session.user.image && (
 							<button
 								className='naked avatar'

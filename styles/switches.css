@@ -34,3 +34,15 @@
 .buoy.r {
 	right: 2vw;
 }
+
+.buoy.btn {
+	background: var(--ink);
+	color: var(--stone);
+	border-color: var(--glass);
+}
+
+.buoy.btn:hover,
+.buoy.btn:focus {
+	background: var(--flair);
+	color: var(--stone);
+}

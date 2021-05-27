@@ -1,5 +1,5 @@
 .btn {
-	--font-weight: 111;
+	--font-weight: 444;
 	--font-casual: 0;
 	font-family: var(--font);
 	border: 0.125em solid var(--cloud);
@@ -17,8 +17,8 @@
 .btn:hover,
 .btn:focus {
 	--font-weight: 777;
-	color: var(--stone);
-	background-color: var(--smoke);
+	color: var(--flair);
+	background-color: var(--cloud);
 }
 
 .btn.sm {

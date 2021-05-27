@@ -32,8 +32,9 @@
 	"files.watcherExclude": {
 		"**/node_modules": true
 	},
+	"foam.decorations.links.enable": true,
 	"foam.edit.linkReferenceDefinitions": "withoutExtensions",
-	"foam.openDailyNote.directory": "_notes/forget/journal",
+	"foam.openDailyNote.directory": "docs/forget/journal",
 	"foam.openDailyNote.fileExtension": "mdx",
 	"foam.openDailyNote.titleFormat": "'---'\n'title: Journal of Kerrbear 'yyyy-mm-dd\n'time: 'yyyy-mm-dd' 'HH:MM:ss\n'terms: journal '\n'---'\n\n'# 'yyyy-mm-dd\n'## Journal of Kerrbear'",
 	"git.enableSmartCommit": true,
@@ -43,6 +44,7 @@
 	"insertDateString.formatDate": "YYYY-MM-DD",
 	"insertDateString.formatTime": "hh:mm:ss",
 	"markdown.preview.breaks": true,
+	"markdownExtended.disabledPlugins": "kbd",
 	"pasteImage.path": "${projectRoot}/public/images",
 	"pasteImage.showFilePathConfirmInputBox": true,
 	"vscodeMarkdownNotes.defaultFileExtension": "mdx",
@@ -53,9 +55,6 @@
 	"workbench.colorTheme": "Summer Vacation (Dark)",
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[ignore]": {
-		"editor.defaultFormatter": "foxundermoon.shell-format"
 	},
 	"frontMatter.taxonomy.categories": ["reading"],
 	"workbench.colorCustomizations": {
@@ -76,6 +75,5 @@
 	},
 	"peacock.color": "#2F222A",
 	"WillLuke.nextjs.addTypesOnSave": true,
-	"WillLuke.nextjs.hasPrompted": true,
-	"foam.decorations.links.enable": true
+	"WillLuke.nextjs.hasPrompted": true
 }

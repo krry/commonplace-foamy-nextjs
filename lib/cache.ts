@@ -9,7 +9,7 @@ import read from 'fs-readdir-recursive'
 import matter from 'gray-matter'
 
 function getNotes() {
-	const notesDir = path.join(process.cwd(), '_notes')
+	const notesDir = path.join(process.cwd(), 'docs')
 	// const notesDir = path.join(process.cwd(), 'private')
 	const filenames = read(notesDir)
 	const notes = filenames.map(file => {

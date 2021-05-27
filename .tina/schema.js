@@ -5,7 +5,7 @@ export default defineSchema({
 		{
 			label: 'WTF Notes',
 			name: 'notes',
-			path: '_notes',
+			path: 'docs',
 			templates: [
 				{
 					label: 'Note',

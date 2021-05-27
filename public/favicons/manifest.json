@@ -1,7 +1,7 @@
 {
-	"name": "The Commonplace of Kerrbear WTF",
+	"background_color": "#1F9E9E",
 	"description": "A zettelkasten-style digital garden for Kerrbear's extra brains",
-	"short_name": "Kerrbear WTF",
+	"display": "standalone",
 	"icons": [
 		{
 			"src": "/favicons/favicon-72x72.png",
@@ -52,9 +52,9 @@
 			"purpose": "any maskable"
 		}
 	],
+	"name": "The Commonplace of Kerrbear",
 	"scope": "/",
+	"short_name": "KerrbearWTF",
 	"start_url": "/?source=pwa",
-	"display": "standalone",
-	"theme_color": "#1F9E9E",
-	"background_color": "#1F9E9E"
+	"theme_color": "#1F9E9E"
 }

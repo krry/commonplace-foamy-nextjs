@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 import read from 'fs-readdir-recursive'
 
 const root = process.cwd()
-const mdxDirPath = path.join(root, '_notes')
+const mdxDirPath = path.join(root, 'docs')
 
 function collectFrontMatter(allNotes, noteSlug) {
 	const source = fs.readFileSync(path.join(mdxDirPath, noteSlug), 'utf8')

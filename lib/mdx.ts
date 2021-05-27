@@ -7,7 +7,7 @@ import MDXComponents from '../components/MDXComponents'
 import renderToString from 'next-mdx-remote/render-to-string'
 
 const root = process.cwd()
-const mdxDirPath = path.join(root, '_notes')
+const mdxDirPath = path.join(root, 'docs')
 const allFilesInMdxDir = read(mdxDirPath)
 
 export const mdxFilePaths = allFilesInMdxDir.filter(path =>

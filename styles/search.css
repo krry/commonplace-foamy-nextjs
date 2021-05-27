@@ -1,20 +1,23 @@
 .searchContainer {
+	display: flex;
+	height: 100%;
+	align-items: center;
 	position: absolute;
-	top: 0.5vh;
 	right: 1.25vw;
+	/* top: 0.5vh; */
 	z-index: 2;
 }
 
 @media (min-width: 536px) {
 	.searchContainer {
 		right: 0.75vw;
-		top: 0.75vh;
+		/* top: 0.75vh; */
 	}
 }
 
 @media (min-height: 536px) and (min-width: 536px) {
 	.searchContainer {
-		top: 1.5vh;
+		/* top: 1.5vh; */
 		right: 1vw;
 	}
 }
@@ -24,7 +27,8 @@
 	--font-casual: 0.5;
 	font-family: var(--font);
 	width: 10rem;
-	margin: 0 3.25em 0.125em 0;
+	margin-right: 3em;
+	display: inline-block;
 	padding: 0.33em 0.67em;
 	font-size: 1em;
 	max-width: 43vw;
