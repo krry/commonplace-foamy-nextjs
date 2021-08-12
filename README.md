@@ -5,6 +5,8 @@ modified: 2021-05-01T17:02:37-07:00
 # The Commonplace of Kerrbear
 
 My humble commonplace "book" which:
+- is getting superseded by Notion
+- I need to figure out how to pump Notion docs into
 
 - is effectively a digital garden
 - uses the Zettelkasten method
